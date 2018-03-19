@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Events page</h1>
+
+<ul>
+  {% for event in site.events %}
+    <li>
+      <a href="{{ event.url }}">{{ event.title }}</a>
+      {{ event.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

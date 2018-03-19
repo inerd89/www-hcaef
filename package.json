@@ -1,0 +1,270 @@
+{
+  "name": "www-hcaef",
+  "version": "1.0.0",
+  "description": "Harney County Arts in Education Foundation website.",
+  "main": "index.md",
+  "scripts": {
+    "clean:dist": "rm -rf dist && rm -rf _site",
+    "clean": "npm run clean:dist",
+    "copy:assets": "cp -R assets/ _site/assets/",
+    "copy": "npm run copy:dist",
+    "critical": "critical _site/index.html --base _site --minify --css _site/dist/styles/main.min.css > _includes/css/critical.css",
+    "font": "cp -R src/fonts dist/fonts",
+    "imagemin": "imagemin src/images/* dist/images/ -p",
+    "pagespeed": "psi tony-jones.github.io/jekyll-starter-kit/ --strategy=mobile",
+    "accessibility": "a11y _site/**/*.html",
+    "lint:js": "eslint src/**/*.js",
+    "lint:css": "stylelint 'src/**/*.{css,less,scss,sss}'",
+    "lint": "npm run lint:js && npm run lint:css",
+    "sass": "node-sass --output-style expanded src/sass/main.scss assets/main.css --importer _sass-npm-import.js",
+    "prefix": "postcss --use autoprefixer -b 'last 3 versions' --output assets/main.css assets/main.css",
+    "browserify": "browserify 'src/js/main.js' -d -t babelify -o assets/main.js",
+    "build:jekyll": "jekyll build --config _config.yml,_config-dev.yml",
+    "build:js": "npm run lint:js && npm run browserify",
+    "build:css": "npm run sass && npm run prefix",
+    "build:font": "npm run font",
+    "build:images": "npm run imagemin",
+    "build": "npm run build:js && npm run build:css && npm run build:jekyll",
+    "watch:jekyll": "chokidar '_config.yml' '_config-dev.yml' '*.md' '*.html' 'pages/*' '_includes/**/*' '_layouts/*' '_posts/*' '_work/**/*' '_team-members/*'  -c 'npm run build:jekyll && browser-sync reload'",
+    "watch:css": "chokidar 'src/sass/**/*' -c 'npm run build:css && npm run copy:assets && browser-sync reload'",
+    "watch:js": "chokidar 'src/js/**/*' -c 'npm run build:js && npm run copy:assets && browser-sync reload'",
+    "server": "browser-sync start --server _site",
+    "server:reload": "browser-sync reload",
+    "start": "npm run build && parallelshell 'npm run server -s' 'npm run watch:jekyll -s' 'npm run watch:css -s' 'npm run watch:js -s'"
+  },
+  "author": "Austin Maurer",
+  "license": "ISC",
+  "homepage": "https://harneyartsfoundation.org",
+  "devDependencies": {
+    "a11y": "^0.5.0",
+    "autoprefixer": "^6.7.7",
+    "babel-preset-env": "^1.4.0",
+    "babelify": "^7.3.0",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "chokidar": "^1.6.1",
+    "chokidar-cli": "^1.2.0",
+    "critical": "^0.8.4",
+    "eslint": "^3.17.1",
+    "findup-sync": "^0.4.3",
+    "image-min": "^0.3.2",
+    "jquery": "^3.2.1",
+    "modularscale-sass": "^3.0.2",
+    "node-sass": "^4.5.0",
+    "normalize-css": "^2.3.1",
+    "parallelshell": "^2.0.0",
+    "path": "^0.12.7",
+    "postcss": "^5.2.16",
+    "postcss-cli": "^3.0.0",
+    "psi": "^3.0.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-order": "^0.4.1",
+    "uglify": "^0.1.5",
+    "watch": "^1.0.2"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "modules": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 0
+    }
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-order"
+    ],
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": "tab",
+      "order/order": [
+        "custom-properties",
+        "declarations"
+      ],
+      "order/properties-order": [
+        [
+          {
+            "order": "flexible",
+            "properties": [
+              "position",
+              "z-index",
+              "top",
+              "right",
+              "bottom",
+              "left"
+            ]
+          },
+          {
+            "order": "flexible",
+            "properties": [
+              "align-content",
+              "align-items",
+              "align-self",
+              "border-bottom-color",
+              "border-bottom-left-radius",
+              "border-bottom-right-radius",
+              "border-bottom-style",
+              "border-bottom-width",
+              "border-bottom",
+              "border-color",
+              "border-image-outset",
+              "border-image-repeat",
+              "border-image-slice",
+              "border-image-source",
+              "border-image-width",
+              "border-image",
+              "border-left-color",
+              "border-left-style",
+              "border-left-width",
+              "border-left",
+              "border-radius",
+              "border-radius",
+              "border-right-color",
+              "border-right-style",
+              "border-right-width",
+              "border-right",
+              "border-style",
+              "border-top-color",
+              "border-top-left-radius",
+              "border-top-right-radius",
+              "border-top-style",
+              "border-top-width",
+              "border-top",
+              "border-width",
+              "border",
+              "box-sizing",
+              "clear",
+              "display",
+              "flex-basis",
+              "flex-direction",
+              "flex-flow",
+              "flex-grow",
+              "flex-shrink",
+              "flex-wrap",
+              "flex",
+              "float",
+              "height",
+              "justify-content",
+              "margin-bottom",
+              "margin-left",
+              "margin-right",
+              "margin-top",
+              "margin",
+              "max-height",
+              "max-width",
+              "min-height",
+              "min-width",
+              "order",
+              "outline-color",
+              "outline-offset",
+              "outline-style",
+              "outline-width",
+              "outline",
+              "overflow-x",
+              "overflow-y",
+              "overflow",
+              "padding-bottom",
+              "padding-left",
+              "padding-right",
+              "padding-top",
+              "padding",
+              "visibility",
+              "width"
+            ]
+          },
+          {
+            "order": "flexible",
+            "properties": [
+              "border-collapse",
+              "border-spacing",
+              "caption-side",
+              "empty-cells",
+              "table-layout"
+            ]
+          },
+          {
+            "order": "flexible",
+            "properties": [
+              "color",
+              "font-family",
+              "font-size-adjust",
+              "font-size",
+              "font-stretch",
+              "font-style",
+              "font-variant",
+              "font-weight",
+              "font",
+              "letter-spacing",
+              "line-height",
+              "text-align",
+              "text-decoration",
+              "text-indent",
+              "text-shadow",
+              "text-transform",
+              "vertical-align",
+              "white-space",
+              "word-break",
+              "word-spacing",
+              "word-wrap"
+            ]
+          },
+          {
+            "order": "flexible",
+            "properties": [
+              "content",
+              "quotes",
+              "counter-increment",
+              "counter-reset",
+              "list-style",
+              "list-style-type",
+              "list-style-image",
+              "list-style-position",
+              "resize",
+              "cursor"
+            ]
+          },
+          {
+            "order": "flexible",
+            "properties": [
+              "background-attachment",
+              "background-clip",
+              "background-color",
+              "background-image",
+              "background-origin",
+              "background-position-x",
+              "background-position-y",
+              "background-position",
+              "background-repeat",
+              "background-size",
+              "background",
+              "box-decoration-break",
+              "box-shadow",
+              "opacity"
+            ]
+          }
+        ],
+        {
+          "unspecified": "ignore"
+        }
+      ]
+    }
+  }
+}

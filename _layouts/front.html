@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<ul>
+  {% for event in site.events %}
+    <li>
+      <a href="{{ event.url }}">{{ event.title }}</a>
+      {{ event.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
+
+<ul>
+  {% for post in site.news %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

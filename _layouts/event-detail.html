@@ -1,0 +1,20 @@
+---
+---
+
+<!--
+	Will we need to handle date spans?
+-->
+
+<img src="{{ page['Event Image'] }}" />
+
+{% if page['Volunteers Needed?'] %}
+<p>Volunteers are needed!</p>
+{% endif %}
+<h1>{{ page.title }}</h1>
+<p>{{ page.content }}</p>
+
+<h3>When: </h3>
+<p>{{ page['Event Start Date'] | date: "%B %d, %Y"}} at {{ page['Event Start Time'] | date: "%I:%M"}}</p>
+
+<h3>Where: </h3>
+<p>{{ page['Event Venue'] }}</p>
