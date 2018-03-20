@@ -1,0 +1,9 @@
+<article class="event-card">
+	<div class="event-card__image"></div>
+	<h4>{{ include.title }}</h4>
+	<div class="event-card__info">
+		<p><time>{{ include.date | date: "%B %d, %Y" }}</time></p>
+		<p><time>{{ include.time| date: "%I:%M" }}</time></p>
+		<p><a href="{{ include.url }}">Learn more &rarr;</a></p>
+	</div>
+</article>

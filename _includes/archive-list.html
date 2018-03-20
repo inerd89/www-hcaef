@@ -1,0 +1,12 @@
+<section>
+	<h3>{{ include.title }}</h3>
+	<ul>
+		{% for post in include.posts %}
+		<li>
+			<time>{{ post.date }}</time>
+			<p>{{ post.title }}</p>
+			<p><a href="{{ post.url }}">View details &rarr;</a></p>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
