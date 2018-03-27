@@ -1,0 +1,13 @@
+.panels {
+	width: 1260px;
+	margin: -288px auto 0;
+}
+
+.panel {
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 36px;
+	color: #fff;
+	background: $dark-grey;
+}

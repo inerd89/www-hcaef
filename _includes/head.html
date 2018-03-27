@@ -1,0 +1,67 @@
+<head>
+
+    <meta charset="utf-8">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <![endif]-->
+
+    <link rel="canonical" href="{{ site.url }}" />
+	<!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> -->
+	<!-- <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}"> -->
+
+    <!-- <title>{{ site.title }}</title> -->
+	<title>{% if page.title and page.title != "Front Page" %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}">
+	<!-- <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"> -->
+
+	<!-- STYLES -->
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Volkhov:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/assets/main.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+
+    <!-- SOCIAL DATAS -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ site.title }}">
+	<meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:image" content="{{ site.share_image_url }}">
+    <meta property="og:site_name" content="">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image:src" content="{{ site.share_image_url }}">
+
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <!-- <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-57x57.png" sizes="57x57">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-60x60.png" sizes="60x60">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-72x72.png" sizes="72x72">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-76x76.png" sizes="76x76">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-114x114.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-120x120.png" sizes="120x120">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-128x128.png" sizes="128x128">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-144x144.png" sizes="144x144">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-152x152.png" sizes="152x152">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+	<link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon-precomposed.png">
+	<meta name="msapplication-TileImage" content="/assets/favicons/win8-tile-144x144.png">
+	<meta name="msapplication-TileColor" content="#424242">
+	<meta name="msapplication-navbutton-color" content="#ffffff">
+	<meta name="msapplication-square70x70logo" content="/assets/favicons/win8-tile-70x70.png">
+	<meta name="msapplication-square144x144logo" content="/assets/favicons/win8-tile-144x144.png">
+	<meta name="msapplication-square150x150logo" content="/assets/favicons/win8-tile-150x150.png">
+	<meta name="msapplication-wide310x150logo" content="/assets/favicons/win8-tile-310x150.png">
+	<meta name="msapplication-square310x310logo" content="/assets/favicons/win8-tile-310x310.png"> -->
+
+</head>

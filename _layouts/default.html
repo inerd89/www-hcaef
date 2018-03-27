@@ -2,9 +2,13 @@
 layout: master
 ---
 
-<section class="hero">
-	<h2>{{ page.title }}</h2>
-	<p>{{ page['Description'] }}</p>
+<section class="page-banner">
+	<div class="container">
+		<h2 class="typo--page-title">{{ page.title }}</h2>
+		<p>{{ page['Description'] }}</p>
+	</div>
 </section>
 
 {{ content }}
+
+{% include footer-sponsors.html %}

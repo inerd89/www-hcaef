@@ -19,6 +19,7 @@ defaults:
     Subtitle: ''
     Author: ''
     Main Image: ''
+    Is Featured?: false
 - scope:
     path: ''
     type: events

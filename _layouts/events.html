@@ -2,13 +2,45 @@
 layout: default
 ---
 
-<h1>Events page</h1>
+{% assign currentYear = 'now' | date: '%Y' | times: 1 %}
+{% assign currentMonth = 'now' | date: '%m' | times: 1 %}
+{% assign currentDay = 'now' | date: '%d' | times: 1 %}
+<section class="upcoming-events">
+	<article class="featured-hero">
+		<div class="featured-image__image"></div>
+		<div class="featured-event-card"></div>
+	</article>
+	{% for event in site.events %}
+		{% assign year = event['Event Start Date'] | date: '%Y' | times: 1 %}
+		{% assign month = event['Event Start Date'] | date: '%m' | times: 1 %}
+		{% assign day = event['Event Start Date'] | date: '%d' | times: 1 %}
+		{% assign title = event.title %}
+		{% assign date = event['Event Start Date'] %}
+		{% assign time = event['Event Start Time'] %}
+		{% assign url = event.url %}
 
-<ul>
-  {% for event in site.events %}
-    <li>
-      <a href="{{ event.url }}">{{ event.title }}</a>
-      {{ event.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+		{% if year > currentYear %}
+			{% include event-card.html title=title date=date time=time url=url %}
+		{% elsif year == currentYear and month > currentMonth %}
+			{% include event-card.html title=title date=date time=time url=url %}
+		{% elsif year == currentYear and month == currentMonth and day >= currentDay %}
+			{% include event-card.html title=title date=date time=time url=url %}
+		{% endif %}
+
+	{% endfor %}
+</section>
+
+{% assign pastEvents = '' | split: '' %}
+{% for event in site.events %}
+	{% assign year = event['Event Start Date'] | date: '%Y' | times: 1 %}
+	{% assign month = event['Event Start Date'] | date: '%m' | times: 1 %}
+	{% assign day = event['Event Start Date'] | date: '%d' | times: 1 %}
+	{% if year < currentYear %}
+		{% assign pastEvents = pastEvents | push: event %}
+	{% elsif month < currentMonth %}
+		{% assign pastEvents = pastEvents | push: event %}
+	{% elsif month == currentMonth and day < currentDay %}
+		{% assign pastEvents = pastEvents | push: event %}
+	{% endif %}
+{% endfor %}
+{% include archive-list.html class="archive--events" title="Archive of Past Events" posts=pastEvents %}

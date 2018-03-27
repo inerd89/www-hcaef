@@ -1,10 +1,10 @@
-<section>
+<section class="archive {{ include.class }}">
 	<h3>{{ include.title }}</h3>
 	<ul>
 		{% for post in include.posts %}
 		<li>
-			<time>{{ post.date }}</time>
-			<p>{{ post.title }}</p>
+			<time>{{ post['Event Start Date'] | date: "%B %d, %Y" }}</time>
+			<h4>{{ post.title }}</h4>
 			<p><a href="{{ post.url }}">View details &rarr;</a></p>
 		</li>
 		{% endfor %}

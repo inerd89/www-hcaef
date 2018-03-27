@@ -1,5 +1,6 @@
 ---
 layout: master
+classes: front
 ---
 
 <section class="hero">
@@ -9,36 +10,29 @@ layout: master
 </section>
 
 <section>
-	<article class="featured-story">
-		<div class="featured-story__image"></div>
-		<h4></h4>
+	<article class="featured-hero">
+		<div class="featured-hero__image"></div>
+		<div class="featured-news-card">
+			<b>Featured: {{ featuredPost.title }}</b>
+		</div>
 	</article>
-</section>
-
-<section>
 	<div class="front-news">
 		<h3>Latest News</h3>
-		{% for post in site.news %}
-		{% assign i = forloop.index %}
-		{% unless i > 3 %}
-			{% assign title = post.title %}
-			{% assign subtitle = post['Subtitle'] %}
+		{% for post in site.news limit: 3 %}
+			{% assign hed = post.title %}
+			{% assign dek = post['Subtitle'] %}
 			{% assign url = post.url %}
-			{% include news-card.html title=title subtitle=subtitle url=url %}
-		{% endunless %}
+			{% include news-card.html hed=hed dek=dek url=url %}
 		{% endfor %}
 	</div>
 	<div class="front-events">
 		<h3>Upcoming Events</h3>
-		{% for event in site.events %}
-		{% assign i = forloop.index %}
-		{% unless i > 3 %}
+		{% for event in site.events limit: 3 %}
 			{% assign title = event.title %}
 			{% assign date = event['Event Start Date'] %}
 			{% assign time = event['Event Start Time'] %}
 			{% assign url = event.url %}
 			{% include event-card.html title=title date=date time=time url=url %}
-		{% endunless %}
 		{% endfor %}
 	</div>
 </section>

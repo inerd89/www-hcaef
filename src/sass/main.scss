@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* stylelint-disable */
+
+// Import Libs
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@import					"normalize-css",
+						"modularscale-sass",
+						"responsive-baseline",
+						"breakpoint-sass";
+
+//
+// Breakpoints
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+$phone				:	375px;
+$phone-large		:	580px;
+$tablet-portrait	:	768px;
+$tablet-landscape	:	1024px;
+$desktop			:	1300px;
+$desktop-large		:	1600px;
+$desktop-hd			:	1920px;
+
+//
+// Colors
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+$dark-grey			:	#282828;
+$light-grey			:	#F0F0F0;
+$brown				:	#E0AE87;
+$blue				:	#7AC8F5;
+$green				:	#94DFBA;
+$yellow				:	#FCBD31;
+
+//
+// Typography
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+$volkhov			:	'Volkhov', Georgia, Times, serif;
+$worksans			:	'Work Sans', Helvetica, Arial, sans-serif;
+$baseline			:   1rem;
+$base-line-height	:   $baseline * 2;
+
+// Type Scale
+$modularscale: (
+	base			:	1rem,
+	ratio			:	$minor-third,
+);
+
+// Fluid rem
+$fluid-rem: (
+	$phone: (
+		base		:	20px,
+	),
+	$tablet-portrait: (
+		base		:	24px,
+	),
+	1023px: (
+		base		:	24px,
+	),
+	$tablet-landscape: (
+		base		:	18px,
+	),
+	$desktop-hd: (
+		base		: 	24px,
+	),
+// 	// 2560px: (
+// 	// 	base		: 	46px,
+// 	// 	ratio		: 	$fourth
+// 	// )
+);
+
+//
+// Grid
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+
+
+//
+// Import Partials
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@import 				"base",
+        				"layout";
+
+/* stylelint-enable */

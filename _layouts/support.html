@@ -2,4 +2,5 @@
 layout: default
 ---
 
-<h1>Support page</h1>
+{% assign panels = page['Ways to Support'] %}
+{% include panel-list.html class="support" panels=panels %}

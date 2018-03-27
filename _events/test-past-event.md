@@ -1,13 +1,13 @@
 ---
-title: Test Event title
-Event Start Date: 2018-04-03 20:00
-Event Start Time: 2018-04-03 20:00
+title: Past Event Title
+Event Start Date: 2017-08-06 20:00
+Event Start Time: 2017-08-06 20:00
 Volunteers Needed?: true
 Event Venue: Hines Community Center
 Event Image: test-event.jpg
 ---
 
-This is an awesome event.
+This WAS an awesome event.
 
 Totally. Be there.
 

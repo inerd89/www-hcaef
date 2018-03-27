@@ -1,0 +1,84 @@
+<section class="panels {{ include.class }}">
+	{% for panel in include.panels %}
+		<article class="panel {{ panel['Title'] | downcase | replace: ' ', '-' }}">
+
+			<div class="panel__primary">
+				<h3 class="typo--section-title">{{ panel['Title'] }}</h3>
+				{{ panel['Description'] | markdownify }}
+
+				{% comment %}
+				*
+				* If a Button Title and URL are provided, insert the button.
+				*
+				{% endcomment %}
+				{% if panel['Button Title (optional)'] and panel['Button URL (optional)'] %}
+					<a class="button" href="{{ panel['Button URL (optional)'] }}">{{ panel['Button Title (optional)'] }} &rarr;</a>
+				{% endif %}
+
+				{% comment %}
+				*
+				* Custom module for the Performing Groups section. Inserts
+				* list of Previous Performers.
+				*
+				{% endcomment %}
+				{% if panel['Previous Performers'] %}
+					<ul>
+						{% for p in panel['Previous Performers'] %}
+							<li>{{ p['Name'] }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+
+				{% comment %}
+				*
+				* If a Footnote is provided, insert the footnote.
+				*
+				{% endcomment %}
+				{% if panel['Footnote'] and panel['Footnote'] != '' %}
+					<p class="panel__footnote"><strong>Note:</strong> {{ panel['Footnote'] }}</p>
+				{% endif %}
+			</div>
+
+			{% comment %}
+			*
+			* If a List is provided, insert the list. Otherwise,
+			* if an Image is provided, insert the image. If neither
+			* is provided, insert nothing.
+			*
+			{% endcomment %}
+			{% if panel['List'] and panel['List'].size > 0 %}
+				<div class="panel__secondary">
+					<ul class="panel__list">
+						{% for item in panel['List'] %}
+							<li>
+								<h4>{{ item['Item Title'] }}</h4>
+								<p>{{ item['Item Description'] }}</p>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% elsif panel['Table'] and panel['Table'].size > 0 %}
+				<div class="panel__secondary">
+					<ul class="panel__table">
+						{% for row in panel['Table'] %}
+							<li class="panel__table-row">
+								{% for col in row %}
+								{% assign i = forloop.index %}
+									<div class="col-{{ i }}">{{ col }}</div>
+								{% endfor %}
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% elsif panel['Image'] and panel['Image'] != '' %}
+				<div class="panel__secondary">
+					<div class="panel__image"
+						 style="background-image: url({{ panel['Image'] }});
+								float: {% if panel['Image Left or Right?'] %}{{ panel['Image Left or Right?'] }}{% else %}left{% endif %}"
+					></div>
+				</div>
+			{% endif %}
+
+		</article>
+	{% endfor %}
+</section>

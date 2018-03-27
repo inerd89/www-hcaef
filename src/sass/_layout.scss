@@ -1,0 +1,61 @@
+// BG / Text Colors / Baseline Grid
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+body {
+	color: $dark-grey;
+
+	// show baseline
+	background-image: linear-gradient(rgba(255, 0, 0, 0.25) 1px, transparent 1px);
+	background-size: 1px $baseline;
+}
+
+// Page layout
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+
+.container {
+	width: 1260px;
+	margin: 0 auto;
+}
+
+
+// Header
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@include breakpoint($desktop-hd) {
+	.site-header {
+		height: 10rem;
+
+		.container {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 36px;
+		}
+	}
+
+}
+
+// .logo {}
+
+// .site-nav {}
+
+// Page Banner
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@include breakpoint($desktop-hd) {
+	.page-banner {
+		height: 44rem;
+		background: #efefef;
+
+		.container {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 36px;
+		}
+	}
+}
+
+
+
+// Page Imports
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@import 				"panels";
+// "layout";

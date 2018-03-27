@@ -1,0 +1,57 @@
+//
+// Base styles, fluid rem size, box sizing
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+html {
+	box-sizing: border-box;
+	font-size: 12px;
+
+	// @include ms-respond(font-size, 0, $fluid-rem);
+	// line-height: $baseline * 3;
+
+	* {
+		box-sizing: inherit;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+//
+// Typography
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+
+p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+
+p {
+	@extend .typo--base;
+	padding-bottom: 3rem;
+	@include align-to-baseline( 1.5rem, 2rem, $worksans-cap-height );
+
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+
+.typo--base {
+	font-family: $worksans;
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+.typo--title {
+	font-family: $volkhov;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.typo--page-title {
+	@extend .typo--title;
+	font-size: 5rem;
+}
+
+.typo--section-title {
+	@extend .typo--title;
+	font-size: 3rem;
+}

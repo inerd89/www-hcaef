@@ -2,4 +2,5 @@
 layout: default
 ---
 
-<h1>Programs page</h1>
+{% assign panels = page['Programs'] %}
+{% include panel-list.html class="programs" panels=panels %}

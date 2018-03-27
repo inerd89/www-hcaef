@@ -4,26 +4,22 @@
   "description": "Harney County Arts in Education Foundation website.",
   "main": "index.md",
   "scripts": {
-    "clean:dist": "rm -rf dist && rm -rf _site",
-    "clean": "npm run clean:dist",
+    "clean:_site": "rm -rf dist && rm -rf _site",
     "copy:assets": "cp -R assets/ _site/assets/",
-    "copy": "npm run copy:dist",
     "critical": "critical _site/index.html --base _site --minify --css _site/dist/styles/main.min.css > _includes/css/critical.css",
-    "font": "cp -R src/fonts dist/fonts",
     "imagemin": "imagemin src/images/* dist/images/ -p",
     "pagespeed": "psi tony-jones.github.io/jekyll-starter-kit/ --strategy=mobile",
     "accessibility": "a11y _site/**/*.html",
-    "lint:js": "eslint src/**/*.js",
-    "lint:css": "stylelint 'src/**/*.{css,less,scss,sss}'",
     "lint": "npm run lint:js && npm run lint:css",
-    "sass": "node-sass --output-style expanded src/sass/main.scss assets/main.css --importer _sass-npm-import.js",
-    "prefix": "postcss --use autoprefixer -b 'last 3 versions' --output assets/main.css assets/main.css",
-    "browserify": "browserify 'src/js/main.js' -d -t babelify -o assets/main.js",
-    "build:jekyll": "jekyll build --config _config.yml,_config-dev.yml",
-    "build:js": "npm run lint:js && npm run browserify",
-    "build:css": "npm run sass && npm run prefix",
-    "build:font": "npm run font",
     "build:images": "npm run imagemin",
+    "build:jekyll": "jekyll build --config _config.yml,_config-dev.yml",
+    "prefix": "postcss --use autoprefixer -b 'last 3 versions' --output assets/main.css assets/main.css",
+    "sass": "node-sass --output-style expanded src/sass/main.scss assets/main.css --importer _sass-npm-import.js",
+    "lint:css": "stylelint 'src/**/*.{css,less,scss,sss}'",
+    "build:css": "npm run lint:css && npm run sass && npm run prefix",
+    "browserify": "browserify 'src/js/main.js' -d -t babelify -o assets/main.js",
+    "lint:js": "eslint src/**/*.js",
+    "build:js": "npm run lint:js && npm run browserify",
     "build": "npm run build:js && npm run build:css && npm run build:jekyll",
     "watch:jekyll": "chokidar '_config.yml' '_config-dev.yml' '*.md' '*.html' 'pages/*' '_includes/**/*' '_layouts/*' '_posts/*' '_work/**/*' '_team-members/*'  -c 'npm run build:jekyll && browser-sync reload'",
     "watch:css": "chokidar 'src/sass/**/*' -c 'npm run build:css && npm run copy:assets && browser-sync reload'",
@@ -37,32 +33,27 @@
   "homepage": "https://harneyartsfoundation.org",
   "devDependencies": {
     "a11y": "^0.5.0",
-    "autoprefixer": "^6.7.7",
-    "babel-preset-env": "^1.4.0",
-    "babelify": "^7.3.0",
+    "autoprefixer": "^8.2.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
     "breakpoint-sass": "^2.7.1",
-    "browser-sync": "^2.18.8",
-    "browserify": "^14.1.0",
-    "chokidar": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.1",
     "chokidar-cli": "^1.2.0",
-    "critical": "^0.8.4",
-    "eslint": "^3.17.1",
-    "findup-sync": "^0.4.3",
+    "critical": "^1.2.0",
+    "eslint": "^4.19.1",
     "image-min": "^0.3.2",
-    "jquery": "^3.2.1",
-    "modularscale-sass": "^3.0.2",
-    "node-sass": "^4.5.0",
-    "normalize-css": "^2.3.1",
-    "parallelshell": "^2.0.0",
-    "path": "^0.12.7",
-    "postcss": "^5.2.16",
-    "postcss-cli": "^3.0.0",
-    "psi": "^3.0.0",
-    "stylelint": "^7.9.0",
-    "stylelint-config-standard": "^16.0.0",
-    "stylelint-order": "^0.4.1",
-    "uglify": "^0.1.5",
-    "watch": "^1.0.2"
+    "node-sass": "^4.8.3",
+    "parallelshell": "^3.0.2",
+    "postcss-cli": "^5.0.0",
+    "psi": "^3.1.0",
+    "stylelint": "^9.1.3",
+    "stylelint-config-recommended-scss": "^3.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^2.5.0",
+    "uglify": "^0.1.5"
   },
   "babel": {
     "presets": [
@@ -90,9 +81,10 @@
   },
   "stylelint": {
     "plugins": [
+		"stylelint-scss",
       "stylelint-order"
     ],
-    "extends": "stylelint-config-standard",
+    "extends": "stylelint-config-recommended-scss",
     "rules": {
       "indentation": "tab",
       "order/order": [
@@ -266,5 +258,10 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "modularscale-sass": "^3.0.5",
+    "normalize-css": "^2.3.1"
   }
 }
