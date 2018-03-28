@@ -1,9 +1,11 @@
-<section class="panels {{ include.class }}">
+<section class="panels {{ include.class }}-panels">
 	{% for panel in include.panels %}
-		<article class="panel {{ panel['Title'] | downcase | replace: ' ', '-' }}">
+		<article class="panel {{ panel['Title'] | downcase | replace: ' ', '-' }}
+						{% if panel['Image First?'] %}swap{% endif %}
+						{% if panel['List'] or panel['Table'] or panel['Image'] %}wide{% endif %}">
 
 			<div class="panel__primary">
-				<h3 class="typo--section-title">{{ panel['Title'] }}</h3>
+				<h3 class="panel__title typo--section-title">{{ panel['Title'] }}</h3>
 				{{ panel['Description'] | markdownify }}
 
 				{% comment %}
@@ -12,7 +14,7 @@
 				*
 				{% endcomment %}
 				{% if panel['Button Title (optional)'] and panel['Button URL (optional)'] %}
-					<a class="button" href="{{ panel['Button URL (optional)'] }}">{{ panel['Button Title (optional)'] }} &rarr;</a>
+					<a class="button panel__button typo--button" href="{{ panel['Button URL (optional)'] }}">{{ panel['Button Title (optional)'] }} &rarr;</a>
 				{% endif %}
 
 				{% comment %}
@@ -35,7 +37,7 @@
 				*
 				{% endcomment %}
 				{% if panel['Footnote'] and panel['Footnote'] != '' %}
-					<p class="panel__footnote"><strong>Note:</strong> {{ panel['Footnote'] }}</p>
+					<span class="panel__footnote"><strong>Note:</strong> {{ panel['Footnote'] }}</span>
 				{% endif %}
 			</div>
 
@@ -72,10 +74,7 @@
 				</div>
 			{% elsif panel['Image'] and panel['Image'] != '' %}
 				<div class="panel__secondary">
-					<div class="panel__image"
-						 style="background-image: url({{ panel['Image'] }});
-								float: {% if panel['Image Left or Right?'] %}{{ panel['Image Left or Right?'] }}{% else %}left{% endif %}"
-					></div>
+					<div class="panel__image" style="background-image: url({{ panel['Image'] }});"></div>
 				</div>
 			{% endif %}
 

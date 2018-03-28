@@ -43,6 +43,7 @@ body {
 	.page-banner {
 		height: 44rem;
 		background: #efefef;
+		// opacity: 0.75;
 
 		.container {
 			display: grid;
@@ -51,11 +52,17 @@ body {
 			grid-column-gap: 36px;
 		}
 	}
+
+	.page-title {
+		padding-top: 9rem;
+	}
 }
 
 
 
 // Page Imports
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@import 				"panels";
-// "layout";
+/* stylelint-disable */
+@import 				"panels",
+						"support";
+/* stylelint-enable */

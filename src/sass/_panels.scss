@@ -4,10 +4,59 @@
 }
 
 .panel {
-	display: grid;
-	grid-template-rows: auto;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 36px;
+	width: calc(50% - 1.5rem);
+	padding: 3rem;
+	margin-bottom: 1.5rem;
+	float: left;
 	color: #fff;
 	background: $dark-grey;
+
+	&.wide {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		float: none;
+		// display: grid;
+		// grid-template-rows: auto;
+		// grid-template-columns: 1fr 1fr;
+		// grid-column-gap: 36px;
+
+		> div {
+			width: 50%;
+
+			&.panel__primary {
+				padding-right: 1.5rem;
+			}
+
+			&.panel__secondary {
+				padding-left: 1.5rem;
+			}
+		}
+
+		&.swap {
+			.panel__primary {
+				order: 2;
+				padding-right: 0;
+				padding-left: 1.5rem;
+			}
+
+			.panel__secondary {
+				order: 1;
+				padding-left: 0;
+				padding-right: 1.5rem;
+			}
+		}
+	}
+}
+
+.panel__title + p {
+	padding-top: 3rem;
+}
+
+.panel__title ~ p:last-of-type {
+	padding-bottom: 1rem;
+}
+
+.panel__button {
+	margin-top: 4rem;
 }

@@ -49,9 +49,26 @@ p {
 .typo--page-title {
 	@extend .typo--title;
 	font-size: 5rem;
+	@include align-to-baseline( 5rem, 5rem, $volkhov-cap-height );
 }
 
 .typo--section-title {
 	@extend .typo--title;
 	font-size: 3rem;
+	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+}
+
+.typo--button {
+	@extend .typo--base;
+}
+
+
+// Buttons
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+.button {
+	display: inline-block;
+	padding: 1.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+	text-decoration: none;
 }

@@ -10,7 +10,7 @@ Ways to Support:
   Button URL (optional): '/'
   Footnote: In the “Special Instructions” area, you may designate your donation as either a general donation or specifically for the Performing Arts in Education Center.
 - Title: Volunteer
-  Description: 'There are many ways that you can get involved, from helping out with refreshments at events to instrument repair and cleaning, to serving on our board or a committee—get in touch with us and we’ll be happy to get you matched up with an activity or project that suits your skills and interests.'
+  Description: 'There are many ways that you can get involved, from helping out with refreshments at events to instrument repair and cleaning, to serving on our board or a committee. Get in touch with us and we’ll be happy to get you matched up with an activity or project that suits your skills and interests.'
   Button Title (optional): Inquire about volunteer opportunities
   Button URL (optional): '/'
 - Title: Become a Member

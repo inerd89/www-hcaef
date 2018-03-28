@@ -16,6 +16,8 @@ Programs:
     Item Description: List item description here teekay.
 - Title: Performing Groups
   Description: 'HCAEF has had the pleasure of bringing a variety of performances to Harney County, through our annual “Evening to Celebrate the Arts” and other special events, including:'
+  Image: 'test.jpg'
+  Image First?: true
   Previous Performers:
   - Name: Portland Youth Philharmonic
   - Name: Coyote Creek
@@ -24,5 +26,4 @@ Programs:
   - Name: Kevin Lefohn
   - Name: Monica Ouchi
   - Name: Raphael Spiro Quartet
-  Image: 'test.jpg'
 ---
