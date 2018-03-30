@@ -3,12 +3,13 @@ layout: support
 permalink: /support/
 title: Support
 position: 5
+Description: All about supporting the HCAEF
 Ways to Support:
 - Title: Donate
   Description: 'Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus placerat, felis est consequat elit. Donate via the PayPal button below or mail your contribution to: **HCAEF, P.O. Box 415, Hines, Oregon 97738**.'
   Button Title (optional): Donate via PayPal
   Button URL (optional): '/'
-  Footnote: In the “Special Instructions” area, you may designate your donation as either a general donation or specifically for the Performing Arts in Education Center.
+  Footnote: You can designate your donation to go toward a specific initiative, such as the Performing Arts Center, in the "Special Instructions" field on the PayPal form.
 - Title: Volunteer
   Description: 'There are many ways that you can get involved, from helping out with refreshments at events to instrument repair and cleaning, to serving on our board or a committee. Get in touch with us and we’ll be happy to get you matched up with an activity or project that suits your skills and interests.'
   Button Title (optional): Inquire about volunteer opportunities

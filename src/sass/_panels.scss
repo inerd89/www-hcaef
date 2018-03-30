@@ -4,7 +4,7 @@
 }
 
 .panel {
-	width: calc(50% - 1.5rem);
+	width: calc(50% - 0.75rem);
 	padding: 3rem;
 	margin-bottom: 1.5rem;
 	float: left;
@@ -49,6 +49,10 @@
 	}
 }
 
+.panel:not(.wide) + .panel:not(.wide) {
+	margin-left: 1.5rem;
+}
+
 .panel__title + p {
 	padding-top: 3rem;
 }
@@ -59,4 +63,56 @@
 
 .panel__button {
 	margin-top: 4rem;
+}
+
+.panel__footnote {
+	@extend .typo--small;
+	display: block;
+}
+
+.panel__table {
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.panel__table-row {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	overflow: hidden;
+
+	&:last-of-type {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	> p {
+		padding: 0;
+		margin: 0;
+	}
+
+	> p:nth-child(1) {
+		float: left;
+	}
+
+	> p:nth-child(2) {
+		float: right;
+	}
+}
+
+.panel__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		padding: 1rem 0 2rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		overflow: hidden;
+
+		&:last-of-type {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		}
+	}
 }

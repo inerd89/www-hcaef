@@ -1,3 +1,7 @@
-.support-panels .panel {
-	// float: left;
+.support-panels .panel:not(.wide) {
+	min-height: 38rem;
+}
+
+.support-panels .panel:nth-child(3) {
+	padding-bottom: 6rem;
 }

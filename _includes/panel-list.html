@@ -37,7 +37,7 @@
 				*
 				{% endcomment %}
 				{% if panel['Footnote'] and panel['Footnote'] != '' %}
-					<span class="panel__footnote"><strong>Note:</strong> {{ panel['Footnote'] }}</span>
+					<span class="panel__footnote">{{ panel['Footnote'] }}</span>
 				{% endif %}
 			</div>
 
@@ -53,7 +53,7 @@
 					<ul class="panel__list">
 						{% for item in panel['List'] %}
 							<li>
-								<h4>{{ item['Item Title'] }}</h4>
+								<h4 class="typo--strong">{{ item['Item Title'] }}</h4>
 								<p>{{ item['Item Description'] }}</p>
 							</li>
 						{% endfor %}
@@ -66,7 +66,7 @@
 							<li class="panel__table-row">
 								{% for col in row %}
 								{% assign i = forloop.index %}
-									<div class="col-{{ i }}">{{ col }}</div>
+									<p class="col-{{ i }}">{{ col }}</p>
 								{% endfor %}
 							</li>
 						{% endfor %}

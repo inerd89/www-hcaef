@@ -10,10 +10,14 @@ Programs:
   Button Title (optional): Contact us about grant or scholarship opportunities
   Button URL (optional): '/'
   List:
-  - Item Title: List Item title
-    Item Description: List item description here teekay.
-  - Item Title: List Item title
-    Item Description: List item description here teekay.
+  - Item Title: Oregon Community Foundation Studio to School Grant
+    Item Description: $280,000 was awarded to Harney County middle school music and art programs, administered by HCAEF and the Harney Education Service District.
+  - Item Title: Leupold and Stevens
+    Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales.
+  - Item Title: Scholarships
+    Item Description: HCAEF funds one of several scholarships given to local students each year by the Harney County Chamber Music Society. These scholarships allow students to receive private music lessons or go to a music camp.
+  - Item Title: Grants to Steens Mountain Ballet Company
+    Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales.
 - Title: Performing Groups
   Description: 'HCAEF has had the pleasure of bringing a variety of performances to Harney County, through our annual “Evening to Celebrate the Arts” and other special events, including:'
   Image: 'test.jpg'
