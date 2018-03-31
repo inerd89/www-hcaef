@@ -7,3 +7,34 @@
 		background-color: $blue;
 	}
 }
+
+.other-program {
+	margin-top: 3rem;
+	padding: 3rem 0 6rem;
+	background-color: $blue;
+
+	> .container {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 3rem;
+	}
+
+	h3 {
+		padding-top: 3rem;
+	}
+
+	h3 + p {
+		padding-top: 3rem;
+	}
+
+	.button {
+		margin-top: 4rem;
+	}
+}
+
+.other-program__image {
+	margin-top: 1rem;
+	background: $light-grey;
+	height: 100%;
+}

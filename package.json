@@ -81,7 +81,7 @@
   },
   "stylelint": {
     "plugins": [
-		"stylelint-scss",
+      "stylelint-scss",
       "stylelint-order"
     ],
     "extends": "stylelint-config-recommended-scss",

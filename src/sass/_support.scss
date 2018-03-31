@@ -6,6 +6,40 @@
 	.page-banner {
 		background-color: lighten($red, 5%);
 	}
+
+	.footer-sponsors--preview {
+		display: none;
+	}
+
+	.footer-sponsors {
+		margin-top: 3rem;
+		background-color: lighten($red, 5%);
+		color: $dark-grey;
+
+		> .container {
+			border-bottom: none;
+		}
+	}
+
+	.footer-sponsors__list {
+		border-bottom: 1px solid $dark-grey;
+	}
+
+	.footer-sponsors__small-list {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-column-gap: 3rem;
+		list-style: none;
+		padding: 0 0 6rem 0;
+		margin: 0;
+
+		> li {
+			font-size: 1.333rem;
+			line-height: 2rem;
+			@include align-to-baseline( 1.333rem, 2rem, $worksans-cap-height );
+		}
+	}
 }
 
 .support-panels .panel:not(.wide) {
