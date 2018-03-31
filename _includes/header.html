@@ -6,7 +6,7 @@
 		<nav class="site-nav">
 			{% assign sitePages = site.pages | sort: 'position' %}
 			{% for p in sitePages offset: 1 %}
-				<a class="site-nav__link {% if page.url == p.url %}active{% endif %}" href="{{ p.url }}">
+				<a class="site-nav__link typo--nav-link {% if page.url == p.url %}active{% endif %}" href="{{ p.url }}">
 					{% if p['Navigation Title'] and p['Navigation Title'] != '' %}
 						{{ p['Navigation Title'] }}
 					{% else %}

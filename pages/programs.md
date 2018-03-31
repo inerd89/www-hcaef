@@ -2,7 +2,7 @@
 layout: programs
 permalink: /programs/
 title: Programs
-Description: 'Description of page'
+Description: 'Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.'
 position: 3
 Programs:
 - Title: Scholarships & Grants

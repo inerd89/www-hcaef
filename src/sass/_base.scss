@@ -71,8 +71,46 @@ p {
 	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
 }
 
+.typo--small-section-title {
+	@extend .typo--title;
+	font-size: 2rem;
+	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+}
+
 .typo--button {
 	@extend .typo--base;
+}
+
+.typo--nav-link {
+	@extend .typo--base;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-color .2s;
+
+	&:hover {
+		border-color: lighten($dark-grey, 70%);
+	}
+}
+
+.typo--link {
+	@extend .typo--base;
+	text-decoration: none;
+	transition: color .2s;
+
+	&:hover {
+		color: lighten($dark-grey, 50%);
+	}
+}
+
+.typo--link--dark {
+	@extend .typo--base;
+	text-decoration: none;
+	color: #fff;
+	transition: color .2s;
+
+	&:hover {
+		color: darken(#fff, 50%);
+	}
 }
 
 
@@ -92,4 +130,10 @@ p {
 		background-color: rgba(255, 255, 255, 0.1);
 		// color: $dark-grey;
 	}
+}
+
+// SVG Icons
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+#svg-sprite {
+	display: none;
 }

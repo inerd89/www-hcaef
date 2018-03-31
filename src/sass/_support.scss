@@ -1,3 +1,13 @@
+.support-page {
+	.site-nav__link.active {
+		border-color: lighten($red, 5%);
+	}
+
+	.page-banner {
+		background-color: lighten($red, 5%);
+	}
+}
+
 .support-panels .panel:not(.wide) {
 	min-height: 38rem;
 }

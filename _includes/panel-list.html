@@ -24,9 +24,9 @@
 				*
 				{% endcomment %}
 				{% if panel['Previous Performers'] %}
-					<ul>
+					<ul class="previous-performers">
 						{% for p in panel['Previous Performers'] %}
-							<li>{{ p['Name'] }}</li>
+							<li><p>{{ p['Name'] }}</p></li>
 						{% endfor %}
 					</ul>
 				{% endif %}
@@ -52,7 +52,7 @@
 				<div class="panel__secondary">
 					<ul class="panel__list">
 						{% for item in panel['List'] %}
-							<li>
+							<li class="panel__list-item">
 								<h4 class="typo--strong">{{ item['Item Title'] }}</h4>
 								<p>{{ item['Item Description'] }}</p>
 							</li>
