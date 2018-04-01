@@ -1,5 +1,6 @@
 ---
-title: Support
+title: Support Us
+Navigation Title: Support
 permalink: "/support/"
 position: 5
 layout: support
@@ -40,4 +41,3 @@ Ways to Support:
   - - Sustaining Membership
     - "$1000 per year"
 ---
-

@@ -10,13 +10,25 @@ body {
 
 // Page layout
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-.container {
-	width: 1260px;
-	margin: 0 auto;
-}
-
 .content {
 	padding-top: 10rem;
+}
+
+.container {
+	width: 94%;
+	margin: 0 auto;
+
+	@include breakpoint($tablet-landscape) {
+		width: 960px;
+	}
+
+	@include breakpoint($desktop) {
+		width: 1104px;
+	}
+
+	@include breakpoint($desktop-large) {
+		width: 1260px;
+	}
 }
 
 .page-section {
@@ -29,7 +41,7 @@ body {
 
 // Header
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop-hd) {
+@include breakpoint($desktop) {
 	.site-header {
 		position: fixed;
 		width: 100%;
@@ -69,9 +81,11 @@ body {
 
 }
 
+// @include breakpoint($desktop-large) {}
+
 // Page Banner
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop-hd) {
+@include breakpoint($desktop) {
 	.page-banner {
 		height: 44rem;
 		background: #efefef;
@@ -95,7 +109,7 @@ body {
 
 // Hero
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop-hd) {
+@include breakpoint($desktop) {
 	.hero {
 		position: relative;
 		width: 100%;

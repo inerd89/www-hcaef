@@ -1,6 +1,6 @@
 // Footer
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop-hd) {
+@include breakpoint($desktop) {
 	.site-footer {
 		padding: 3rem;
 		background: $dark-grey;
@@ -105,7 +105,7 @@
 
 // Footer Sponsors
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop-hd) {
+@include breakpoint($desktop) {
 	.footer-sponsors {
 		padding: 6rem 3rem 0 3rem;
 		background: $dark-grey;

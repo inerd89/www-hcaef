@@ -1,5 +1,6 @@
 ---
-title: About
+title: About Us
+Navigation Title: About
 permalink: "/about/"
 position: 4
 layout: about
@@ -87,4 +88,3 @@ Contact Info Blurb: 'Please contact us lorem ipsum dolor sit amet:'
 HCAEF Mailing Address: "P.O. Box 9999  \nHines, Oregon 99999\n"
 HCAEF Email Address: info@harneyarts.org
 ---
-

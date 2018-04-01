@@ -1,5 +1,6 @@
 ---
-title: Programs
+title: Our Programs
+Navigation Title: Programs
 permalink: "/programs/"
 position: 3
 layout: programs
@@ -50,4 +51,3 @@ Other Program Description: Pellentesque faucibus velit a auctor tempor. Proin tr
 Other Program Button Title (optional): Donate to the PAEC
 Other Program Button URL (optional): ''
 ---
-
