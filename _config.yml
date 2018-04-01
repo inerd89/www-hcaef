@@ -1,10 +1,56 @@
 ---
-title: Www Hcaef
+title: Harney County Arts in Education Foundation
 timezone: America/Los_Angeles
 collections:
-  posts:
-    title: Posts
+  news:
+    title: News
     output: true
+    permalink: "/:collection/:year/:month/:day/:title/"
+  events:
+    title: Events
+    output: true
+    permalink: "/:collection/:path/"
   uploads:
-    title: Uploads
+    title: uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: news
+  values:
+    layout: news-detail
+    Subtitle: ''
+    Author: ''
+    Main Image: ''
+    Is Featured?: false
+- scope:
+    path: ''
+    type: events
+  values:
+    layout: event-detail
+    Event Start Date:
+    Event End Date:
+    Event Start Time:
+    Event End Time:
+    Volunteers Needed?: false
+    Event Venue:
+    Event Image:
+email: info@harneyartsfoundation.org
+description: 'Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for Google search
+  results) and in your feed.xml site description.
+'
+baseurl: "/"
+url: http://harneyartsfoundation.org
+twitter_username:
+share_image_url:
+markdown: kramdown
+exclude:
+- Gemfile
+- Gemfile.lock
+- node_modules
+- package.json
+- README.md
+- sass
+- src
+---
