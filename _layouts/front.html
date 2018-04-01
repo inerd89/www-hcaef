@@ -9,7 +9,9 @@ classes: front-page
 			<h2 class="typo--page-title page-title">{{ page['Intro Blurb'] }}</h2>
 			<a class="typo--link" href="/about">{{ page['Intro Link Title'] }} &rarr;</a>
 		</div>
-		<a href="">Donate!</a>
+		<div>
+			<a class="typo--small-section-title" href="">Donate!</a>
+		</div>
 	</div>
 </section>
 
@@ -27,16 +29,16 @@ classes: front-page
 			</div>
 		</article>
 		<div class="front-news">
-			<h3>Latest News</h3>
+			<h3 class="page-section-title typo--section-title">Latest News</h3>
 			{% for post in site.news limit: 3 %}
 				{% assign hed = post.title %}
 				{% assign dek = post['Subtitle'] %}
 				{% assign url = post.url %}
-				{% include news-card.html hed=hed dek=dek url=url %}
+				{% include news-card.html hed=hed dek=dek url=url class="front-page" %}
 			{% endfor %}
 		</div>
 		<div class="front-events">
-			<h3>Upcoming Events</h3>
+			<h3 class="page-section-title typo--section-title">Upcoming Events</h3>
 			{% for event in site.events limit: 3 %}
 				{% assign title = event.title %}
 				{% assign date = event['Event Start Date'] %}
