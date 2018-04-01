@@ -41,6 +41,14 @@ Programs:
   - Name: Kevin Lefohn
   - Name: Monica Ouchi
   - Name: Raphael Spiro Quartet
+- Title: Grants to Teachers
+  Description: We give money to arts teachers to restock their classrooms, order materials
+    and blah blah
+  Image: "/uploads/RE-d87a2f.jpg"
+  Image First?:
+  - Schools to Students Grant
+  - Reorganized music library
+  - Music Scholarships
 Other Program Title: Performing Arts in Education Center
 Other Program Description: Pellentesque faucibus velit a auctor tempor. Proin tristique
   lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
@@ -51,4 +59,4 @@ Other Program Button URL (optional):
 layout: programs
 ---
 
-Is this the page description?
+[LEAVE THIS BLANK]
