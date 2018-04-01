@@ -48,7 +48,7 @@ Programs:
     placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
     ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
     Vivamus vitae enim rutrum ipsum ultrices convallis. '
-  Image:
+  Image: 
   Image First?: false
   Button Title (optional): Request funding via our online application
   Button URL (optional): "/"
@@ -72,6 +72,7 @@ Other Program Description: Pellentesque faucibus velit a auctor tempor. Proin tr
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
 Other Program Button Title (optional): Donate to the PAEC
-Other Program Button URL (optional): '#'
+Other Program Button URL (optional): "#"
 layout: programs
 ---
+
