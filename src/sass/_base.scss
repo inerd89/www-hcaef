@@ -37,6 +37,7 @@ p {
 	font-family: $worksans;
 	font-size: 1.5rem;
 	line-height: 2rem;
+	letter-spacing: -0.0025em;
 	@include align-to-baseline( 1.5rem, 2rem, $worksans-cap-height );
 }
 
@@ -62,18 +63,21 @@ p {
 .typo--page-title {
 	@extend .typo--title;
 	font-size: 5rem;
+	line-height: 5rem;
 	@include align-to-baseline( 5rem, 5rem, $volkhov-cap-height );
 }
 
 .typo--section-title {
 	@extend .typo--title;
 	font-size: 3rem;
+	line-height: 3rem;
 	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
 }
 
 .typo--small-section-title {
 	@extend .typo--title;
 	font-size: 2rem;
+	line-height: 2rem;
 	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
 }
 
@@ -88,14 +92,28 @@ p {
 	transition: border-color .2s;
 
 	&:hover {
-		border-color: lighten($dark-grey, 70%);
+		// border-color: lighten($dark-grey, 70%);
+		border-color: $dark-grey;
 	}
 }
 
 .typo--link {
 	@extend .typo--base;
 	text-decoration: none;
+	color: $dark-grey;
 	transition: color .2s;
+	mix-blend-mode: multiply;
+
+	&:hover {
+		color: lighten($dark-grey, 50%);
+	}
+}
+
+.typo--link--underline {
+	@extend .typo--base;
+	color: $dark-grey;
+	transition: color .2s;
+	mix-blend-mode: multiply;
 
 	&:hover {
 		color: lighten($dark-grey, 50%);
@@ -134,11 +152,12 @@ p {
 	&.button--dark {
 		color: $dark-grey;
 		border-color: $dark-grey;
-		mix-blend-mode: multiply;
+		// mix-blend-mode: multiply;
 
 		&:hover {
+			color: #fff;
 			border-color: transparent;
-			background-color: lighten($dark-grey, 75%);
+			background-color: $dark-grey;
 		}
 	}
 }

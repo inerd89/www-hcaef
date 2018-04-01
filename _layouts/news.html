@@ -1,6 +1,6 @@
 ---
 layout: default
-classes: news
+classes: news-page
 ---
 {% comment %}
 {% assign featuredPost = site.news | where: "title", "Featured News Article" %}
@@ -21,18 +21,20 @@ classes: news
 {% endfor %}
 
 <section class="latest-news">
-	<article class="featured-hero">
-		<div class="featured-hero__image"></div>
-		<div class="featured-news-card">
-			<b>Featured: {{ featuredPost.title }}</b>
-		</div>
-	</article>
-	{% for post in nonFeaturedPosts limit: 9 %}
-		{% assign hed = post.title %}
-		{% assign dek = post['Subtitle'] %}
-		{% assign url = post.url %}
-		{% include news-card.html hed=hed dek=dek url=url %}
-	{% endfor %}
+	<div class="container">
+		<article class="hero">
+			<div class="hero__image"></div>
+			<div class="hero__card">
+				<b>Featured: {{ featuredPost.title }}</b>
+			</div>
+		</article>
+		{% for post in nonFeaturedPosts limit: 9 %}
+			{% assign hed = post.title %}
+			{% assign dek = post['Subtitle'] %}
+			{% assign url = post.url %}
+			{% include news-card.html hed=hed dek=dek url=url %}
+		{% endfor %}
+	</div>
 </section>
 
 {% include archive-list.html class="archive--news" title="Archive of Past News" posts=archivedPosts %}

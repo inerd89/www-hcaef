@@ -3,7 +3,7 @@ layout: support
 permalink: /support/
 title: Support
 position: 5
-Description: All about supporting the HCAEF
+Description: 'Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.'
 Ways to Support:
 - Title: Donate
   Description: 'Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus placerat, felis est consequat elit. Donate via the PayPal button below or mail your contribution to: **HCAEF, P.O. Box 415, Hines, Oregon 97738**.'

@@ -17,7 +17,7 @@ $tablet-portrait	:	768px;
 $tablet-landscape	:	1024px;
 $desktop			:	1300px;
 $desktop-large		:	1600px;
-$desktop-hd			:	1920px;
+$desktop-hd			:	$desktop-large; //1920px
 
 //
 // Colors

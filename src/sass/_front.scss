@@ -1,0 +1,54 @@
+.front-page {
+	.site-header {
+		background: $green;
+		box-shadow: none;
+	}
+}
+
+.page-banner--front {
+	background-color: $green;
+
+	.container {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-column-gap: 36px;
+
+		div {
+			grid-column: 1/4;
+		}
+	}
+
+	.page-title {
+		padding-top: 6rem;
+		font-size: 4rem;
+		line-height: 4rem;
+		@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
+		padding-bottom: 3rem;
+	}
+
+}
+
+.news-events {
+	margin-top: -204px;
+
+	.container {
+		display: grid;
+		grid-template: auto auto / 1fr 1fr;
+		grid-column-gap: 3rem;
+	}
+}
+
+.support-the-foundation {
+	background-color: $brown;
+
+	.container {
+		display: grid;
+		grid-template: auto auto / 1fr 1fr;
+		grid-column-gap: 3rem;
+	}
+
+	.section-image {
+		background-color: $light-grey;
+	}
+}

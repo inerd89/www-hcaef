@@ -1,70 +1,89 @@
 ---
 layout: master
-classes: front
+classes: front-page
 ---
 
-<section class="hero">
-	<h2>{{ page['Description'] }}</h2>
-	<p><a href="">About the Foundation &rarr;</a></p>
-	<a href="">Donate!</a>
-</section>
-
-<section>
-	<article class="featured-hero">
-		<div class="featured-hero__image"></div>
-		<div class="featured-news-card">
-			<b>Featured: {{ featuredPost.title }}</b>
+<section class="page-banner page-banner--front">
+	<div class="container">
+		<div>
+			<h2 class="typo--page-title page-title">{{ page['Intro Blurb'] }}</h2>
+			<a class="typo--link" href="/about">{{ page['Intro Link Title'] }} &rarr;</a>
 		</div>
-	</article>
-	<div class="front-news">
-		<h3>Latest News</h3>
-		{% for post in site.news limit: 3 %}
-			{% assign hed = post.title %}
-			{% assign dek = post['Subtitle'] %}
-			{% assign url = post.url %}
-			{% include news-card.html hed=hed dek=dek url=url %}
-		{% endfor %}
-	</div>
-	<div class="front-events">
-		<h3>Upcoming Events</h3>
-		{% for event in site.events limit: 3 %}
-			{% assign title = event.title %}
-			{% assign date = event['Event Start Date'] %}
-			{% assign time = event['Event Start Time'] %}
-			{% assign url = event.url %}
-			{% include event-card.html title=title date=date time=time url=url %}
-		{% endfor %}
+		<a href="">Donate!</a>
 	</div>
 </section>
 
-<section>
-	<h3>Our Programs</h3>
-	<p>Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est
-		feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-		placerat, felis est consequat elit, id dictum turpis nibh eget enim.
-		Vestibulum ut quam turpis. Proin convallis neque eget felis vehicula, ac
-		faucibus augue aliquam. Vivamus vitae enim rutrum ipsum ultrices
-		convallis.</p>
-	<ul>
-		<li>Scholarships & Grants</li>
-		<li>School Funding</li>
-		<li>Performing Groups & Events</li>
-	</ul>
+{% comment %}
+*
+* News Events
+*
+{% endcomment %}
+<section class="news-events">
+	<div class="container">
+		<article class="hero">
+			<div class="hero__image"></div>
+			<div class="hero__card">
+				<b>Featured: {{ featuredPost.title }}</b>
+			</div>
+		</article>
+		<div class="front-news">
+			<h3>Latest News</h3>
+			{% for post in site.news limit: 3 %}
+				{% assign hed = post.title %}
+				{% assign dek = post['Subtitle'] %}
+				{% assign url = post.url %}
+				{% include news-card.html hed=hed dek=dek url=url %}
+			{% endfor %}
+		</div>
+		<div class="front-events">
+			<h3>Upcoming Events</h3>
+			{% for event in site.events limit: 3 %}
+				{% assign title = event.title %}
+				{% assign date = event['Event Start Date'] %}
+				{% assign time = event['Event Start Time'] %}
+				{% assign url = event.url %}
+				{% include event-card.html title=title date=date time=time url=url %}
+			{% endfor %}
+		</div>
+	</div>
 </section>
 
-<section>
-	<h3>Support the Foundation</h3>
-	<p>Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est
-		feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-		placerat, felis est consequat elit, id dictum turpis nibh eget enim.
-		Vestibulum ut quam turpis. Proin convallis neque eget felis vehicula, ac
-		faucibus augue aliquam. Vivamus vitae enim rutrum ipsum ultrices
-		convallis.</p>
-	<ul>
-		<li><a href="">Make a Donation</a></li>
-		<li><a href="">Volunteer</a></li>
-		<li><a href="">Become a Member</a></li>
-		<li><a href="">Become a Grantor</a></li>
-	</ul>
-	<img src="" />
+{% comment %}
+*
+* OUR PROGRAMS
+*
+{% endcomment %}
+<section class="our-programs page-section">
+	<div class="container">
+		<div class="col">
+			<h3 class="page-section-title typo--section-title">{{ page['Programs Section Title'] }}</h3>
+			<p class="our-programs__copy">{{ page['Programs Section Text'] }}</p>
+		</div>
+		<ul class="programs__link-list">
+			{% for item in page['Programs Section List'] %}
+				<li><a class="typo--small-section-title" href="{{ item['URL'] }}"><span>{{ item['Name'] }}</span></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+
+<section class="support-the-foundation page-section">
+	<div class="container">
+		<div>
+			<h3 class="page-section-title typo--section-title">Support the Foundation</h3>
+			<p>Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est
+				feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
+				placerat, felis est consequat elit, id dictum turpis nibh eget enim.
+				Vestibulum ut quam turpis. Proin convallis neque eget felis vehicula, ac
+				faucibus augue aliquam. Vivamus vitae enim rutrum ipsum ultrices
+				convallis.</p>
+			<ul>
+				<li><a href="">Make a Donation</a></li>
+				<li><a href="">Volunteer</a></li>
+				<li><a href="">Become a Member</a></li>
+				<li><a href="">Become a Grantor</a></li>
+			</ul>
+		</div>
+		<div class="section-image"></div>
+	</div>
 </section>

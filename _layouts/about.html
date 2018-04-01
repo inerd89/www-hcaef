@@ -1,5 +1,124 @@
 ---
 layout: default
+classes: about-page
 ---
 
-<h1>About page</h1>
+{% comment %}
+*
+* ABOUT US SECTION
+*
+{% endcomment %}
+<section class="about-us">
+	<div class="container">
+		<div class="hero">
+			<div class="hero__image"></div>
+		</div>
+		<h3 class="about-us__intro typo--section-title">{{ page['About Us Intro'] }}</h3>
+		<p class="about-us__copy">{{ page['About Us Text'] }}</p>
+	</div>
+</section>
+
+{% comment %}
+*
+* OUR PROGRAMS
+*
+{% endcomment %}
+<section class="our-programs page-section">
+	<div class="container">
+		<div class="col">
+			<h3 class="page-section-title typo--section-title">{{ page['Programs Section Title'] }}</h3>
+			<p class="our-programs__copy">{{ page['Programs Section Text'] }}</p>
+		</div>
+		<ul class="programs__link-list">
+			{% for item in page['Programs Section List'] %}
+				<li><a class="typo--small-section-title" href="{{ item['URL'] }}"><span>{{ item['Name'] }}</span></a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+
+{% comment %}
+*
+* CTA
+*
+{% endcomment %}
+<section class="cta page-section">
+	<div class="container">
+		<h4 class="cta__copy typo--small-section-title">{{ page['Call to Action'] }} </h4>
+		<a class="cta__link typo--small-section-title typo--link" href="{{ page['CTA URL'] }}">{{ page['CTA Link Title'] }} &rarr;</a>
+	</div>
+</section>
+
+{% comment %}
+*
+* OUR HISTORY
+*
+{% endcomment %}
+<section class="our-history page-section">
+	<div class="container">
+		<div class="our-history__copy">
+			<h3 class="page-section-title typo--section-title">{{ page['Our History Title'] }}</h3>
+			{{ page['Our History Text'] | markdownify }}
+		</div>
+		<ul class="hcaef-stats">
+			{% for stat in page['Historical Stats'] %}
+			<li class="hcaef-stat">
+				<div class="hcaef-stat__num">{{ stat['Number'] }}</div>
+				<p class="hcaef-stat__copy">{{ stat['Label'] }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="container historical-highlights">
+		<h3 class="page-section-title historical-highlights__title typo--section-title">{{ page['Historical Highlights Title'] }}</h3>
+		{% for hilite in page['Historical Highlights'] limit: 2 %}
+			<div class="col historical-highlight">
+				<div class="historical-highlight__image" style="background-image: url({{ hilite['Image'] }});"></div>
+				<div class="historical-highlight__caption">
+					<h4 class="typo--strong">{{ hilite['Caption Title'] }}</h4>
+					<p>{{ hilite['Caption'] }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
+
+{% comment %}
+*
+* BOARD & CONTACT
+*
+{% endcomment %}
+<section id="contact" class="contact page-section">
+	<div class="container">
+		<h3 class="page-section-title typo--section-title">{{ page['Board & Contact Title'] }}</h3>
+		<ul class="board-members">
+			{% for mem in page['Board Leadership'] %}
+			<li class="board-member">
+				<div class="board-member__image" style="background-image: url({{ mem['Image'] }});"></div>
+				<h4 class="typo--small-section-title">{{ mem['Name'] }}</h4>
+				<p>{{ mem['Title'] }}
+					{% if mem['Email Address'] and mem['Email Address'] != '' %}
+						<br><a class="typo--link--underline" href="mailto:{{ mem['Email Address'] }}">{{ mem['Email Address'] }}</a>
+					{% endif %}
+				</p>
+			</li>
+			{% endfor %}
+		</ul>
+		<div class="other-contact-info">
+			<ul class="other-members">
+				{% for mem in page['Other Board Members'] %}
+				<li>
+					<h5 class="typo--strong">{{ mem['Name'] }}</h5>
+					<p>{{ mem['Title'] }}</p>
+				</li>
+				{% endfor %}
+			</ul>
+			<p>{{ page['Contact Info Blurb'] }}</p>
+			<address class="hcaef-contact-info typo--base">
+				{{ page['HCAEF Mailing Address'] | markdownify }}
+				<br>
+				<a class="typo--link--underline" href="mailto:{{ page['HCAEF Email Address'] }}">{{ page['HCAEF Email Address'] }}</a>
+			</address>
+		</div>
+	</div>
+</section>
