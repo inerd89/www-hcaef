@@ -1,8 +1,8 @@
 ---
 title: Our Programs
-Navigation Title: Programs
 permalink: "/programs/"
 position: 3
+Navigation Title: Programs
 Description: Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
   ac, pharetra varius felis.
 Programs:
