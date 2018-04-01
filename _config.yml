@@ -2,14 +2,17 @@
 title: Harney County Arts in Education Foundation
 timezone: America/Los_Angeles
 collections:
-  news:
-    title: News
-    output: true
-    permalink: "/:collection/:year/:month/:day/:title/"
   events:
     title: Events
     output: true
     permalink: "/:collection/:path/"
+  news:
+    title: News
+    output: true
+    permalink: "/:collection/:year/:month/:day/:title/"
+  posts:
+    title: Posts
+    output: true
   uploads:
     title: uploads
     output: true
@@ -38,8 +41,7 @@ defaults:
 email: info@harneyartsfoundation.org
 description: 'Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
-'
+  results) and in your feed.xml site description. '
 baseurl: "/"
 url: http://harneyartsfoundation.org
 twitter_username:

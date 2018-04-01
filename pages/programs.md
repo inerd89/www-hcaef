@@ -3,7 +3,6 @@ title: Our Programs
 Navigation Title: Programs
 permalink: "/programs/"
 position: 3
-layout: programs
 Description: Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
   ac, pharetra varius felis.
 Programs:
@@ -43,11 +42,36 @@ Programs:
   - Name: Kevin Lefohn
   - Name: Monica Ouchi
   - Name: Raphael Spiro Quartet
+- Title: School Funding
+  Description: 'Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
+    et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
+    placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
+    ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
+    Vivamus vitae enim rutrum ipsum ultrices convallis. '
+  Image:
+  Image First?: false
+  Button Title (optional): Request funding via our online application
+  Button URL (optional): "/"
+  List:
+  - Item Title: New Instruments / Instrument Repair
+    Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique
+      lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed
+      dapibus placerat.
+  - Item Title: Art Supplies
+    Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique
+      lorem et est feugiat, non tempus justo sodales.
+  - Item Title: Rural School Travel Assistance
+    Item Description: "$2,000 donation to assist a music teacher’s weekly travel expenses
+      to Diamond, Frenchglen and Double-O schools."
+  - Item Title: Teaching Positions
+    Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique
+      lorem et est feugiat, non tempus justo sodales.
 Other Program Title: Performing Arts in Education Center
 Other Program Description: Pellentesque faucibus velit a auctor tempor. Proin tristique
   lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
 Other Program Button Title (optional): Donate to the PAEC
-Other Program Button URL (optional): ''
+Other Program Button URL (optional):
+layout: programs
 ---
