@@ -1,6 +1,5 @@
 ---
-title: Harney County Arts in Education Foundation
-layout: front
+title: Front Page
 Intro Blurb: We are committed to providing excellent art education and art experiences
   in Harney County.
 Intro Link Title: About the Foundation
@@ -12,10 +11,11 @@ Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin trist
   Vivamus vitae enim rutrum ipsum ultrices convallis. '
 Programs Section List:
 - Name: Scholarships & Grants
-  URL: ''
+  URL: 
 - Name: School Funding
-  URL: ''
+  URL: 
 - Name: Performing Groups
-  URL: ''
+  URL: 
+layout: front
 ---
 
