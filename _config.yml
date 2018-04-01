@@ -31,21 +31,21 @@ defaults:
     type: events
   values:
     layout: event-detail
-    Event Start Date:
-    Event End Date:
-    Event Start Time:
-    Event End Time:
+    Event Start Date: 
+    Event End Date: 
+    Event Start Time: 
+    Event End Time: 
     Volunteers Needed?: false
-    Event Venue:
-    Event Image:
+    Event Venue: 
+    Event Image: 
 email: info@harneyartsfoundation.org
 description: 'Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
   results) and in your feed.xml site description. '
 baseurl: "/"
 url: http://harneyartsfoundation.org
-twitter_username:
-share_image_url:
+twitter_username: 
+share_image_url: 
 markdown: kramdown
 exclude:
 - Gemfile
@@ -55,4 +55,3 @@ exclude:
 - README.md
 - sass
 - src
----
