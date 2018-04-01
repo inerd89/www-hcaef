@@ -2,7 +2,6 @@
 title: Programs
 permalink: "/programs/"
 position: 3
-layout: programs
 Description: Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
   ac, pharetra varius felis.
 Programs:
@@ -48,6 +47,8 @@ Other Program Description: Pellentesque faucibus velit a auctor tempor. Proin tr
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
 Other Program Button Title (optional): Donate to the PAEC
-Other Program Button URL (optional): ''
+Other Program Button URL (optional): 
+layout: programs
 ---
 
+Is this the page description?
