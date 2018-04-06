@@ -1,9 +1,16 @@
-<article class="event-card">
-	<div class="event-card__image"></div>
-	<h4>{{ include.title }}</h4>
-	<div class="event-card__info">
-		<p><time>{{ include.date | date: "%B %d, %Y" }}</time></p>
-		<p><time>{{ include.time| date: "%I:%M" }}</time></p>
-		<p><a href="{{ include.url }}">Learn more &rarr;</a></p>
+<article class="event-card
+				{% if include.classModifier %}event-card--{{ include.classModifier }}{% endif %}
+				{% if include.image and include.image != '' %}include-image{% endif %}">
+	<div class="event-card__copy">
+		<h4 class="event-card__hed typo--small-section-title">{{ include.title }}</h4>
+		<div class="event-card__info">
+			<p><time>{{ include.start | date: "%B %d, %Y" }}</time></p>
+			<p><time>{{ include.end | date: "%B %d, %Y" }}</time></p>
+			<!-- <p><time>{{ include.end| date: "%I:%M" }}</time></p> -->
+			<a class="typo--link--dark" href="{{ include.url }}">Learn more &rarr;</a>
+		</div>
 	</div>
+	{% if include.image and include.image != '' %}
+	<div class="event-card__image">{{ include.image }}</div>
+	{% endif %}
 </article>

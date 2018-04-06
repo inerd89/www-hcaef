@@ -66,8 +66,8 @@
 	}
 }
 
-.front-news .page-section-title,
-.front-events .page-section-title {
+.front-page-news .page-section-title,
+.front-page-events .page-section-title {
 	padding-bottom: 3rem;
 }
 
@@ -81,7 +81,7 @@
 		float: left;
 		width: 33%;
 		height: 0;
-		padding-bottom: 33%;
+		padding-bottom: 32%;
 		background-color: $light-grey;
 		margin-right: 2rem;
 	}
@@ -90,6 +90,55 @@
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 	}
+}
+
+.front-page-events {
+	.event-cards {
+		display: grid;
+		grid-template: auto auto / 1fr 1fr;
+		grid-gap: 1rem;
+		padding-top: 1rem;
+		border-top: 1px solid lighten(#000, 80%);
+	}
+}
+
+.event-card--front-page {
+	display: grid;
+	height: 26rem;
+	padding: 1.5rem;
+	background-color: $dark-grey;
+	color: #fff;
+
+	&.include-image {
+		grid-column: 1/-1;
+		grid-template: auto / 1fr 1fr;
+		grid-gap: 1rem;
+	}
+
+	.event-card__copy {
+		display: grid;
+		grid-template: 1fr 1fr / auto;
+	}
+
+	.event-card__info {
+		// display: flex;
+		// flex-flow: row;
+		border-top: 1px solid #535353;
+
+		> p:first-of-type {
+			padding-bottom: 0;
+		}
+		> a {
+			padding-top: 4rem;
+			display: block;
+			// align-self: flex-end;
+		}
+	}
+}
+
+.event-card__image {
+	grid-column: 2/3;
+	background: $light-grey;
 }
 
 .support-the-foundation {
