@@ -4,11 +4,19 @@
 
 	<a class="event-card__link" href="{{ include.url }}">
 		<div class="event-card__copy">
-			<h4 class="event-card__hed typo--small-section-title">{{ include.title }}</h4>
+			<h4 class="event-card__hed">{{ include.title }}</h4>
 			<div class="event-card__info">
-				<p><time>{{ include.start | date: "%B %d, %Y" }}</time></p>
-				<p><time>{{ include.end | date: "%B %d, %Y" }}</time></p>
-				<!-- <p><time>{{ include.end| date: "%I:%M" }}</time></p> -->
+				{% assign startDate = include.start | date: "%B %d, %Y" %}
+				{% assign endDate = include.end | date: "%B %d, %Y" %}
+				{% if startDate == endDate %}
+					<p><time>{{ include.start | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&mdash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
+				{% else %}
+					{% if include.start | date: "%B" == include.end | date: "%B" %}
+						<p><time>{{ include.start | date: "%B %e" }}&mdash;{{ include.end | date: "%e" }}</time></p>
+					{% else %}
+						<p><time>{{ include.start | date: "%B %e" }}&mdash;{{ include.end | date: "%B %e" }}</time></p>
+					{% endif %}
+				{% endif %}
 				<p>Learn more &rarr;</p>
 			</div>
 		</div>

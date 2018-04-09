@@ -1,6 +1,13 @@
 <article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %}">
-	<div class="news-card__image"></div>
-	<h4 class="news-card__hed typo--small-section-title">{{ include.hed }}</h4>
-	<p class="news-card__dek typo--base">{{ include.dek }}</p>
-	<p class="typo--base"><a class="typo--link" href="{{ include.url }}">Continue reading &rarr;</a></p>
+	<a class="news-card__link" href="{{ include.url }}">
+		{% if include.cat and include.cat != '' %}
+			<p class="news-card__category">{{ include.cat }}</p>
+		{% endif %}
+		{% if include.image and include.image != '' %}
+			<div class="news-card__image"></div>
+		{% endif %}
+		<h4 class="news-card__hed typo--small-section-title">{{ include.hed }}</h4>
+		<p class="news-card__dek typo--base">{{ include.dek }}</p>
+		<p class="typo--base">Continue reading &rarr;</p>
+	</a>
 </article>

@@ -1,12 +1,22 @@
-<section class="archive {{ include.class }}">
-	<h3>{{ include.title }}</h3>
-	<ul>
-		{% for post in include.posts %}
-		<li>
-			<time>{{ post['Event Start Date'] | date: "%B %d, %Y" }}</time>
-			<h4>{{ post.title }}</h4>
-			<p><a href="{{ post.url }}">View details &rarr;</a></p>
-		</li>
-		{% endfor %}
-	</ul>
+<section class="archive archive--{{ include.classModifier }} page-section">
+	<div class="container">
+		<h3 class="typo--section-title">{{ include.title }}</h3>
+		<ul class="archive-list">
+			{% for post in include.posts %}
+			<li class="archive-item">
+				<a href="{{ post.url }}">
+					<time class="archive-item__date typo--base">
+						{% if post['Event Start Date'] %}
+							{{ post['Event Start Date'] | date: "%B %e, %Y" }}
+						{% else %}
+							{{ post.date | date: "%B %e, %Y" }}
+						{% endif %}
+					</time>
+					<h4 class="archive-item__title typo--base">{{ post.title }}</h4>
+					<p class="archive-item__view-details">View details &rarr;</p>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
 </section>

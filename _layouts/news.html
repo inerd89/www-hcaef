@@ -3,10 +3,6 @@ layout: default
 classes: news-page
 ---
 
-{% comment %}
-{% assign featuredPost = site.news | where: "title", "Featured News Article" %}
-{% endcomment %}
-
 {% assign nonFeaturedPosts = '' | split: '' %}
 {% for post in site.news %}
 	{% if post['Is Featured?'] == false %}
@@ -17,25 +13,38 @@ classes: news-page
 {% endfor %}
 
 {% assign archivedPosts = '' | split: '' %}
-{% for post in nonFeaturedPosts offset: 9 %}
+{% for post in nonFeaturedPosts offset: 6 %}
 	{% assign archivedPosts = archivedPosts | push: post %}
 {% endfor %}
 
 <section class="latest-news">
 	<div class="container">
-		<article class="hero">
-			<div class="hero__image"></div>
-			<div class="hero__card">
-				<b>Featured: {{ featuredPost.title }}</b>
-			</div>
+		<article class="hero hero--news">
+				<div class="hero__image"></div>
+				<div class="hero__card">
+					<a href="{{ featuredPost.url }}">
+						<div class="hero__card__copy">
+							<p class="category">{{ featuredPost['Category'] }}</p>
+							<h3 class="typo--section-title">{{ featuredPost.title }}</h3>
+							<p>{{ featuredPost['Description'] }}</p>
+						</div>
+						<p>Continue reading &rarr;</p>
+					</a>
+				</div>
 		</article>
-		{% for post in nonFeaturedPosts limit: 9 %}
-			{% assign hed = post.title %}
-			{% assign dek = post['Subtitle'] %}
-			{% assign url = post.url %}
-			{% include news-card.html hed=hed dek=dek url=url %}
-		{% endfor %}
+		<div class="news-cards">
+			{% for post in nonFeaturedPosts limit: 6 %}
+				{% assign hed = post.title %}
+				{% assign dek = post['Description'] %}
+				{% assign url = post.url %}
+				{% assign cat = post['Category'] %}
+				{% assign img = post['Main Image'] %}
+				{% include news-card.html hed=hed dek=dek url=url image=img cat=cat %}
+			{% endfor %}
+		</div>
 	</div>
 </section>
 
-{% include archive-list.html class="archive--news" title="Archive of Past News" posts=archivedPosts %}
+{% if archivedPosts.size > 0 %}
+	{% include archive-list.html classModifier="news" title="Archive of Past News" posts=archivedPosts %}
+{% endif %}

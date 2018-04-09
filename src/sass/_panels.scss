@@ -67,6 +67,8 @@
 .panel__footnote {
 	@extend .typo--small;
 	display: block;
+	color: darken(#fff, 50%);
+	padding-top: 2rem;
 }
 
 .panel__table {

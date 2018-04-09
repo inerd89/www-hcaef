@@ -3,6 +3,25 @@ layout: master
 classes: front-page
 ---
 
+{% assign currentYear = 'now' | date: '%Y' | times: 1 %}
+{% assign currentMonth = 'now' | date: '%m' | times: 1 %}
+{% assign currentDay = 'now' | date: '%d' | times: 1 %}
+{% assign currentEvents = '' | split: '' %}
+{% for event in site.events %}
+	{% assign year = event['Event Start Date'] | date: '%Y' | times: 1 %}
+	{% assign month = event['Event Start Date'] | date: '%m' | times: 1 %}
+	{% assign day = event['Event Start Date'] | date: '%d' | times: 1 %}
+
+	{% if year > currentYear %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% elsif year == currentYear and month > currentMonth %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% elsif year == currentYear and month == currentMonth and day >= currentDay %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% endif %}
+
+{% endfor %}
+
 <section class="page-banner page-banner--front">
 	<div class="container">
 		<div>
@@ -29,21 +48,25 @@ classes: front-page
 			</div>
 		</article>
 		<div class="front-page-news">
+			<!-- <a class="typo--link typo--small see-all" href="/news">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Latest News</h3>
 			<div class="news-cards">
 				{% for post in site.news limit: 3 %}
 					{% assign hed = post.title %}
-					{% assign dek = post['Subtitle'] %}
+					{% assign dek = post['Description'] %}
 					{% assign url = post.url %}
-					{% include news-card.html hed=hed dek=dek url=url classModifier="front-page" %}
+					{% assign image = post['Main Image'] %}
+					{% assign cat = post['Category'] %}
+					{% include news-card.html hed=hed dek=dek url=url image=image classModifier="front-page" %}
 				{% endfor %}
 			</div>
 		</div>
 		<div class="front-page-events">
+			<!-- <a class="typo--link typo--small see-all" href="/events">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Upcoming Events</h3>
 			<div class="event-cards">
 				{% assign needFour = false %}
-				{% for event in site.events limit: 4 %}
+				{% for event in currentEvents limit: 4 %}
 					{% assign i = forloop.index %}
 					{% assign title = event.title %}
 					{% assign start = event['Event Start Date'] %}
