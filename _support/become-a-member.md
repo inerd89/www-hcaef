@@ -1,6 +1,6 @@
 ---
-position: 3
 title: Become a Member
+position: 3
 Table:
 - - Student Membership
   - "$5 per year"
@@ -13,6 +13,7 @@ Table:
 - - Sustaining Membership
   - "$1000 per year"
 ---
+
 Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
 et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
 placerat, felis est consequat elit.\n\nMail your contribution to: **HCAEF, P.O.

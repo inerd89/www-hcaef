@@ -1,6 +1,6 @@
 ---
-position: 2
 title: Performing Groups
+position: 2
 Image: test.jpg
 Image First?: true
 List (single):
