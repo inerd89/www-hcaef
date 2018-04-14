@@ -4,7 +4,7 @@ classes: news-page
 ---
 
 {% assign nonFeaturedPosts = '' | split: '' %}
-{% for post in site.news %}
+{% for post in site.posts %}
 	{% if post['Is Featured?'] == false %}
 		{% assign nonFeaturedPosts = nonFeaturedPosts | push: post %}
 	{% else %}
