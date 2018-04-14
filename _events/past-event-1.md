@@ -1,6 +1,6 @@
 ---
 title: Past Event Title
-position: 5
+position: 6
 Event Start Date: 2017-08-06 20:00
 Event Start Time: 2017-08-06 20:00
 Volunteers Needed?: true
