@@ -12,6 +12,8 @@
 
 	.hero__image {
 		left: calc(33.333% - 0.75rem);
+		background-size: cover;
+		background-position: center;
 	}
 
 	.hero__card {
