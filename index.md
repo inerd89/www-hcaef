@@ -1,7 +1,6 @@
 ---
 title: Front Page
-Intro Blurb: We are committed to providing excellent art education and art experiences
-  in Harney County.
+Intro Blurb: Hello, test test hello bueler
 Intro Link Title: Learn more about us
 Programs Section Title: Our Programs
 Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin tristique
