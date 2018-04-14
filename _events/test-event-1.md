@@ -1,5 +1,5 @@
 ---
-title: Chamber Orchestra Concert
+title: 'Chamber Orchestra Concert: Fresh Dew on a Ginko Leaf'
 position: 0
 Event Start Date: 2018-07-23 20:00:00 -07:00
 Event End Date: 2018-09-23 21:00:00 -07:00
