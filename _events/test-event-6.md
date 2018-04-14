@@ -1,5 +1,6 @@
 ---
 title: Test Event 6
+position: 6
 Event Start Date: 2018-06-01 19:00
 Event End Date: 2018-06-01 21:00
 Volunteers Needed?: true
