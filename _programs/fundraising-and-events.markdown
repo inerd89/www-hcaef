@@ -1,6 +1,7 @@
 ---
 title: Fundraising & Events
 date: 2018-04-14 13:45:00 -07:00
+position: 3
 Button:
 - Title: View all upcoming events
   URL: "/events"

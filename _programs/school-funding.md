@@ -1,6 +1,6 @@
 ---
 title: School Funding
-position: 3
+position: 2
 Button:
 - Title: Request funding via our online application
   URL: "#"

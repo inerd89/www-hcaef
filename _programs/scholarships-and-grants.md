@@ -1,6 +1,6 @@
 ---
 title: Scholarships & Grants
-position: 1
+position: 0
 Button:
 - Title: Contact us about grant or scholarship opportunities
   URL: "#"
