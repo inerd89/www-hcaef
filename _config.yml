@@ -5,20 +5,20 @@ collections:
   events:
     title: Events
     output: true
-    permalink: /:collection/:path/
+    permalink: "/:collection/:path/"
   news:
     title: News
     output: true
-    permalink: /:collection/:year/:month/:day/:title/
+    permalink: "/:collection/:year/:month/:day/:title/"
+  posts:
+    title: Posts
+    output: true
   programs:
     title: Programs
     output: false
   support:
     title: Support
     output: false
-  posts:
-    title: Posts
-    output: true
   uploads:
     title: uploads
     output: true
@@ -37,13 +37,13 @@ defaults:
     type: events
   values:
     layout: event-detail
-    Event Start Date:
-    Event End Date:
-    Event Start Time:
-    Event End Time:
+    Event Start Date: 
+    Event End Date: 
+    Event Start Time: 
+    Event End Time: 
     Volunteers Needed?: false
-    Event Venue:
-    Event Image:
+    Event Venue: 
+    Event Image: 
     Is Featured?: false
 - scope:
     path: ''
@@ -67,7 +67,7 @@ defaults:
     Button:
     - Title: ''
       URL: ''
-    Footnote:
+    Footnote: 
     Table:
     - - ''
       - ''
@@ -77,8 +77,8 @@ description: 'Write an awesome description for your new site here. You can edit 
   results) and in your feed.xml site description. '
 baseurl: "/"
 url: http://harneyartsfoundation.org
-twitter_username:
-share_image_url:
+twitter_username: 
+share_image_url: 
 markdown: kramdown
 exclude:
 - Gemfile
