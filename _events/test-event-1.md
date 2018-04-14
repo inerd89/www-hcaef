@@ -7,7 +7,7 @@ Volunteers Needed?: true
 Event Venue: Hines Community Center
 ---
 
-This is an awesome event.
+Testing testing—which event is this?
 
 Totally. Be there.
 
