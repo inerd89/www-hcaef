@@ -15,6 +15,6 @@ Support Section Text: Pellentesque faucibus velit a auctor tempor. Proin tristiq
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
   Vivamus vitae enim rutrum ipsum ultrices convallis.
+Support Section Image: test.jpg
 layout: front
 ---
-
