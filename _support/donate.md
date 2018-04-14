@@ -1,6 +1,6 @@
 ---
 title: Make a Donation
-position: 1
+position: 0
 Button:
 - Title: Donate via PayPal
   URL: "#"

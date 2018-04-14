@@ -1,6 +1,7 @@
 ---
 title: Become a Grantor
 date: 2018-04-14 13:50:00 -07:00
+position: 3
 Button:
 - Title: Recommend grant applications
   URL: "#"
