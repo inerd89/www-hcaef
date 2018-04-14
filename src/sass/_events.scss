@@ -76,6 +76,8 @@
 .event-card__image {
 	grid-column: 2/3;
 	background: $light-grey;
+	background-size: cover;
+	background-position: center;
 }
 
 .event-card__copy {
