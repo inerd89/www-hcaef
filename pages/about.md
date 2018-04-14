@@ -22,13 +22,6 @@ Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin trist
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
   Vivamus vitae enim rutrum ipsum ultrices convallis. '
-Programs Section List:
-- Name: Scholarships & Grants
-  URL: ''
-- Name: School Funding
-  URL: ''
-- Name: Performing Groups
-  URL: ''
 Call to Action: Please consider making a donation to support the arts in Harney County.
 CTA Link Title: Make a Donation
 CTA URL: "#"
@@ -55,37 +48,9 @@ Historical Highlights:
   Caption Title: Highlight Title
   Caption: Placeholder caption text
 Board & Contact Title: Board Members & Contact Info
-Board Leadership:
-- Name: Name Teekay
-  Title: Title teekay hear
-  Email Address: name@email.com
-- Name: Name Teekay
-  Title: Title teekay hear
-  Email Address: name@email.com
-- Name: Name Teekay
-  Title: Title teekay hear
-  Email Address: name@email.com
-- Name: Name Teekay
-  Title: Title teekay hear
-  Email Address: name@email.com
-- Name: Name Teekay
-  Title: Title teekay hear
-  Email Address: name@email.com
-Other Board Members:
-- Name: Name Teekay
-  Title: Title
-- Name: Name Teekay
-  Title: Title
-- Name: Name Teekay
-  Title: Title
-- Name: Name Teekay
-  Title: Title
-- Name: Name Teekay
-  Title: Title
 Contact Info Blurb: 'Please contact us lorem ipsum dolor sit amet:'
 HCAEF Mailing Address: "P.O. Box 9999  \nHines, Oregon 99999\n"
 HCAEF Email Address: info@harneyarts.org
 ---
 
-Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
-  ac, pharetra varius felis.
+Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.

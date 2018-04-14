@@ -9,13 +9,11 @@ Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin trist
   placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
   ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
   Vivamus vitae enim rutrum ipsum ultrices convallis. '
-Programs Section List:
-- Name: Scholarships & Grants
-  URL: 
-- Name: School Funding
-  URL: 
-- Name: Performing Groups
-  URL: 
+Support Section Title: Support the Foundation
+Support Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est
+  feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
+  placerat, felis est consequat elit, id dictum turpis nibh eget enim.
+  Vestibulum ut quam turpis. Proin convallis neque eget felis vehicula, ac
+  faucibus augue aliquam. Vivamus vitae enim rutrum ipsum ultrices convallis.'
 layout: front
 ---
-

@@ -18,7 +18,8 @@
 			grid-column: 1/5;
 		}
 
-		div + div {
+		> a {
+			display: block;
 			position: relative;
 			grid-column: 6/7;
 			border-radius: 50%;
@@ -29,7 +30,11 @@
 			text-align: center;
 			margin-top: 5rem;
 
-			a {
+			&:hover {
+				background-color: lighten($dark-grey, 8%);
+			}
+
+			span {
 				position: absolute;
 				top: 50%;
 				width: 100%;

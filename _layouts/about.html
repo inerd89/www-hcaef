@@ -30,8 +30,9 @@ classes: about-page
 			<p class="our-programs__copy">{{ page['Programs Section Text'] }}</p>
 		</div>
 		<ul class="programs__link-list">
-			{% for item in page['Programs Section List'] %}
-				<li><a class="typo--small-section-title" href="{{ item['URL'] }}"><span>{{ item['Name'] }}</span></a></li>
+			{% assign programs = site.programs | sort:'position' %}
+			{% for item in programs limit: 3 %}
+				<li><a class="typo--small-section-title" href="/programs/#{{ item.title | downcase | replace: ' ', '-' }}"><span>{{ item.title }}</span></a></li>
 			{% endfor %}
 		</ul>
 	</div>

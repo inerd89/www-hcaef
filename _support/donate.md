@@ -1,5 +1,5 @@
 ---
-title: Donate
+title: Make a Donation
 position: 1
 Button:
 - Title: Donate via PayPal

@@ -28,9 +28,9 @@ classes: front-page
 			<h2 class="typo--page-title page-title">{{ page['Intro Blurb'] }}</h2>
 			<a class="typo--link" href="/about">{{ page['Intro Link Title'] }} &rarr;</a>
 		</div>
-		<div>
-			<a class="typo--small-section-title" href="">Donate!</a>
-		</div>
+		<a href="#">
+			<span class="typo--small-section-title">Donate!</span>
+		</a>
 	</div>
 </section>
 
@@ -114,8 +114,9 @@ classes: front-page
 			<p class="our-programs__copy">{{ page['Programs Section Text'] }}</p>
 		</div>
 		<ul class="programs__link-list">
-			{% for item in page['Programs Section List'] %}
-				<li><a class="typo--small-section-title" href="{{ item['URL'] }}"><span>{{ item['Name'] }}</span></a></li>
+			{% assign programs = site.programs | sort:'position' %}
+			{% for item in programs limit: 3 %}
+				<li><a class="typo--small-section-title" href="/programs/#{{ item.title | downcase | replace: ' ', '-' }}"><span>{{ item.title }}</span></a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -124,18 +125,13 @@ classes: front-page
 <section class="support-the-foundation page-section">
 	<div class="container">
 		<div>
-			<h3 class="page-section-title typo--section-title">Support the Foundation</h3>
-			<p>Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est
-				feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-				placerat, felis est consequat elit, id dictum turpis nibh eget enim.
-				Vestibulum ut quam turpis. Proin convallis neque eget felis vehicula, ac
-				faucibus augue aliquam. Vivamus vitae enim rutrum ipsum ultrices
-				convallis.</p>
+			<h3 class="page-section-title typo--section-title">{{ page['Support Section Title'] }}</h3>
+			<p>{{ page['Support Section Text'] }}</p>
 			<ul class="front-page-support-buttons">
-				<li><a class="button button--dark typo--small-section-title" href="">Make a Donation</a></li>
-				<li><a class="button button--dark typo--small-section-title" href="">Volunteer</a></li>
-				<li><a class="button button--dark typo--small-section-title" href="">Become a Member</a></li>
-				<li><a class="button button--dark typo--small-section-title" href="">Become a Grantor</a></li>
+				{% assign supports = site.support | sort:'position' %}
+				{% for item in supports limit: 4 %}
+					<li><a class="button button--dark typo--small-section-title" href="/support/#{{ item.title | downcase | replace: ' ', '-' }}">{{ item.title }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 		<div class="section-image"></div>
