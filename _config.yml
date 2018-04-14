@@ -9,6 +9,9 @@ collections:
   news:
     title: News
     output: true
+  posts:
+    title: Posts
+    output: true
   programs:
     title: Programs
     output: false
