@@ -4,8 +4,6 @@ permalink: "/about/"
 position: 4
 Navigation Title: About
 layout: about
-Description: Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
-  ac, pharetra varius felis.
 About Us Intro: 'Mission statement here lorem ip sum dolor sit amet, consectetuer
   adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
   volutpat. '
@@ -88,4 +86,5 @@ Contact Info Blurb: 'Please contact us lorem ipsum dolor sit amet:'
 HCAEF Mailing Address: "P.O. Box 9999  \nHines, Oregon 99999\n"
 HCAEF Email Address: info@harneyarts.org
 ---
-
+Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
+  ac, pharetra varius felis.

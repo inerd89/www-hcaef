@@ -4,7 +4,6 @@ permalink: "/news/"
 position: 2
 layout: news
 Navigation Title: News
-Description: Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
-  ac, pharetra varius felis.
 ---
-
+Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
+  ac, pharetra varius felis.

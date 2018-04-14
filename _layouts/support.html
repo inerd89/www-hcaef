@@ -3,7 +3,7 @@ layout: default
 classes: support-page
 ---
 
-{% assign panels = page['Ways to Support'] %}
+{% assign panels = site.support | sort: 'position' %}
 {% include panel-list.html class="support" panels=panels %}
 <section id="sponsors" class="footer-sponsors footer-sponsors--full">
 	<div class="container">

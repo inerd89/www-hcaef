@@ -3,7 +3,7 @@ layout: default
 classes: programs-page
 ---
 
-{% assign panels = page['Programs'] %}
+{% assign panels = site.programs | sort: 'position' %}
 {% include panel-list.html class="programs" panels=panels %}
 <section class="other-program">
 	<div class="container">

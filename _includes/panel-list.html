@@ -3,19 +3,25 @@
 		{% for panel in include.panels %}
 			<article class="panel {{ panel['Title'] | downcase | replace: ' ', '-' }}
 							{% if panel['Image First?'] %}swap{% endif %}
-							{% if panel['List'] or panel['Table'] or panel['Image'] %}wide{% endif %}">
+							{% if panel['Image'] and panel['Image'] != '' %}
+								wide
+							{% elsif panel['List (expanded)'] and panel['List (expanded)'].size > 0 and panel['List (expanded)'][0]['Item Title'] != '' %}
+								wide
+							{% elsif panel['Table'] and panel['Table'].size > 0 and panel['Table'][0][0] != '' %}
+								wide
+							{% endif %}">
 
 				<div class="panel__primary">
-					<h3 class="panel__title typo--section-title">{{ panel['Title'] }}</h3>
-					{{ panel['Description'] | markdownify }}
+					<h3 class="panel__title typo--section-title">{{ panel.title }}</h3>
+					{{ panel.content }}
 
 					{% comment %}
 					*
 					* If a Button Title and URL are provided, insert the button.
 					*
 					{% endcomment %}
-					{% if panel['Button Title (optional)'] and panel['Button URL (optional)'] %}
-						<a class="button panel__button typo--button" href="{{ panel['Button URL (optional)'] }}">{{ panel['Button Title (optional)'] }} &rarr;</a>
+					{% if panel['Button'][0]['Title'] != '' and panel['Button'][0]['URL'] != '' %}
+						<a class="button panel__button typo--button" href="{{ panel['Button'][0]['URL'] }}">{{ panel['Button'][0]['Title'] }} &rarr;</a>
 					{% endif %}
 
 					{% comment %}
@@ -24,10 +30,10 @@
 					* list of Previous Performers.
 					*
 					{% endcomment %}
-					{% if panel['Previous Performers'] %}
-						<ul class="previous-performers">
-							{% for p in panel['Previous Performers'] %}
-								<li><p>{{ p['Name'] }}</p></li>
+					{% if panel['List (single)'] and panel['List (single)'].size > 0 and panel['List (single)'][0]['Item'] != '' %}
+						<ul class="list--single">
+							{% for p in panel['List (single)'] %}
+								<li><p>{{ p['Item'] }}</p></li>
 							{% endfor %}
 						</ul>
 					{% endif %}
@@ -49,10 +55,10 @@
 				* is provided, insert nothing.
 				*
 				{% endcomment %}
-				{% if panel['List'] and panel['List'].size > 0 %}
+				{% if panel['List (expanded)'] and panel['List (expanded)'].size > 0 and panel['List (expanded)'][0]['Item Title'] != '' %}
 					<div class="panel__secondary">
 						<ul class="panel__list">
-							{% for item in panel['List'] %}
+							{% for item in panel['List (expanded)'] %}
 								<li class="panel__list-item">
 									<h4 class="typo--strong">{{ item['Item Title'] }}</h4>
 									<p>{{ item['Item Description'] }}</p>
@@ -60,7 +66,7 @@
 							{% endfor %}
 						</ul>
 					</div>
-				{% elsif panel['Table'] and panel['Table'].size > 0 %}
+				{% elsif panel['Table'] and panel['Table'].size > 0 and panel['Table'][0][0] != '' %}
 					<div class="panel__secondary">
 						<ul class="panel__table">
 							{% for row in panel['Table'] %}
