@@ -2,20 +2,15 @@
 position: 3
 title: Become a Member
 Table:
-- Row:
-  - Student Membership
+- - Student Membership
   - "$5 per year"
-  Row:
-  - Individual Membership
+- - Individual Membership
   - "$15 per year"
-  Row:
-  - Family Membership
+- - Family Membership
   - "$30 per year"
-  Row:
-  - Supporting Membership
+- - Supporting Membership
   - "$250 per year"
-  Row:
-  - Sustaining Membership
+- - Sustaining Membership
   - "$1000 per year"
 ---
 Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
