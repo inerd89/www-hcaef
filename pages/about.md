@@ -3,6 +3,7 @@ title: About Us
 permalink: "/about/"
 position: 4
 Navigation Title: About
+Hero Image: test.jpg
 About Us Intro: 'Mission statement here lorem ip sum dolor sit amet, consectetuer
   adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
   volutpat. '

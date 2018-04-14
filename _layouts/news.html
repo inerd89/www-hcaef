@@ -35,7 +35,7 @@ classes: news-page
 		<div class="news-cards">
 			{% for post in nonFeaturedPosts limit: 6 %}
 				{% assign hed = post.title %}
-				{% assign dek = post['Description'] %}
+				{% assign dek = post['Subtitle'] %}
 				{% assign url = post.url %}
 				{% assign cat = post['Category'] %}
 				{% assign img = post['Main Image'] %}
