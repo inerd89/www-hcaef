@@ -3,7 +3,6 @@ title: About Us
 permalink: "/about/"
 position: 4
 Navigation Title: About
-layout: about
 About Us Intro: 'Mission statement here lorem ip sum dolor sit amet, consectetuer
   adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
   volutpat. '
@@ -41,7 +40,7 @@ Historical Stats:
   Label: current students served
 Historical Highlights Title: Highlights
 Historical Highlights:
-- Image: test.jpg
+- Image: "/uploads/prism-quartet-breath-beneath-2016-05-web.jpg"
   Caption Title: Highlight Title
   Caption: Placeholder caption text
 - Image: test.jpg
@@ -51,6 +50,7 @@ Board & Contact Title: Board Members & Contact Info
 Contact Info Blurb: 'Please contact us lorem ipsum dolor sit amet:'
 HCAEF Mailing Address: "P.O. Box 9999  \nHines, Oregon 99999\n"
 HCAEF Email Address: info@harneyarts.org
+layout: about
 ---
 
 Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.
