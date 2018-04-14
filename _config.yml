@@ -69,7 +69,8 @@ defaults:
       URL: ''
     Footnote:
     Table:
-    - - ''
+    - Row:
+      - ''
       - ''
 email: info@harneyartsfoundation.org
 description: 'Write an awesome description for your new site here. You can edit this
