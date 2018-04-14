@@ -1,7 +1,7 @@
 ---
 title: Performing Groups
 position: 2
-Image: test.jpg
+Image: "/uploads/slide-09.jpg"
 Image First?: true
 List (single):
 - Item: Portland Youth Philharmonic
