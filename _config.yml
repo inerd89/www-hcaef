@@ -16,6 +16,9 @@ collections:
   support:
     title: Support
     output: false
+  team-members:
+    title: Team Members
+    output: false
   posts:
     title: Posts
     output: true
@@ -71,6 +74,14 @@ defaults:
     Table:
     - - ''
       - ''
+- scope:
+    path: ''
+    type: team-members
+  values:
+    Position Title: ''
+    Email Address: ''
+    Is Board Member?: false
+    Image: ''
 email: info@harneyartsfoundation.org
 description: 'Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
