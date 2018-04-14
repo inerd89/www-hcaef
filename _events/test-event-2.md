@@ -1,6 +1,6 @@
 ---
 title: Test Event 2
-position: 5
+position: 1
 Event Start Date: 2018-04-27 20:00:00 -07:00
 Event End Date: 2018-04-30 20:00:00 -07:00
 Volunteers Needed?: true

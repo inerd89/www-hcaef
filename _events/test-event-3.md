@@ -1,6 +1,6 @@
 ---
 title: Test Event 3
-position: 3
+position: 4
 Event Start Date: 2018-05-04 19:00:00 -07:00
 Event End Date: 2018-05-04 21:00:00 -07:00
 Volunteers Needed?: true
