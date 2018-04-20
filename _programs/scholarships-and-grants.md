@@ -20,10 +20,4 @@ List (expanded):
     et est feugiat, non tempus justo sodales.
 ---
 
-Oregon Community Foundation Studio to School Grant, 2014-2020 -- $280,000 was awarded to Harney County middle school music and art programs, administered by HCAEF and the Harney Education Service District.
 
-Leupold and Stevens
-
-Scholarships -- HCAEF funds one of several scholarships given to local students each year by the Harney County Chamber Music Society. These scholarships allow students to receive private music lessons or go to a music camp.
-
-Grants to Steens Mountain Ballet Company
