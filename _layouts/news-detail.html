@@ -7,7 +7,7 @@ classes: news news--secondary
 	<a href="/news">&larr; Back to News</a>
 </div>
 
-<article>
+<article class="news-article">
 	<div class="container">
 		<header class="article-header">
 			<div class="article-social-share">
@@ -15,15 +15,22 @@ classes: news news--secondary
 				<a href="#">{% include icons/twitter_icon.svg %}</a>
 				<a href="#">{% include icons/linkedin_icon.svg %}</a>
 			</div>
-			<h1 class="article-hed">{{ page.title }}</h1>
-			<h3 class="article-dek">{{ page['Subtitle'] }}</h3>
-			<ul class="article-tags">
-				{% for tag in page.tags %}
-					<li><a href="">{{ tag }}</a></li>
-				{% endfor %}
-			</ul>
+			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
+			<h3 class="article-dek typo--large-sans">{{ page['Subtitle'] }}</h3>
 		</header>
-		<img src="{{ page['Main Image'] }}" />
-		{{ page.content }}
+		<ul class="article-tags">
+			{% for tag in page.tags %}
+			<li><a href="">{{ tag }}</a></li>
+			{% endfor %}
+		</ul>
+		<div class="article-lead-image">
+			<img src="{{ page['Main Image'] }}" />
+		</div>
+		<div class="article-byline">
+			<p>By {{ page['Author'] }}<br>{{ page.date | date: "%B %e, %Y" }}</p>
+		</div>
+		<div class="article-body">
+			{{ page.content }}
+		</div>
 	</div>
 </article>
