@@ -7,7 +7,6 @@ Main Image: "/uploads/26151456_576455216019885_233882564362764288_n.jpg"
 Is Featured?: true
 Description: This is an excellent test article.
 Category: Teacher Spotlight
-thing: red
 ---
 
 This is the article. Pretty awesome, right?

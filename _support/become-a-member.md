@@ -1,6 +1,6 @@
 ---
 title: Become a Member
-position: 3
+position: 2
 Table:
 - - Student Membership
   - "$5 per year"

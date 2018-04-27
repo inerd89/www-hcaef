@@ -1,6 +1,6 @@
 ---
 title: Performing Groups
-position: 2
+position: 1
 Image: "/uploads/slide-09.jpg"
 Image First?: true
 List (single):

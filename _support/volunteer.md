@@ -1,6 +1,6 @@
 ---
 title: Volunteer
-position: 2
+position: 1
 Button:
 - Title: Inquire about volunteer opportunities
   URL: "#"

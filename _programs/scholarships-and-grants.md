@@ -1,6 +1,6 @@
 ---
 title: Scholarships & Grants
-position: 1
+position: 0
 Button:
 - Title: Contact us about grant or scholarship opportunities
   URL: "#"
@@ -20,8 +20,4 @@ List (expanded):
     et est feugiat, non tempus justo sodales.
 ---
 
-Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
-ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
-Vivamus vitae enim rutrum ipsum ultrices convallis.
+
