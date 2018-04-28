@@ -1,6 +1,11 @@
 ---
 title: 'From The Archives: Raphael Spiro Quartet in concert'
 date: 2018-02-14 00:00:00 -08:00
+tags:
+- event
+- performance
+- music
+- from the archives
 position: 1
 Subtitle: This is an excellent test article.
 Author: Name Teekay
