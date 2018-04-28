@@ -10,6 +10,7 @@ position: 1
 Subtitle: This is an excellent test article.
 Author: Name Teekay
 Main Image: test-article.jpg
+Main Image Caption: 'This is an image caption.'
 Description: This is an excellent test article.
 Category: Student Spotlight
 ---
