@@ -18,7 +18,7 @@ The Harney County Arts in Education Foundation (HCAEF) was pleased to present th
 
 RSQ was formed in 2012 as a memorial to the late Raphael Spiro (1905-2000), when the three upper string players learned at a chamber music gathering that each of them had Spiro as their principal violin teacher. RSQ performs formal recitals, gives educational workshops for a range of audiences, contributes to local community outreach programs, and is available for weddings and other celebrations.
 
-Meet the Quartet
+## Meet the Quartet
 
 Violinist Irene Gadeholt studied with Spiro and Michael Foxman in Portland, and in her youth studied with Max Winder of the Boston Symphony. She was concertmaster and soloist with the Portland Junior Symphony (now Portland Youth Philharmonic), and a featured soloist with the Portland State University orchestra as a student. Gadeholt performed many seasons as a member of the Oregon Symphony and has held posts of assistant concertmaster with the Portland Opera, Oregon Ballet Theatre, the West Coast Chamber Orchestra, and guest concertmaster of the Newport Symphony.
 Violinist Mary Ann Coggins Kaza studied with Spiro in Portland, and with Louis Krasner. She has done thousands of performances during her 42 years with the Oregon Symphony, including concerts at the Hollywood Bowl and Carnegie Hall. She has performed with the Portland Opera and Oregon Ballet Theatre, West Coast Chamber Orchestra, Little Orchestra of Portland, and with the former Kaza String Quartet.
