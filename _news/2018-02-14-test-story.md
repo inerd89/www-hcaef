@@ -10,7 +10,8 @@ position: 1
 Subtitle: This is an excellent test article.
 Author: Name Teekay
 Main Image: test-article.jpg
-Main Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME TEEKAY'
+Main Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME
+  TEEKAY'
 Description: This is an excellent test article.
 Category: Student Spotlight
 ---
