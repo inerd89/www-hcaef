@@ -6,7 +6,13 @@
 		<nav class="site-nav">
 			{% assign sitePages = site.pages | sort: 'position' %}
 			{% for p in sitePages offset: 1 %}
-				<a class="site-nav__link typo--nav-link {% if page.url == p.url %}active{% endif %}" href="{{ p.url }}">
+				<a class="
+					site-nav__link
+					typo--nav-link
+					{% if page.url == p.url %}active
+					{% elsif page.url contains '/news/' and p.url contains '/news' %}active
+					{% elsif page.url contains '/events/' and p.url contains '/events' %}active
+					{% endif %}" href="{{ p.url }}">
 					{% if p['Navigation Title'] and p['Navigation Title'] != '' %}
 						{{ p['Navigation Title'] }}
 					{% else %}
@@ -15,8 +21,35 @@
 				</a>
 			{% endfor %}
 		</nav>
+		<div class="mobile-ham">
+			<button><div></div></button>
+		</div>
 	</div>
 </header>
+
+<nav class="mobile-nav">
+	<div class="container">
+		<ul>
+			{% for p in sitePages offset: 1 %}
+				<li>
+					<a class="
+						site-nav__link
+						typo--nav-link
+						{% if page.url == p.url %}active
+						{% elsif page.url contains '/news/' and p.url contains '/news' %}active
+						{% elsif page.url contains '/events/' and p.url contains '/events' %}active
+						{% endif %}" href="{{ p.url }}">
+						{% if p['Navigation Title'] and p['Navigation Title'] != '' %}
+							{{ p['Navigation Title'] }}
+						{% else %}
+							{{ p.title }}
+						{% endif %}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
 
 {% comment %}
 <!-- <a href="/events">Events</a>

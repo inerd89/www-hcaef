@@ -1,21 +1,32 @@
-
-.news-article {
-	padding: $baseline * 4 0;
+.news-page--secondary {
+	background-color: #f8f8f8;
 }
 
-.news-article > .container {
+.back-from-article {
+	display: inline-block;
+	padding-top: 4rem;
+	grid-column: 1 / span 3;
+	grid-row: 1 / span 1;
+}
+
+.article {
+	padding-bottom: 8rem;
+}
+
+.article--news > .container {
 	display: grid;
-	grid-template: auto auto auto auto / 2fr 7fr 3fr;
-	grid-gap: 3rem;
+	grid-template: auto auto auto auto auto / 2fr 7fr 3fr;
+	grid-column-gap: 3rem;
 }
 
 .article-header {
 	grid-column: 1 / span 3;
-	grid-row: 1 / span 1;
+	grid-row: 2 / span 1;
+	padding-top: 3rem;
 
 	display: grid;
 	grid-template: auto auto / 9fr 1fr 2fr;
-	grid-gap: 3rem;
+	grid-column-gap: 3rem;
 }
 
 .article-hed {
@@ -27,24 +38,106 @@
 	grid-column: 1 / span 1;
 	grid-row: 2 / span 1;
 	font-weight: normal;
+	padding-top: 1rem;
 }
 
 .article-social-share {
 	grid-column: 3 / span 1;
 	grid-row: 1 / span 2;
+	text-align: right;
+	padding-top: 0.5rem;
 }
+
+.article-social-share > a {
+	position: relative;
+	display: inline-block;
+	margin-left: 1rem;
+	width: 4rem;
+	height: 4rem;
+	border: 1px solid $dark-grey;
+	border-radius: 50%;
+	text-align: center;
+	transition: opacity 0.2s ease-out;
+
+	> svg {
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		// background-color: $dark-grey;
+		opacity: 0.6;
+
+		// .icon-dark {
+		// 	fill: #ffffff !important;
+		// }
+	}
+}
+
+// .article-share-fb
 
 .article-tags {
 	grid-column: 1 / span 3;
-	grid-row: 2 / span 1;
+	grid-row: 3 / span 1;
+	margin: 3rem 0 2rem 0;
+	height: 4rem;
+}
+
+.article-tags.none {
+	height: 0;
+}
+
+.article-tag {
+	display: inline-block;
+	padding: 0.25rem 0.5rem;
+	color: lighten($dark-grey, 25%);
+	border: 1px solid lighten($dark-grey, 50%);
+	border-radius: 0.25rem;
+	margin-right: 0.5rem;
+	text-transform: uppercase;
 }
 
 .article-lead-image {
 	grid-column: 1 / span 3;
-	grid-row: 3 / span 1;
+	grid-row: 4 / span 1;
+
+	margin-bottom: 3rem;
+	// height: 39rem;
 
 	img {
+		display: block;
 		width: 100%;
 		min-height: 200px;
+		// height: 48rem;
+		background: $light-grey;
+		border: none;
+		outline: none;
 	}
+}
+
+.image-caption {
+	color: lighten($dark-grey, 25%);
+	padding-top: 0;
+}
+
+.article-byline {
+	font-weight: bold;
+}
+
+.related .news-cards {
+	display: grid;
+	grid-template: auto / 1fr 1fr 1fr;
+	grid-column-gap: 3rem;
+}
+
+.related .page-section-title {
+	padding-bottom: 2rem;
+}
+
+.related {
+	padding-bottom: 0;
 }

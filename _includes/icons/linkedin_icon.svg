@@ -1,4 +1,11 @@
-<svg width="17px" height="17px" viewBox="0 0 17 17">
-	<title>LinkedIn</title>
-	<use xlink:href="#icon__linkedin--small"></use>
-</svg>
+{% if include.color == 'dark' %}
+	<svg width="17px" height="17px" viewBox="0 0 17 17">
+		<title>LinkedIn</title>
+		<use xlink:href="#icon__linkedin--small--dark"></use>
+	</svg>
+{% else %}
+	<svg width="17px" height="17px" viewBox="0 0 17 17">
+		<title>LinkedIn</title>
+		<use xlink:href="#icon__linkedin--small"></use>
+	</svg>
+{% endif %}

@@ -1,4 +1,11 @@
-<svg width="18px" height="16px" viewBox="0 0 18 16">
-	<title>Twitter</title>
-	<use xlink:href="#icon__twitter--small"></use>
-</svg>
+{% if include.color == 'dark' %}
+	<svg width="18px" height="16px" viewBox="0 0 18 16">
+		<title>Twitter</title>
+		<use xlink:href="#icon__twitter--small--dark"></use>
+	</svg>
+{% else %}
+	<svg width="18px" height="16px" viewBox="0 0 18 16">
+		<title>Twitter</title>
+		<use xlink:href="#icon__twitter--small"></use>
+	</svg>
+{% endif %}

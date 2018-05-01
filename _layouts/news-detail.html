@@ -1,30 +1,38 @@
 ---
 layout: master
-classes: news news--secondary
+classes: news-page news-page--secondary
 ---
 
-<div class="container">
-	<a href="/news">&larr; Back to News</a>
-</div>
+{% assign related = '' | split:'' %}
 
-<article class="news-article">
+{% for post in site.news %}
+	{% if post.url != page.url %}
+		{% assign related = related | push: post %}
+	{% endif %}
+{% endfor %}
+
+<article class="article article--news">
 	<div class="container">
+		<a class="back-from-article typo--link" href="/news">&larr; Back to News</a>
 		<header class="article-header">
 			<div class="article-social-share">
-				<a href="#">{% include icons/facebook_icon.svg %}</a>
-				<a href="#">{% include icons/twitter_icon.svg %}</a>
-				<a href="#">{% include icons/linkedin_icon.svg %}</a>
+				<a class="article-share-fb" href="#">{% include icons/facebook_icon.svg color="dark" %}</a>
+				<a class="article-share-tw" href="#">{% include icons/twitter_icon.svg color="dark" %}</a>
+				<a class="article-share-in" href="#">{% include icons/linkedin_icon.svg color="dark" %}</a>
 			</div>
 			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
-			<h3 class="article-dek typo--large-sans">{{ page['Subtitle'] }}</h3>
+			{% if page['Subtitle'] and page['Subtitle'] != '' %}
+				<h3 class="article-dek typo--large-sans">{{ page['Subtitle'] }}</h3>
+			{% endif %}
 		</header>
-		<ul class="article-tags">
+		<div class="article-tags {% unless page.tags and page.tags.size != 0 %}none{% endunless %}">
 			{% for tag in page.tags %}
-			<li><a href="">{{ tag }}</a></li>
+				<a class="article-tag typo--link" href="">{{ tag }}</a>
 			{% endfor %}
-		</ul>
+		</div>
 		<div class="article-lead-image">
 			<img src="{{ page['Main Image'] }}" />
+			<p class="image-caption typo--caption">{{ page['Main Image Caption'] }}</p>
 		</div>
 		<div class="article-byline">
 			<p>By {{ page['Author'] }}<br>{{ page.date | date: "%B %e, %Y" }}</p>
@@ -34,3 +42,19 @@ classes: news news--secondary
 		</div>
 	</div>
 </article>
+
+<section class="page-section related">
+	<div class="container">
+		<h3 class="page-section-title typo--section-title">More Recent News</h3>
+		<div class="news-cards">
+			{% for item in related limit: 3 %}
+				{% assign hed = item.title %}
+				{% assign dek = item['Subtitle'] %}
+				{% assign url = item.url %}
+				{% assign cat = item['Category'] %}
+				{% assign img = item['Main Image'] %}
+				{% include news-card.html hed=hed dek=dek url=url image=img cat=cat %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

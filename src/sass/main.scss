@@ -47,17 +47,17 @@ $modularscale: (
 // Fluid rem
 $fluid-rem: (
 	$phone: (
-		base		:	6px,
-	),
-	$tablet-portrait: (
-		base		:	9px,
-	),
-	$tablet-landscape: (
 		base		:	10px,
 	),
-	$desktop-large: (
-		base		: 	12px,
-	)
+	// $tablet-portrait: (
+	// 	base		:	9px,
+	// ),
+	$tablet-landscape: (
+		base		:	12px,
+	),
+	// $desktop-large: (
+	// 	base		: 	12px,
+	// )
 );
 
 //

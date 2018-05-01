@@ -1,21 +1,146 @@
 ---
 layout: master
+classes: events-page events-page--secondary
 ---
 
-<!--
-	Will we need to handle date spans?
--->
+<article class="article article--event">
+	<div class="container">
+		<a class="back-from-article typo--link" href="/events">&larr; Back to Events</a>
+		<header class="article-header">
+			<div class="article-social-share">
+				<a class="article-share-fb" href="#">{% include icons/facebook_icon.svg color="dark" %}</a>
+				<a class="article-share-tw" href="#">{% include icons/twitter_icon.svg color="dark" %}</a>
+				<a class="article-share-in" href="#">{% include icons/linkedin_icon.svg color="dark" %}</a>
+			</div>
+			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
+			{% assign startDate = page['Event Start Date'] | date: "%B %d, %Y" %}
+			{% assign endDate = page['Event End Date'] | date: "%B %d, %Y" %}
+			{% if startDate == endDate %}
+				<h3 class="article-dek typo--large-sans"><time>{{ page['Event Start Date'] | date: "%B %e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+			{% else %}
+				{% if page['Event Start Date'] | date: "%B" == page['Event End Date'] | date: "%B" %}
+					<h3 class="article-dek typo--large-sans"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+				{% else %}
+					<h3 class="article-dek typo--large-sans"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event E Date'] | date: "%B %e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+				{% endif %}
+			{% endif %}
+		</header>
+		<div class="article-tags {% unless page.tags and page.tags.size != 0 %}none{% endunless %}">
+			{% for tag in page.tags %}
+				<a class="article-tag typo--link" href="">{{ tag }}</a>
+			{% endfor %}
+		</div>
+		<div class="article-lead-image">
+			<img src="{{ page['Event Image'] }}" />
+			{% if page['Event Image Caption'] and page['Event Image Caption'] != '' %}
+				<p class="image-caption typo--caption">{{ page['Event Image Caption'] }}</p>
+			{% endif %}
+		</div>
+		<div class="article-body">
+			{% if page['Volunteers Needed?'] %}
+				<p><strong>Volunteers needed!</strong></p>
+			{% endif %}
+			{{ page.content }}
+			{% if page['Event Info URL'] %}
+			<p>Learn more at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a>.</p>
+			{% endif %}
+		</div>
+		<div class="event-info-sidebar">
+			{% if startDate == endDate %}
+				<p><time>{{ page['Event Start Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+			{% else %}
+				{% if page['Event Start Date'] | date: "%B" == page['Event End Date'] | date: "%B" %}
+					<p><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+				{% else %}
+					<p><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event E Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+				{% endif %}
+			{% endif %}
+			{% if page['Event Venue'] and page['Event Venue'] != '' %}
+				<p>{{ page['Event Venue'] }}
+					{% if page['Event Venue Address'] and page['Event Venue Address'] != '' %}
+						<br>{{ page['Event Venue Address'] }}
+					{% endif %}
+				</p>
+			{% endif %}
+			{% if page['Tickets Required?'] %}
+				<p>Tickets are required. {% if page['Instructions for Tickets'] and page['Instructions for Tickets'] != '' %}{{ page['Instructions for Tickets'] }}{% endif %}</p>
+			{% endif %}
+			{% if page['Ticket Purchasing URL'] and page['Ticket Purchasing URL'] != '' %}
+				<a class="button button--dark button--tickets typo--button" href="//{{ page['Ticket Purchasing URL'] }}">Buy Tickets &rarr;</a>
+			{% endif %}
+			{% if page['Event Info URL'] %}
+			<p>More info at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a></p>
+			{% endif %}
+		</div>
+	</div>
+</article>
 
-<img src="{{ page['Event Image'] }}" />
+{% assign currentYear = 'now' | date: '%Y' | times: 1 %}
+{% assign currentMonth = 'now' | date: '%m' | times: 1 %}
+{% assign currentDay = 'now' | date: '%d' | times: 1 %}
+{% assign pastEvents = '' | split: '' %}
+{% assign currentEvents = '' | split: '' %}
+{% for event in site.events %}
+	{% assign year = event['Event Start Date'] | date: '%Y' | times: 1 %}
+	{% assign month = event['Event Start Date'] | date: '%m' | times: 1 %}
+	{% assign day = event['Event Start Date'] | date: '%d' | times: 1 %}
 
-{% if page['Volunteers Needed?'] %}
-<p>Volunteers are needed!</p>
-{% endif %}
-<h1>{{ page.title }}</h1>
-<p>{{ page.content }}</p>
+	{% if year > currentYear and event['Is Featured?'] == false %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% elsif year == currentYear and month > currentMonth and event['Is Featured?'] == false %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% elsif year == currentYear and month == currentMonth and day >= currentDay and event['Is Featured?'] == false %}
+		{% assign currentEvents = currentEvents | push: event %}
+	{% elsif event['Is Featured?'] == true %}
+		{% assign featuredEvent = event %}
+	{% else %}
+		{% assign pastEvents = pastEvents | push: event %}
+	{% endif %}
 
-<h3>When: </h3>
-<p>{{ page['Event Start Date'] | date: "%B %d, %Y"}} at {{ page['Event Start Time'] | date: "%I:%M" }}</p>
+{% endfor %}
 
-<h3>Where: </h3>
-<p>{{ page['Event Venue'] }}</p>
+{% assign related = '' | split:'' %}
+{% for event in currentEvents %}
+	{% if event.url != page.url %}
+		{% assign related = related | push: event %}
+	{% endif %}
+{% endfor %}
+
+<section class="page-section related">
+	<div class="container">
+		<h3 class="page-section-title typo--section-title">More Upcoming Events</h3>
+		<div class="event-cards">
+			{% assign numberOfWides = 0 %}
+			{% for event in related limit: 3 %}
+				{% assign i = forloop.index %}
+				{% assign title = event.title %}
+				{% assign start = event['Event Start Date'] %}
+				{% assign end = event['Event End Date'] %}
+				{% assign url = event.url %}
+
+				{% case i %}
+					{% when 1 %}
+						{% if event['Event Image'] and event['Event Image'] != '' %}
+							{% assign img = event['Event Image'] %}
+							{% include event-card.html title=title start=start end=end url=url image=img %}
+							{% assign numberOfWides = numberOfWides | plus: 1 %}
+						{% else %}
+							{% include event-card.html title=title start=start end=end url=url %}
+						{% endif %}
+					{% when 2 %}
+						{% if numberOfWides == 0 and event['Event Image'] and event['Event Image'] != '' %}
+							{% assign img = event['Event Image'] %}
+							{% include event-card.html title=title start=start end=end url=url image=img %}
+							{% assign numberOfWides = numberOfWides | plus: 1 %}
+						{% else %}
+							{% include event-card.html title=title start=start end=end url=url %}
+						{% endif %}
+					{% when 3 %}
+						{% if numberOfWides == 0 %}
+							{% include event-card.html title=title start=start end=end url=url %}
+						{% endif %}
+				{% endcase %}
+			{% endfor %}
+		</div>
+	</div>
+</section>

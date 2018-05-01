@@ -9,12 +9,12 @@
 				{% assign startDate = include.start | date: "%B %d, %Y" %}
 				{% assign endDate = include.end | date: "%B %d, %Y" %}
 				{% if startDate == endDate %}
-					<p><time>{{ include.start | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&mdash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
+					<p><time>{{ include.start | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
 				{% else %}
 					{% if include.start | date: "%B" == include.end | date: "%B" %}
-						<p><time>{{ include.start | date: "%B %e" }}&mdash;{{ include.end | date: "%e" }}</time></p>
+						<p><time>{{ include.start | date: "%B %e" }}&ndash;{{ include.end | date: "%e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
 					{% else %}
-						<p><time>{{ include.start | date: "%B %e" }}&mdash;{{ include.end | date: "%B %e" }}</time></p>
+						<p><time>{{ include.start | date: "%B %e" }}&ndash;{{ include.end | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
 					{% endif %}
 				{% endif %}
 				<p>Learn more &rarr;</p>

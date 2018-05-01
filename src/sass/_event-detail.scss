@@ -1,0 +1,29 @@
+.events-page--secondary {
+	background-color: #f8f8f8;
+}
+
+.article--event > .container {
+	display: grid;
+	grid-template: auto auto auto auto auto / 7fr 1fr 4fr;
+	grid-column-gap: 3rem;
+}
+
+.event-info-sidebar {
+	position: relative;
+	grid-column: 3 / span 1;
+	padding-bottom: 2rem;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		content: '';
+		background-color: lighten(#000, 80%);
+		left: -1.5rem;
+	}
+}
+
+.button--tickets + p {
+	padding-top: 2rem;
+}

@@ -1,5 +1,5 @@
 $volkhov-cap-height: 0.65;
-$worksans-cap-height: 0.5;
+$worksans-cap-height: 0.65;
 
 @function strip-unit($num) {
 	@return $num / ($num * 0 + 1);

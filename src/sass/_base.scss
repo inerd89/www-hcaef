@@ -5,16 +5,12 @@ html {
 	box-sizing: border-box;
 	font-size: 12px;
 
-	@include ms-respond(font-size, 0, $fluid-rem);
+	// @include ms-respond(font-size, 0, $fluid-rem);
 
 	* {
 		box-sizing: inherit;
 		-webkit-font-smoothing: antialiased;
 	}
-}
-
-body {
-	background-color: $dark-grey;
 }
 
 //
@@ -57,6 +53,22 @@ p {
 	@include align-to-baseline( 1.1667rem, 1.5rem, $worksans-cap-height );
 }
 
+.typo--large {
+	@extend .typo--base;
+	font-size: 2rem;
+	line-height: 2rem;
+	letter-spacing: -0.33px;
+	@include align-to-baseline( 2rem, 2rem, $worksans-cap-height );
+}
+
+.typo--caption {
+	@extend .typo--base;
+	font-size: 1.33rem;
+	line-height: 2rem;
+	color: lighten( $dark-grey, 25% );
+	@inclue align-to-baseline( 1.33rem, 2rem, $worksans-cap-height);
+}
+
 .typo--title {
 	font-family: $volkhov;
 	font-weight: 700;
@@ -81,14 +93,8 @@ p {
 	@extend .typo--title;
 	font-size: 4rem;
 	line-height: 4rem;
+	letter-spacing: -0.75px;
 	@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
-}
-
-.typo--large-sans {
-	@extend .typo--base;
-	font-size: 2rem;
-	line-height: 2.5rem;
-	@include align-to-baseline( 2rem, 2.5rem, $worksans-cap-height );
 }
 
 .typo--small-section-title {
@@ -120,6 +126,7 @@ p {
 	color: $dark-grey;
 	transition: color .2s;
 	mix-blend-mode: multiply;
+	letter-spacing: -0.15px;
 
 	&:hover {
 		color: lighten($dark-grey, 50%);
