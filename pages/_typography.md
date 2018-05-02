@@ -1,6 +1,6 @@
 ---
+permalink: "/typography/"
 layout: type
-permalink: /typography/
 ---
 
 <h1 class="typo--page-title">Fluid Vertical Rhythm</h1>
