@@ -1,4 +1,4 @@
-<article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %}">
+<article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %} {% if include.image and include.image != '' %}with-image{% endif %}">
 	<a class="news-card__link" href="{{ include.url }}">
 		{% if include.cat and include.cat != '' %}
 			<p class="news-card__category">{{ include.cat }}</p>
@@ -6,7 +6,7 @@
 		{% if include.image and include.image != '' %}
 			<div class="news-card__image" style="background-image: url({{ include.image }});"></div>
 		{% endif %}
-		<h4 class="news-card__hed typo--small-section-title">{{ include.hed }}</h4>
+		<h4 class="news-card__hed typo--small-article-title">{{ include.hed }}</h4>
 		<p class="news-card__dek typo--base">{{ include.dek }}</p>
 		<p class="typo--base">Continue reading &rarr;</p>
 	</a>

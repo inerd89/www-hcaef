@@ -77,9 +77,15 @@ p {
 
 .typo--page-title {
 	@extend .typo--title;
-	font-size: 5rem;
-	line-height: 5rem;
-	@include align-to-baseline( 5rem, 5rem, $volkhov-cap-height );
+	font-size: 3rem;
+	line-height: 3rem;
+	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+
+	@include breakpoint($tablet-landscape) {
+		font-size: 5rem;
+		line-height: 5rem;
+		@include align-to-baseline( 5rem, 5rem, $volkhov-cap-height );
+	}
 }
 
 .typo--section-title {
@@ -87,6 +93,13 @@ p {
 	font-size: 3rem;
 	line-height: 3rem;
 	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+}
+
+.typo--small-section-title {
+	@extend .typo--title;
+	font-size: 2rem;
+	line-height: 2rem;
+	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
 }
 
 .typo--article-title {
@@ -97,11 +110,19 @@ p {
 	@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
 }
 
-.typo--small-section-title {
+.typo--small-article-title {
 	@extend .typo--title;
-	font-size: 2rem;
-	line-height: 2rem;
-	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+
+	font-size: 1.5rem;
+	line-height: 1.75rem;
+	@include align-to-baseline( 1.5rem, 1.75rem, $volkhov-cap-height );
+
+	@include breakpoint($tablet-landscape) {
+		font-size: 2rem;
+		line-height: 2rem;
+		@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+	}
+
 }
 
 .typo--button {

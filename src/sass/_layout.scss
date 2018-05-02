@@ -12,8 +12,12 @@ body {
 // Page layout
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
 .content {
-	padding-top: 10rem;
+	padding-top: 8rem;
 	// background-color: #fff;
+
+	@include breakpoint($tablet-landscape) {
+		padding-top: 10rem;
+	}
 }
 
 .container {
@@ -177,7 +181,7 @@ body {
 		display: grid;
 		grid-template: auto / 1fr 2fr;
 		grid-column-gap: 3rem;
-		height: 10rem;
+		height: 8rem;
 		transition: height 0.2s ease-out;
 	}
 
@@ -221,15 +225,32 @@ body {
 @include breakpoint($tablet-landscape) {
 	.site-header > .container {
 		grid-template: auto / 1fr 1fr;
+		height: 10rem;
 	}
 }
 
 
 // Page Banner
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+.page-banner {
+	height: 40rem;
+	padding-top: 4rem;
+	background: #efefef;
+	// opacity: 0.5;
+}
+
+.page-description {
+	padding-top: 1rem;
+}
+
+.page-banner + section {
+	margin-top: -24rem;
+}
+
 @include breakpoint($desktop) {
 	.page-banner {
 		height: 44rem;
+		padding-top: 9rem;
 		background: #efefef;
 
 		.container {
@@ -240,24 +261,64 @@ body {
 		}
 	}
 
-	.page-title {
-		padding-top: 9rem;
-	}
-
 	.page-description {
-		padding-top: 10rem;
+		padding-top: 1rem;
 	}
 }
 
 // Hero
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
-@include breakpoint($desktop) {
+.hero {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 9;
+}
+
+.hero__image {
+	width: 100%;
+	// height: 16rem;
+	height: 0;
+	padding-bottom: 60%;
+	background-color: $light-grey;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.hero__card {
+	position: relative;
+	z-index: 99;
+	color: #fff;
+	background-color: $dark-grey;
+	transition: all 0.2s ease-out;
+
+	> a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		height: 100%;
+		padding: 1.5rem;
+	}
+
+	&:hover {
+		background-color: lighten($dark-grey, 8%);
+
+		.hero__cta {
+			transform: translateX(0.5rem);
+		}
+	}
+
+	.hero__cta {
+		padding: 1rem 0;
+		transition: all 0.2s ease-out;
+	}
+}
+
+@include breakpoint($tablet-landscape) {
 	.hero {
-		position: relative;
-		width: 100%;
 		height: 42rem;
 		grid-column: 1/-1;
-		z-index: 9;
 	}
 
 	.hero__image {
@@ -266,15 +327,9 @@ body {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: $light-grey;
-		background-size: cover;
-		background-position: center;
-		z-index: -1;
-	}
-
-	.hero__card {
-		position: relative;
-		z-index: 99;
+		height: auto;
+		width: auto;
+		padding: 0;
 	}
 }
 

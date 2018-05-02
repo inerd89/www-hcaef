@@ -28,7 +28,7 @@ classes: news-page
 							<h3 class="typo--section-title">{{ featuredPost.title }}</h3>
 							<p>{{ featuredPost['Description'] }}</p>
 						</div>
-						<p>Continue reading &rarr;</p>
+						<p class="hero__cta">Continue reading &rarr;</p>
 					</a>
 				</div>
 		</article>
@@ -45,6 +45,6 @@ classes: news-page
 	</div>
 </section>
 
-{% if archivedPosts.size > 0 %}
+<!-- {% if archivedPosts.size > 0 %}
 	{% include archive-list.html classModifier="news" title="Archive of Past News" posts=archivedPosts %}
-{% endif %}
+{% endif %} -->
