@@ -7,6 +7,7 @@
 
 .page-banner--front {
 	background-color: $green;
+	padding-top: 0;
 
 	.container {
 		display: grid;
@@ -56,7 +57,7 @@
 
 }
 
-.news-events {
+.front-page .news-events {
 	margin-top: -17rem;
 	padding-bottom: 6rem;
 

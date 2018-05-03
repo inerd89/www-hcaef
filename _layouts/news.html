@@ -26,7 +26,7 @@ classes: news-page
 						<div class="hero__card__copy">
 							<p class="category">{{ featuredPost['Category'] }}</p>
 							<h3 class="typo--section-title">{{ featuredPost.title }}</h3>
-							<p>{{ featuredPost['Description'] }}</p>
+							<p>{{ featuredPost['Subtitle'] }}</p>
 						</div>
 						<p class="hero__cta">Continue reading &rarr;</p>
 					</a>
@@ -45,6 +45,6 @@ classes: news-page
 	</div>
 </section>
 
-<!-- {% if archivedPosts.size > 0 %}
+{% if archivedPosts.size > 0 %}
 	{% include archive-list.html classModifier="news" title="Archive of Past News" posts=archivedPosts %}
-{% endif %} -->
+{% endif %}

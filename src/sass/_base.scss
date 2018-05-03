@@ -81,6 +81,12 @@ p {
 	line-height: 3rem;
 	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
 
+	@include breakpoint($tablet-portrait) {
+		font-size: 4rem;
+		line-height: 4rem;
+		@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
+	}
+
 	@include breakpoint($tablet-landscape) {
 		font-size: 5rem;
 		line-height: 5rem;
@@ -90,9 +96,15 @@ p {
 
 .typo--section-title {
 	@extend .typo--title;
-	font-size: 3rem;
-	line-height: 3rem;
-	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+	font-size: 2rem;
+	line-height: 2rem;
+	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+
+	@include breakpoint($tablet-portrait) {
+		font-size: 3rem;
+		line-height: 3rem;
+		@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+	}
 }
 
 .typo--small-section-title {
