@@ -100,7 +100,7 @@ p {
 	line-height: 2rem;
 	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
 
-	@include breakpoint($tablet-portrait) {
+	@include breakpoint($tablet-landscape) {
 		font-size: 3rem;
 		line-height: 3rem;
 		@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
@@ -109,9 +109,15 @@ p {
 
 .typo--small-section-title {
 	@extend .typo--title;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	line-height: 2rem;
-	@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+	@include align-to-baseline( 1.75rem, 2rem, $volkhov-cap-height );
+
+	@include breakpoint($tablet-portrait) {
+		font-size: 2rem;
+		line-height: 2rem;
+		@include align-to-baseline( 2rem, 2rem, $volkhov-cap-height );
+	}
 }
 
 .typo--article-title {

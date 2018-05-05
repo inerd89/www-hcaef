@@ -9,32 +9,21 @@
 }
 
 .other-program {
-	margin-top: 3rem;
-	padding: 4rem 0 8rem;
+	padding-bottom: 3rem;
 	background-color: $blue;
 
-	> .container {
-		display: grid;
-		grid-template-rows: auto;
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 3rem;
-	}
-
-	h3 {
-		padding-top: 3rem;
-	}
-
-	h3 + p {
-		padding-top: 3rem;
-	}
-
 	.button {
-		margin-top: 4rem;
+		margin-top: 3rem;
 	}
+
 }
 
-.other-program__image {
-	margin-top: 1rem;
-	background: $light-grey;
-	height: 100%;
+@include breakpoint($tablet-landscape) {
+	.other-program {
+		padding-bottom: 8rem;
+
+		.button {
+			margin-top: 4rem;
+		}
+	}
 }

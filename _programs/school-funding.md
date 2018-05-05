@@ -2,7 +2,7 @@
 title: School Funding
 position: 2
 Button:
-- Title: Request funding via our online application
+- Title: Request funding
   URL: "#"
 List (expanded):
 - Item Title: New Instruments / Instrument Repair

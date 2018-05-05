@@ -1,6 +1,6 @@
 <article class="event-card
 				{% if include.classModifier %}event-card--{{ include.classModifier }}{% endif %}
-				{% if include.image and include.image != '' %}include-image{% endif %}">
+				{% if include.image and include.image != '' %}with-image{% endif %}">
 
 	<a class="event-card__link" href="{{ include.url }}">
 		<div class="event-card__copy">
@@ -17,7 +17,7 @@
 						<p><time>{{ include.start | date: "%B %e" }}&ndash;{{ include.end | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
 					{% endif %}
 				{% endif %}
-				<p>Learn more &rarr;</p>
+				<p class="event-card__cta">Learn more &rarr;</p>
 			</div>
 		</div>
 		{% if include.image and include.image != '' %}

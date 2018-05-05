@@ -15,15 +15,18 @@ function checkScrollPosition() {
 
 function onMobileHamClick() {
 	let $mobileHam = $('.mobile-ham'),
-		$mobileNav = $('.mobile-nav')
+		$mobileNav = $('.mobile-nav'),
+		$siteHeader = $('.site-header')
 
 	if ($mobileNav.hasClass('open')) {
 		$mobileNav.removeClass('open')
 		$mobileHam.removeClass('active')
+		$siteHeader.removeClass('mobile-open')
 	}
 	else {
 		$mobileHam.addClass('active')
 		$mobileNav.addClass('open')
+		$siteHeader.addClass('mobile-open')
 	}
 }
 

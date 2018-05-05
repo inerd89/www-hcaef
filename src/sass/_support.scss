@@ -1,4 +1,4 @@
-.support-page {
+ .support-page {
 	.site-nav__link.active {
 		border-color: lighten($red, 5%);
 	}
@@ -12,7 +12,6 @@
 	}
 
 	.footer-sponsors {
-		margin-top: 3rem;
 		background-color: lighten($red, 5%);
 		color: $dark-grey;
 
@@ -40,12 +39,4 @@
 			@include align-to-baseline( 1.333rem, 2rem, $worksans-cap-height );
 		}
 	}
-}
-
-.support-panels .panel:not(.wide) {
-	min-height: 38rem;
-}
-
-.support-panels .panel:nth-child(3) {
-	padding-bottom: 6rem;
 }

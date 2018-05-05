@@ -31,7 +31,7 @@
 					*
 					{% endcomment %}
 					{% if panel['List (single)'] and panel['List (single)'].size > 0 and panel['List (single)'][0]['Item'] != '' %}
-						<ul class="list--single">
+						<ul class="panel__list--single">
 							{% for p in panel['List (single)'] %}
 								<li><p>{{ p['Item'] }}</p></li>
 							{% endfor %}

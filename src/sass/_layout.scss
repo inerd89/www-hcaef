@@ -38,11 +38,51 @@ body {
 }
 
 .page-section {
-	padding: 6rem 0;
+	padding: 4rem 0;
 }
 
 .page-section-title {
-	padding-bottom: 4rem;
+	padding-bottom: 1rem;
+}
+
+.page-section--2col {
+	> .container > div:first-of-type {
+		margin-bottom: 4rem;
+	}
+
+	.page-section__image {
+		background: $light-grey;
+		height: 0;
+		padding-bottom: 75%;
+	}
+}
+
+@include breakpoint($tablet-landscape) {
+	.page-section {
+		padding: 6rem 0 8rem;
+	}
+
+	.page-section-title {
+		padding-bottom: 3rem;
+	}
+
+	.page-section--2col {
+		> .container {
+			display: grid;
+			grid-template: auto / 1fr 1fr;
+			grid-column-gap: 3rem;
+
+			> div:first-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+
+		.page-section__image {
+			height: 100%;
+			padding: 0;
+		}
+	}
 }
 
 // Header
@@ -61,6 +101,24 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: height 0.2s ease-out;
+}
+
+.site-header.scrolled {
+	background-color: #fff !important;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+	.container {
+		height: 6rem;
+	}
+
+	.site-nav__link {
+		margin-top: 0;
+	}
+}
+
+.site-header.scrolled.mobile-open {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
 }
 
 .site-nav {
@@ -169,6 +227,23 @@ body {
 	margin: 0;
 }
 
+.mobile-nav.open li {
+	opacity: 0;
+	animation: mobileNavIn 0.3s ease-out both;
+
+	@for $navItem from 1 through 5 {
+		&:nth-of-type(#{$navItem}) {
+			$delay: $navItem * 0.025 + 0.1;
+			animation-delay: #{$delay}s;
+		}
+	}
+}
+
+@keyframes mobileNavIn {
+	0% {opacity: 0; transform: translateY(-200%);}
+	100% {opacity: 1; transform: translateY(0);}
+}
+
 .mobile-nav .site-nav__link {
 	font-size: 2rem;
 	line-height: 4rem;
@@ -244,7 +319,7 @@ body {
 }
 
 .page-banner + section {
-	margin-top: -24rem;
+	margin-top: -23rem;
 }
 
 @include breakpoint($desktop) {

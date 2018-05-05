@@ -12,8 +12,7 @@ Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin trist
 Support Section Title: Support the Foundation
 Support Section Text: Are you passionate about supporting arts and music educational
   opportunities in Harney County? There are many ways you can show your support. Consider
-  a monetary donation, or give of your time by volunteering -- it all helps!
+  a monetary donation, or give of your time by volunteering &mdash; it all helps!
 Support Section Image: test.jpg
 layout: front
 ---
-

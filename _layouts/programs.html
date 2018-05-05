@@ -5,15 +5,15 @@ classes: programs-page
 
 {% assign panels = site.programs | sort: 'position' %}
 {% include panel-list.html class="programs" panels=panels %}
-<section class="other-program">
+<section class="other-program page-section page-section--2col">
 	<div class="container">
 		<div>
-			<h3 class="typo--section-title">{{ page['Other Program Title'] }}</h3>
+			<h3 class="typo--section-title page-section-title">{{ page['Other Program Title'] }}</h3>
 			{{ page['Other Program Description'] | markdownify }}
 			{% if page['Other Program Button Title (optional)'] and page['Other Program Button URL (optional)'] %}
 				<a class="button button--dark typo--button" href="{{ page['Other Program Button URL (optional)'] }}">{{ page['Other Program Button Title (optional)'] }} &rarr;</a>
 			{% endif %}
 		</div>
-		<div class="other-program__image"><div>
+		<div class="page-section__image"><div>
 	</div>
 </section>

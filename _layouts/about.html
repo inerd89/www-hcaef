@@ -23,7 +23,7 @@ classes: about-page
 * OUR PROGRAMS
 *
 {% endcomment %}
-<section class="our-programs page-section">
+<section class="our-programs page-section page-section--2col">
 	<div class="container">
 		<div class="col">
 			<h3 class="page-section-title typo--section-title">{{ page['Programs Section Title'] }}</h3>
@@ -31,7 +31,7 @@ classes: about-page
 		</div>
 		<ul class="programs__link-list">
 			{% assign programs = site.programs | sort:'position' %}
-			{% for item in programs limit: 3 %}
+			{% for item in programs limit: 4 %}
 				<li><a class="typo--small-section-title" href="/programs/#{{ item.title | downcase | replace: ' ', '-' }}"><span>{{ item.title }}</span></a></li>
 			{% endfor %}
 		</ul>
@@ -100,7 +100,7 @@ classes: about-page
 				<h4 class="typo--small-section-title">{{ mem.title }}</h4>
 				<p>{{ mem['Position Title'] }}
 					{% if mem['Email Address'] and mem['Email Address'] != '' %}
-						<br><a class="typo--link--underline" href="mailto:{{ mem['Email Address'] }}">{{ mem['Email Address'] }}</a>
+						<br><a class="typo--link--underline" href="mailto:{{ mem['Email Address'] }}">Contact</a>
 					{% endif %}
 				</p>
 			</li>

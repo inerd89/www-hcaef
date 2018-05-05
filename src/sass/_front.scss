@@ -1,7 +1,6 @@
 .front-page {
 	.site-header {
 		background-color: $green;
-		// box-shadow: none;
 	}
 }
 
@@ -140,18 +139,6 @@
 
 .support-the-foundation {
 	background-color: $brown;
-
-	.container {
-		display: grid;
-		grid-template: auto auto / 1fr 1fr;
-		grid-column-gap: 3rem;
-	}
-
-	.section-image {
-		background-color: $light-grey;
-		background-size: cover;
-		background-position: center;
-	}
 }
 
 .front-page-support-buttons {
@@ -160,9 +147,10 @@
 	grid-gap: 1rem;
 	list-style: none;
 	padding: 0;
-	margin: 3rem 0 0.5rem 0;
+	margin: 3rem 0 0 0;
 
 	> li > a {
 		display: block;
+		height: 100%;
 	}
 }

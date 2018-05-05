@@ -14,7 +14,7 @@
     "build:images": "npm run imagemin",
     "build:jekyll": "jekyll build --verbose --config _config.yml,_config-dev.yml",
     "prefix": "postcss --use autoprefixer -b 'last 3 versions' --output assets/main.css assets/main.css",
-    "sass": "node-sass --output-style expanded src/sass/main.scss assets/main.css --importer _sass-npm-import.js",
+    "sass": "node-sass --output-style expanded --source-map-embed true --source-map-contents true src/sass/main.scss assets/main.css --importer _sass-npm-import.js",
     "lint:css": "stylelint 'src/**/*.{css,less,scss,sss}'",
     "build:css": "npm run sass && npm run prefix",
     "browserify": "browserify 'src/js/main.js' -d -t babelify -o assets/main.js",
