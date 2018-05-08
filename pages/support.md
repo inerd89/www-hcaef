@@ -6,4 +6,4 @@ Navigation Title: Support
 layout: support
 ---
 
-Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.
+Are you passionate about supporting arts and music educational opportunities in Harney County? There are many ways you can show your support. Consider a monetary donation, or give of your time by volunteering -- it all helps!
