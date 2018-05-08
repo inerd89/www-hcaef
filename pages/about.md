@@ -4,18 +4,13 @@ permalink: "/about/"
 position: 4
 Navigation Title: About
 Hero Image: test.jpg
-About Us Intro: 'Mission statement here lorem ip sum dolor sit amet, consectetuer
-  adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-  volutpat. '
-About Us Text: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-  et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-  placerat, felis est consequat elit, id dictum turpis nibh eget enim. Lorem ipsum
-  dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
-  ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-  nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-  consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-  molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-  accumsan et iusto odio dignissim qui.
+About Us Intro: Our mission is to promote, maintain, and enhance the opportunities
+  for growth and achievement within the areas of Music Education, Performing Arts,
+  Visual Arts, and Theater Arts in the schools and communities of Harney County.
+About Us Text: |-
+  **Why We Do What We Do**
+
+  We strongly believe that every child deserves the opportunity to expand their horizons from the exposure to, appreciation and performance of music and the arts. There is no question that this type of education benefits at-risk kids, opens doors of opportunity to dedicated students and increases academic ability for all.
 Programs Section Title: Our Programs
 Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin tristique
   lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
@@ -26,12 +21,17 @@ Call to Action: Please consider making a donation to support the arts in Harney 
 CTA Link Title: Make a Donation
 CTA URL: "#"
 Our History Title: Our History
-Our History Text: |
-  Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus placerat, felis est consequat elit, id dictum turpis nibh eget enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui.
-
-  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui. Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales.
-
-  Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus placerat, felis est consequat elit, id dictum turpis nibh eget enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+Our History Text: "**Our History**\n\nHarney County Arts in Education Foundation (HCAEF)
+  officially became a nonprofit 501(c)3 organization in 2009. It was founded after
+  millions of dollars in budget cuts were made to the local school districts, with
+  devastating results. Music and art classes ended at Burns High School, Hines Middle
+  School, Slater Elementary, Crane Elementary, and Crane High School. \n\nThe dedicated
+  volunteers that stepped forward to make a difference for our youth have kept our
+  mission. In the six years after its founding, HCAEF raised over $55,000 to support
+  the music and arts programs in Harney County. The band program instructor was fully
+  funded; art programs at Burns High School and Crane High School were restored, and
+  funding helped assist programs at rural schools (Diamond, Frenchglen, and Double
+  O). Artists-in-Residence programs were established at the schools."
 Historical Stats:
 - Number: 18
   Label: student scholarships sponsored
@@ -54,4 +54,4 @@ HCAEF Email Address: info@harneyarts.org
 layout: about
 ---
 
-Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa ac, pharetra varius felis.
+Welcome! We are a group of artists, musicians, educators, parents, and community members that are committed to providing our students and our community with excellent art and music education and experiences.
