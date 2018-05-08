@@ -1,5 +1,6 @@
 ---
 title: Sharla Calkins
+position: 0
 Position Title: President
 Email Address: name@email.com
 Is Board Member?: true
