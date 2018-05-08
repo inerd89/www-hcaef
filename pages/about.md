@@ -12,14 +12,12 @@ About Us Text: |-
 
   We strongly believe that every child deserves the opportunity to expand their horizons from the exposure to, appreciation and performance of music and the arts. There is no question that this type of education benefits at-risk kids, opens doors of opportunity to dedicated students and increases academic ability for all.
 Programs Section Title: Our Programs
-Programs Section Text: 'Pellentesque faucibus velit a auctor tempor. Proin tristique
-  lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-  placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
-  ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
-  Vivamus vitae enim rutrum ipsum ultrices convallis. '
+Programs Section Text: We support a variety of programs and initiatives -- everything
+  from art supplies and musical instruments to funding teaching positions to bringing
+  world-class performances to Harney County.
 Call to Action: Please consider making a donation to support the arts in Harney County.
 CTA Link Title: Make a Donation
-CTA URL: "#"
+CTA URL: https://www.paypal.com/donate/?token=ka92tunofB241GIEP8QI4M8-EZ1PlXtiiaR0KhgEy1S-jeVsNE-Lz9W5WQ3Xxb3QJe4qrG&country.x=US&locale.x=US
 Our History Title: Our History
 Our History Text: "**Our History**\n\nHarney County Arts in Education Foundation (HCAEF)
   officially became a nonprofit 501(c)3 organization in 2009. It was founded after
@@ -47,10 +45,12 @@ Historical Highlights:
 - Image: test.jpg
   Caption Title: Highlight Title
   Caption: Placeholder caption text
-Board & Contact Title: Board Members & Contact Info
-Contact Info Blurb: 'Please contact us lorem ipsum dolor sit amet:'
-HCAEF Mailing Address: "P.O. Box 9999  \nHines, Oregon 99999\n"
-HCAEF Email Address: info@harneyarts.org
+Board & Contact Title: Board Members
+Contact Info Blurb: 'Please contact us:'
+HCAEF Mailing Address: |
+  Harney County Arts in Education Foundation
+  PO Box 415, Hines, OR 97738
+HCAEF Email Address: harneyartsfoundation@gmail.com
 layout: about
 ---
 
