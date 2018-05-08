@@ -6,18 +6,13 @@ Button:
   URL: "#"
 List (expanded):
 - Item Title: New Instruments / Instrument Repair
-  Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-    et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-    placerat.
+  Item Description: No description.
 - Item Title: Art Supplies
-  Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-    et est feugiat, non tempus justo sodales.
+  Item Description: No description.
 - Item Title: Rural School Travel Assistance
-  Item Description: "$2,000 donation to assist a music teacher’s weekly travel expenses
-    to Diamond, Frenchglen and Double-O schools."
+  Item Description: No description.
 - Item Title: Teaching Positions
-  Item Description: Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-    et est feugiat, non tempus justo sodales.
+  Item Description: No description.
 ---
 
 Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
