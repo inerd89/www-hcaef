@@ -1,6 +1,6 @@
 ---
 title: Debby Peckham
-position: 1
+position: 2
 Position Title: Founding Advisor
 Email Address: name@email.com
 Is Board Member?: true

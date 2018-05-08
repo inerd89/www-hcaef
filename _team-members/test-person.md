@@ -1,6 +1,6 @@
 ---
 title: Ken Peckham
-position: 2
+position: 3
 Position Title: Treasurer
 Email Address: name@email.com
 Is Board Member?: true

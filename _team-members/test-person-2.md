@@ -1,6 +1,6 @@
 ---
 title: Becky Thein
-position: 3
+position: 1
 Position Title: Becky Thein
 Email Address: name@email.com
 Is Board Member?: true
