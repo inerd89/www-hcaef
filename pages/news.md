@@ -2,9 +2,8 @@
 title: Latest News
 permalink: "/news/"
 position: 2
-layout: news
 Navigation Title: News
+layout: news
 ---
 
-Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
-  ac, pharetra varius felis.
+Find out more about our past, present and future in our newsfeed.
