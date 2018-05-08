@@ -2,9 +2,8 @@
 title: Upcoming Events
 permalink: "/events/"
 position: 1
-layout: events
 Navigation Title: Events
+layout: events
 ---
 
-Mauris a porttitor dolor. Vestibulum arcu ex, sollicitudin sit amet massa
-  ac, pharetra varius felis.
+Check out what's going on in the arts in Harney County!
