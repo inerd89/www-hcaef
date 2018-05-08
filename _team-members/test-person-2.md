@@ -1,9 +1,9 @@
 ---
-title: Name Teekay 2
-Position Title: Title Teekay
+title: Becky Thein
+Position Title: Becky Thein
 Email Address: name@email.com
-Is Board Member?: false
-Image: 
+Is Board Member?: true
+Image: "/uploads/IMG_3913.JPG"
 ---
 
 Leave blank
