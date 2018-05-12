@@ -21,8 +21,8 @@ classes: news-page news-page--secondary
 				<a class="article-share-in" href="#">{% include icons/linkedin_icon.svg color="dark" %}</a>
 			</div>
 			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
-			{% if page['Subtitle'] and page['Subtitle'] != '' %}
-				<h3 class="article-dek typo--large-sans">{{ page['Subtitle'] }}</h3>
+			{% if page['Description'] and page['Description'] != '' %}
+				<h3 class="article-dek typo--large">{{ page['Description'] }}</h3>
 			{% endif %}
 		</header>
 		<div class="article-tags {% unless page.tags and page.tags.size != 0 %}none{% endunless %}">
@@ -34,7 +34,7 @@ classes: news-page news-page--secondary
 			<img src="{{ page['Main Image'] }}" />
 			<p class="image-caption typo--caption">{{ page['Main Image Caption'] }}</p>
 		</div>
-		<div class="article-byline">
+		<div class="article-byline-date">
 			<p>By {{ page['Author'] }}<br>{{ page.date | date: "%B %e, %Y" }}</p>
 		</div>
 		<div class="article-body">

@@ -1,0 +1,42 @@
+{% if include.type == 'news' %}
+	<article class="hero hero--news">
+			<div class="hero__image" style="background-image: url({{ include.post['Main Image'] }});"></div>
+			<div class="hero__card">
+				<a href="{{ include.post.url }}">
+					<div class="hero-card__info">
+						{% if include.post['Category'] and include.post['Category'] != '' %}
+							<p class="category">{{ include.post['Category'] }}</p>
+						{% endif %}
+						<h3 class="typo--section-title">{{ include.post.title }}</h3>
+						<p>{{ include.post['Description'] }}</p>
+					</div>
+					<p class="hero__cta">Continue reading &rarr;</p>
+				</a>
+			</div>
+	</article>
+{% elsif include.type == 'event' %}
+	<article class="hero hero--event">
+		<div class="hero__image" style="background-image: url({{ include.image }});"></div>
+		<div class="hero__card">
+			<a class="event-card__link" href="{{ include.url }}">
+				<div class="event-card__copy">
+					<h4 class="event-card__hed">{{ include.title }}</h4>
+					<div class="event-card__info">
+						{% assign startDate = include.start | date: "%B %d, %Y" %}
+						{% assign endDate = include.end | date: "%B %d, %Y" %}
+						{% if startDate == endDate %}
+							<p><time>{{ include.start | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
+						{% else %}
+							{% if include.start | date: "%B" == include.end | date: "%B" %}
+								<p><time>{{ include.start | date: "%B %e" }}&ndash;{{ include.end | date: "%e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
+							{% else %}
+								<p><time>{{ include.start | date: "%B %e" }}&ndash;{{ include.end | date: "%B %e" }}<br>{{ include.start | date: "%l:%M %P" }}&ndash;{{ include.end | date: "%l:%M %P" | strip }}</time></p>
+							{% endif %}
+						{% endif %}
+						<p class="event-card__cta">Learn more &rarr;</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</article>
+{% endif %}

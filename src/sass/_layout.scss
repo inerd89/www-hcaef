@@ -322,6 +322,25 @@ body {
 	margin-top: -23rem;
 }
 
+@include breakpoint($tablet-landscape) {
+	.page-banner {
+		height: 44rem;
+		padding-top: 7rem;
+		background: #efefef;
+
+		.container {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 36px;
+		}
+	}
+
+	.page-description {
+		padding-top: 1rem;
+	}
+}
+
 @include breakpoint($desktop) {
 	.page-banner {
 		height: 44rem;

@@ -113,9 +113,9 @@
 	}
 }
 
-@include breakpoint($desktop) {
+@include breakpoint($tablet-landscape) {
 	.site-footer {
-		padding: 3rem 0;
+		padding: 4rem 0 3rem;
 
 		.container {
 			display: grid;
@@ -172,7 +172,7 @@
 
 	.footer__logo {
 		text-align: right;
-		padding: 0;
+		padding: 1rem 0 0;
 
 		svg {
 			transform: scale(1);

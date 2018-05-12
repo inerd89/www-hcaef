@@ -54,4 +54,4 @@ HCAEF Email Address: harneyartsfoundation@gmail.com
 layout: about
 ---
 
-Welcome! We are a group of artists, musicians, educators, parents, and community members that are committed to providing our students and our community with excellent art and music education and experiences.
+We are a group of artists, educators, parents, and community members that are committed to providing our students and our community with excellent art and music education and experiences.

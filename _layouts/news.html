@@ -19,23 +19,11 @@ classes: news-page
 
 <section class="latest-news">
 	<div class="container">
-		<article class="hero hero--news">
-				<div class="hero__image" style="background-image: url({{ featuredPost['Main Image'] }});"></div>
-				<div class="hero__card">
-					<a href="{{ featuredPost.url }}">
-						<div class="hero__card__copy">
-							<p class="category">{{ featuredPost['Category'] }}</p>
-							<h3 class="typo--section-title">{{ featuredPost.title }}</h3>
-							<p>{{ featuredPost['Subtitle'] }}</p>
-						</div>
-						<p class="hero__cta">Continue reading &rarr;</p>
-					</a>
-				</div>
-		</article>
+		{% include hero.html type='news' post=featuredPost %}
 		<div class="news-cards">
 			{% for post in nonFeaturedPosts limit: 6 %}
 				{% assign hed = post.title %}
-				{% assign dek = post['Subtitle'] %}
+				{% assign dek = post['Description'] %}
 				{% assign url = post.url %}
 				{% assign cat = post['Category'] %}
 				{% assign img = post['Main Image'] %}

@@ -5,6 +5,8 @@ classes: support-page
 
 {% assign panels = site.support | sort: 'position' %}
 {% include panel-list.html class="support" panels=panels %}
+
+{% comment %}
 <section id="sponsors" class="footer-sponsors footer-sponsors--full">
 	<div class="container">
 		<h4 class="typo--small-section-title">Thanks to our sponsors:</h4>
@@ -31,3 +33,4 @@ classes: support-page
 		</ul>
 	</div>
 </section>
+{% endcomment %}

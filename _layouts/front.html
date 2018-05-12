@@ -28,7 +28,7 @@ classes: front-page
 			<h2 class="typo--page-title page-title">{{ page['Intro Blurb'] }}</h2>
 			<a class="typo--link" href="/about">{{ page['Intro Link Title'] }} &rarr;</a>
 		</div>
-		<a href="#">
+		<a class="donate-badge" href="#">
 			<span class="typo--small-section-title">Donate!</span>
 		</a>
 	</div>
@@ -41,12 +41,17 @@ classes: front-page
 {% endcomment %}
 <section class="news-events">
 	<div class="container">
-		<article class="hero">
-			<div class="hero__image"></div>
-			<div class="hero__card">
-				<b>Featured: {{ featuredPost.title }}</b>
-			</div>
-		</article>
+
+		{% assign featuredNews = site.news | where: 'Feature on Front Page?', true | first %}
+		{% assign featuredEvent = site.events | where: 'Feature on Front Page?', true | first %}
+		{% if featuredEvent %}
+			{% include hero.html type='event' event=featuredEvent %}
+		{% elsif featuredNews %}
+			{% include hero.html type='news' post=featuredNews %}
+		{% else %}
+			<h1>NO FEATURED POST FOUND</h1>
+		{% endif %}
+
 		<div class="front-page-news">
 			<!-- <a class="typo--link typo--small see-all" href="/news">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Latest News</h3>
@@ -57,7 +62,7 @@ classes: front-page
 					{% assign url = post.url %}
 					{% assign image = post['Main Image'] %}
 					{% assign cat = post['Category'] %}
-					{% include news-card.html hed=hed dek=dek url=url image=image classModifier="front-page" %}
+					{% include news-card.html hed=hed dek=dek url=url image=image cat=cat classModifier="front-page" %}
 				{% endfor %}
 			</div>
 		</div>
@@ -122,6 +127,11 @@ classes: front-page
 	</div>
 </section>
 
+{% comment %}
+*
+* SUPPORT THE FOUNDATION
+*
+{% endcomment %}
 <section class="support-the-foundation page-section page-section--2col">
 	<div class="container">
 		<div>

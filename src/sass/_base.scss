@@ -122,10 +122,17 @@ p {
 
 .typo--article-title {
 	@extend .typo--title;
-	font-size: 4rem;
-	line-height: 4rem;
+	font-size: 3rem;
+	line-height: 3rem;
 	letter-spacing: -0.75px;
-	@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
+	@include align-to-baseline( 3rem, 3rem, $volkhov-cap-height );
+
+	@include breakpoint($tablet-portrait) {
+		font-size: 4rem;
+		line-height: 4rem;
+		letter-spacing: -0.75px;
+		@include align-to-baseline( 4rem, 4rem, $volkhov-cap-height );
+	}
 }
 
 .typo--small-article-title {
@@ -194,6 +201,15 @@ p {
 	}
 }
 
+p > a {
+	color: inherit;
+	opacity: 1;
+	transition: opacity 0.2s ease-out;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
 
 // Buttons
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––

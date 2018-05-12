@@ -1,3 +1,7 @@
+//
+// Global & Mobile Styles
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+
 .about-page {
 	.site-nav__link.active {
 		border-color: $brown;
@@ -5,13 +9,20 @@
 
 	.page-banner {
 		background-color: $brown;
-		height: 28rem;
+		@include breakpoint (max-width $tablet-portrait - 1) {
+			height: 28rem;
+		}
 	}
 }
 
 .about-us {
-	margin-top: -11rem !important;
 	padding-bottom: 6rem;
+}
+
+.page-banner + .about-us {
+	@include breakpoint (max-width $tablet-portrait - 1) {
+		margin-top: -11rem;
+	}
 }
 
 .about-us__intro {
@@ -204,26 +215,240 @@
 	padding-top: 2rem;
 }
 
+
+//
+// Tablet Portrait Styles
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@include breakpoint($tablet-portrait) {
+	.programs__link-list {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.hcaef-stat {
+		grid-template: auto / 4fr 1fr;
+	}
+
+	.historical-highlights {
+		display: grid;
+		grid-template: auto auto / 1fr 1fr;
+		grid-column-gap: 3rem;
+
+		> h3 {
+			grid-column: 1 / span 2;
+		}
+	}
+
+	.board-members {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 3rem;
+	}
+}
+
+
+//
+// Tablet Landscape Styles
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
 @include breakpoint($tablet-landscape) {
 	.about-us {
-		margin-top: -288px;
 		padding-bottom: 6rem;
 
 		> .container {
 			display: grid;
 			grid-template-rows: auto auto;
 			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 3rem;
-			grid-row-gap: 3rem;
+			grid-gap: 3rem;
 		}
 	}
 
 	.about-us__intro {
-		font-weight: 400;
-		line-height: 3.5rem;
-		@include align-to-baseline( 3rem, 3.5rem, $volkhov-cap-height );
+		padding-top: 0;
+		// font-weight: 400;
+		// line-height: 3.5rem;
+		// @include align-to-baseline( 3rem, 3.5rem, $volkhov-cap-height );
 	}
 
+	.programs__link-list {
+		grid-template-columns: 1fr 1fr 1fr;
+
+		li:nth-child(4) {
+			display: none;
+		}
+	}
+
+	.our-history {
+		padding-bottom: 8rem;
+
+		.container {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-column-gap: 3rem;
+		}
+
+		.container.historical-highlights {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.our-history__copy {
+		grid-column: 1 / span 4;
+	}
+
+	.hcaef-stats {
+		margin-top: 7rem;
+		grid-column: 5 / span 4;
+	}
+
+	.hcaef-stat {
+		grid-template: auto / 3fr 1fr;
+	}
+
+	// .hcaef-stats {
+	// 	list-style: none;
+	// 	padding: 0;
+	// 	padding-left: calc(((100% - (3rem * 5)) / 6) + 3rem);
+	// 	margin: 0;
+	// 	margin-top: 8rem;
+	// }
+	//
+	// .hcaef-stat {
+	// 	overflow: hidden;
+	// 	width: 100%;
+	// 	padding: 5rem 0 3rem;
+	// 	border-top: 1px solid #535353;
+	// 	height: 14rem;
+	//
+	// 	&:last-child {
+	// 		border-bottom: 1px solid #535353;
+	// 	}
+	// }
+	//
+	// .hcaef-stat__num {
+	// 	float: left;
+	// 	width: calc(100% - 14rem);
+	// 	text-align: right;
+	// 	font-family: $worksans;
+	// 	font-size: 8rem;
+	// 	line-height: 6rem;
+	// 	letter-spacing: -1px;
+	// 	padding-top: 0;
+	// }
+	//
+	// .hcaef-stat__copy {
+	// 	float: left;
+	// 	width: 10rem;
+	// 	margin-right: 2rem;
+	// 	margin-left: 2rem;
+	// 	margin-top: 3px; // this is weird — fix baseline alignment?
+	// }
+
+	// .historical-highlights {
+	// 	display: grid;
+	// 	grid-template-rows: auto auto;
+	// 	grid-template-columns: 1fr 1fr;
+	// 	grid-column-gap: 3rem;
+	// 	padding-top: 12rem;
+	// }
+	//
+	// .historical-highlights__title {
+	// 	grid-column: 1/-1;
+	// }
+	//
+	// .historical-highlight {
+	// 	margin-top: 1rem;
+	// }
+	//
+	// .historical-highlight__image {
+	// 	width: 100%;
+	// 	height: 0;
+	// 	padding-bottom: 66.667%;
+	// 	background-color: $light-grey;
+	// 	background-size: cover;
+	// 	background-position: center;
+	// }
+
+	.contact {
+		background-color: $brown;
+
+		.container {
+			display: grid;
+			grid-template-rows: auto auto;
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-column-gap: 3rem;
+		}
+
+		.page-section-title {
+			grid-column: 1/-1;
+		}
+	}
+
+	.board-members {
+		grid-column: 1/9;
+		display: grid;
+		grid-template-rows: auto auto;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-column-gap: 3rem;
+		list-style: none;
+		padding: 0;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		margin: 0;
+	}
+
+	.board-member {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.board-member__image {
+		width: 100%;
+		height: 0;
+		padding-bottom: 100%;
+		border-radius: 50%;
+		background-color: $light-grey;
+		margin-bottom: 2rem;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.other-contact-info {
+		grid-column: 10/13;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -1.5rem;
+			width: 1px;
+			background-color: rgba(0, 0, 0, 0.2);
+			display: block;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	.other-members {
+		list-style: none;
+		padding: 0;
+		margin: 3rem 0 12rem 0;
+
+		li {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.hcaef-contact-info {
+		font-style: normal;
+		padding-top: 2rem;
+	}
+}
+
+
+//
+// Desktop Styles
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+@include breakpoint($desktop) {
 	.our-programs {
 		background-color: $light-grey;
 		padding-bottom: 8rem;
@@ -284,180 +509,8 @@
 		}
 	}
 
-	.cta {
-		background-color: $brown;
-		padding: 3rem;
-	}
-
-	.cta__copy {
-		display: inline;
-	}
-
-	.cta__link {
-		display: inline-block;
-		font-family: $worksans;
-		font-weight: 400;
-		transform: translateX(0);
-		transition: transform .3s ease-out;
-		border-bottom: 1px solid lighten($dark-grey, 50%);
-
-		&:hover {
-			color: $dark-grey;
-			transform: translateX(1rem);
-		}
-	}
-
-	.our-history {
-		background: $dark-grey;
-		color: #fff;
-		padding-bottom: 10rem;
-		// opacity: 0.5;
-
-		.container {
-			display: grid;
-			grid-template-rows: auto;
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 3rem;
-		}
-	}
-
 	.hcaef-stats {
-		list-style: none;
-		padding: 0;
-		padding-left: calc(((100% - (3rem * 5)) / 6) + 3rem);
-		margin: 0;
-		margin-top: 8rem;
-	}
-
-	.hcaef-stat {
-		overflow: hidden;
-		width: 100%;
-		padding: 5rem 0 3rem;
-		border-top: 1px solid #535353;
-		height: 14rem;
-
-		&:last-child {
-			border-bottom: 1px solid #535353;
-		}
-	}
-
-	.hcaef-stat__num {
-		float: left;
-		width: calc(100% - 14rem);
-		text-align: right;
-		font-family: $worksans;
-		font-size: 8rem;
-		line-height: 6rem;
-		letter-spacing: -1px;
-		padding-top: 0;
-	}
-
-	.hcaef-stat__copy {
-		float: left;
-		width: 10rem;
-		margin-right: 2rem;
-		margin-left: 2rem;
-		margin-top: 3px; // this is weird — fix baseline alignment?
-	}
-
-	.historical-highlights {
-		display: grid;
-		grid-template-rows: auto auto;
-		grid-template-columns: 1fr 1fr;
-		grid-column-gap: 3rem;
-		padding-top: 12rem;
-	}
-
-	.historical-highlights__title {
-		grid-column: 1/-1;
-	}
-
-	.historical-highlight {
-		margin-top: 1rem;
-	}
-
-	.historical-highlight__image {
-		width: 100%;
-		height: 0;
-		padding-bottom: 66.667%;
-		background-color: $light-grey;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.contact {
-		background-color: $brown;
-
-		.container {
-			display: grid;
-			grid-template-rows: auto auto;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-			grid-column-gap: 3rem;
-		}
-
-		.page-section-title {
-			grid-column: 1/-1;
-		}
-	}
-
-	.board-members {
-		grid-column: 1/9;
-		display: grid;
-		grid-template-rows: auto auto;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-column-gap: 6rem;
-		list-style: none;
-		padding: 0;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-		margin: 0;
-	}
-
-	.board-member {
-		text-align: center;
-		margin-bottom: 6rem;
-	}
-
-	.board-member__image {
-		width: 100%;
-		height: 0;
-		padding-bottom: 100%;
-		border-radius: 50%;
-		background-color: $light-grey;
-		margin-bottom: 2rem;
-		background-size: cover;
-		background-position: center;
-	}
-
-	.other-contact-info {
-		grid-column: 10/13;
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: -1.5rem;
-			width: 1px;
-			background-color: rgba(0, 0, 0, 0.2);
-			display: block;
-			mix-blend-mode: multiply;
-		}
-	}
-
-	.other-members {
-		list-style: none;
-		padding: 0;
-		margin: 3rem 0 12rem 0;
-
-		li {
-			margin-bottom: 2rem;
-		}
-	}
-
-	.hcaef-contact-info {
-		font-style: normal;
-		padding-top: 2rem;
+		margin-top: 6rem;
+		grid-column: 6 / span 3;
 	}
 }
