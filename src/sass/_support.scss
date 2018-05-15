@@ -5,6 +5,10 @@
 
 	.page-banner {
 		background-color: lighten($red, 5%);
+
+		&::after {
+			background-color: lighten($red, 5%);
+		}
 	}
 
 	.footer-sponsors--preview {

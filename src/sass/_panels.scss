@@ -1,5 +1,7 @@
 .panels {
+	position: relative;
 	padding-bottom: 3rem;
+	z-index: 2;
 }
 
 .panel {
@@ -119,7 +121,7 @@
 
 @include breakpoint($tablet-landscape) {
 	.panels {
-		margin-top: -24rem;
+		// margin-top: -24rem;
 	}
 
 	.panels > .container {

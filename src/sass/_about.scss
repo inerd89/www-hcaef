@@ -9,9 +9,14 @@
 
 	.page-banner {
 		background-color: $brown;
-		@include breakpoint (max-width $tablet-portrait - 1) {
-			height: 28rem;
+
+		&::after {
+			height: 12rem;
+			background-color: $brown;
 		}
+		// @include breakpoint (max-width $tablet-portrait - 1) {
+		// 	height: 28rem;
+		// }
 	}
 }
 
@@ -19,11 +24,11 @@
 	padding-bottom: 6rem;
 }
 
-.page-banner + .about-us {
-	@include breakpoint (max-width $tablet-portrait - 1) {
-		margin-top: -11rem;
-	}
-}
+// .page-banner + .about-us {
+// 	@include breakpoint (max-width $tablet-portrait - 1) {
+// 		margin-top: -11rem;
+// 	}
+// }
 
 .about-us__intro {
 	font-weight: 400;
@@ -220,6 +225,14 @@
 // Tablet Portrait Styles
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
 @include breakpoint($tablet-portrait) {
+	.about-page {
+		.page-banner {
+			&::after {
+				height: 24rem;
+			}
+		}
+	}
+
 	.programs__link-list {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}

@@ -5,6 +5,10 @@
 
 	.page-banner {
 		background-color: $blue;
+
+		&::after {
+			background-color: $blue;
+		}
 	}
 }
 

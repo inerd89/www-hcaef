@@ -5,6 +5,10 @@
 
 	.page-banner {
 		background-color: $yellow;
+
+		&::after {
+			background-color: $yellow;
+		}
 	}
 }
 
@@ -174,7 +178,7 @@
 	}
 
 	.latest-news {
-		margin-top: -24rem;
+		// margin-top: -24rem;
 	}
 
 	.news-cards {

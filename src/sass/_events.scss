@@ -5,6 +5,10 @@
 
 	.page-banner {
 		background-color: $green;
+
+		&::after {
+			background-color: $green;
+		}
 	}
 }
 
@@ -13,7 +17,7 @@
 }
 
 .upcoming-events {
-	margin-top: -24rem;
+	// margin-top: -24rem;
 }
 
 .event-cards {
@@ -111,7 +115,7 @@
 
 @include breakpoint($tablet-landscape) {
 	.upcoming-events {
-		margin-top: -24rem;
+		// margin-top: -24rem;
 	}
 
 	.hero__card.event-card {

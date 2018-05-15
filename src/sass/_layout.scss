@@ -304,35 +304,56 @@ body {
 	}
 }
 
-
 // Page Banner
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
 .page-banner {
-	height: 40rem;
+	position: relative;
+	height: auto;
 	padding-top: 4rem;
 	background: #efefef;
 	// opacity: 0.5;
+	padding-bottom: 3rem;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		position: absolute;
+		display: block;
+		background: #efefef;
+		width: 100%;
+		top: 100%;
+		height: 17.25rem;
+		z-index: -1;
+	}
 }
 
 .page-description {
 	padding-top: 1rem;
 }
 
-.page-banner + section {
-	margin-top: -23rem;
+@include breakpoint($tablet-portrait) {
+	.page-banner {
+		&::after {
+			height: 30rem;
+		}
+	}
 }
 
 @include breakpoint($tablet-landscape) {
 	.page-banner {
-		height: 44rem;
 		padding-top: 7rem;
+		padding-bottom: 8rem;
 		background: #efefef;
+
+		&::after {
+			height: 24rem;
+		}
 
 		.container {
 			display: grid;
 			grid-template-rows: auto;
 			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 36px;
+			grid-column-gap: 3rem;
 		}
 	}
 
@@ -343,22 +364,64 @@ body {
 
 @include breakpoint($desktop) {
 	.page-banner {
-		height: 44rem;
 		padding-top: 9rem;
-		background: #efefef;
-
-		.container {
-			display: grid;
-			grid-template-rows: auto;
-			grid-template-columns: 1fr 1fr;
-			grid-column-gap: 36px;
-		}
-	}
-
-	.page-description {
-		padding-top: 1rem;
 	}
 }
+
+// Page Banner
+//–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
+// .page-banner {
+// 	height: 40rem;
+// 	padding-top: 4rem;
+// 	background: #efefef;
+// 	// opacity: 0.5;
+// }
+//
+// .page-description {
+// 	padding-top: 1rem;
+// }
+//
+// .page-banner + section {
+// 	margin-top: -23rem;
+// }
+//
+// @include breakpoint($tablet-landscape) {
+// 	.page-banner {
+// 		height: 44rem;
+// 		padding-top: 7rem;
+// 		background: #efefef;
+//
+// 		.container {
+// 			display: grid;
+// 			grid-template-rows: auto;
+// 			grid-template-columns: 1fr 1fr;
+// 			grid-column-gap: 36px;
+// 		}
+// 	}
+//
+// 	.page-description {
+// 		padding-top: 1rem;
+// 	}
+// }
+//
+// @include breakpoint($desktop) {
+// 	.page-banner {
+// 		height: 44rem;
+// 		padding-top: 9rem;
+// 		background: #efefef;
+//
+// 		.container {
+// 			display: grid;
+// 			grid-template-rows: auto;
+// 			grid-template-columns: 1fr 1fr;
+// 			grid-column-gap: 36px;
+// 		}
+// 	}
+//
+// 	.page-description {
+// 		padding-top: 1rem;
+// 	}
+// }
 
 // Hero
 //–––––––––––––––––––––––––––————————————————————————————–––––––––––––––––––––––
