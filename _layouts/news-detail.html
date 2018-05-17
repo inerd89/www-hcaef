@@ -15,27 +15,36 @@ classes: news-page news-page--secondary
 	<div class="container">
 		<a class="back-from-article typo--link" href="/news">&larr; Back to News</a>
 		<header class="article-header">
+			{% if page['Category'] and page['Category'] != '' %}
+				<p class="article-category">{{ page['Category'] }}</p>
+			{% endif %}
 			<div class="article-social-share">
-				<a class="article-share-fb" href="#">{% include icons/facebook_icon.svg color="dark" %}</a>
-				<a class="article-share-tw" href="#">{% include icons/twitter_icon.svg color="dark" %}</a>
-				<a class="article-share-in" href="#">{% include icons/linkedin_icon.svg color="dark" %}</a>
+				<a class="article-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">{% include icons/facebook_icon.svg color="dark" %}</a>
+				<a class="article-share-tw" href="https://twitter.com/home?status={{ page.title | append: ": " }}{{ site.url }}{{ page.url }}" target="_blank">{% include icons/twitter_icon.svg color="dark" %}</a>
+				<a class="article-share-in" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&summary={{ page['Subtitle'] }}&source={{ site.title }}" target="_blank">{% include icons/linkedin_icon.svg color="dark" %}</a>
 			</div>
 			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
 			{% if page['Description'] and page['Description'] != '' %}
 				<h3 class="article-dek typo--large">{{ page['Description'] }}</h3>
 			{% endif %}
 		</header>
-		<div class="article-tags {% unless page.tags and page.tags.size != 0 %}none{% endunless %}">
-			{% for tag in page.tags %}
-				<a class="article-tag typo--link" href="">{{ tag }}</a>
-			{% endfor %}
-		</div>
-		<div class="article-lead-image">
-			<img src="{{ page['Main Image'] }}" />
-			<p class="image-caption typo--caption">{{ page['Main Image Caption'] }}</p>
-		</div>
+		{% comment %} // until functionality fully built
+			{% if page.tags and page.tags.size > 0 %}
+				<div class="article-tags">
+					{% for tag in page.tags %}
+						<a class="article-tag typo--link" href="">{{ tag }}</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endcomment %}
+		{% if page['Main Image'] and page['Main Image'] != '' %}
+			<div class="article-lead-image">
+				<img src="{{ page['Main Image'] }}" />
+				<p class="image-caption typo--caption">{{ page['Main Image Caption'] }}</p>
+			</div>
+		{% endif %}
 		<div class="article-byline-date">
-			<p>By {{ page['Author'] }}<br>{{ page.date | date: "%B %e, %Y" }}</p>
+			<p>{% if page['Author'] and page['Author'] != '' %}By {{ page['Author'] }}<br>{% endif %}{{ page.date | date: "%B %e, %Y" }}</p>
 		</div>
 		<div class="article-body">
 			{{ page.content }}

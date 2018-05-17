@@ -17,7 +17,7 @@ Programs Section Text: We support a variety of programs and initiatives -- every
   world-class performances to Harney County.
 Call to Action: Please consider making a donation to support the arts in Harney County.
 CTA Link Title: Make a Donation
-CTA URL: https://www.paypal.com/donate/?token=ka92tunofB241GIEP8QI4M8-EZ1PlXtiiaR0KhgEy1S-jeVsNE-Lz9W5WQ3Xxb3QJe4qrG&country.x=US&locale.x=US
+CTA URL: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2LUZUYG2268NS
 Our History Title: Our History
 Our History Text: "Harney County Arts in Education Foundation (HCAEF) officially became
   a nonprofit 501(c)3 organization in 2009. It was founded after millions of dollars

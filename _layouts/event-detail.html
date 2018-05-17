@@ -8,9 +8,9 @@ classes: events-page events-page--secondary
 		<a class="back-from-article typo--link" href="/events">&larr; Back to Events</a>
 		<header class="article-header">
 			<div class="article-social-share">
-				<a class="article-share-fb" href="#">{% include icons/facebook_icon.svg color="dark" %}</a>
-				<a class="article-share-tw" href="#">{% include icons/twitter_icon.svg color="dark" %}</a>
-				<a class="article-share-in" href="#">{% include icons/linkedin_icon.svg color="dark" %}</a>
+				<a class="article-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank">{% include icons/facebook_icon.svg color="dark" %}</a>
+				<a class="article-share-tw" href="https://twitter.com/home?status={{ page.title | append: ": " }}{{ site.url }}{{ page.url }}" target="_blank">{% include icons/twitter_icon.svg color="dark" %}</a>
+				<a class="article-share-in" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}&source={{ site.title }}" target="_blank">{% include icons/linkedin_icon.svg color="dark" %}</a>
 			</div>
 			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
 			{% assign startDate = page['Event Start Date'] | date: "%B %d, %Y" %}
@@ -25,11 +25,15 @@ classes: events-page events-page--secondary
 				{% endif %}
 			{% endif %}
 		</header>
-		<div class="article-tags {% unless page.tags and page.tags.size != 0 %}none{% endunless %}">
-			{% for tag in page.tags %}
-				<a class="article-tag typo--link" href="">{{ tag }}</a>
-			{% endfor %}
-		</div>
+		{% comment %} // until functionality fully built
+			{% if page.tags and page.tags.size > 0 %}
+				<div class="article-tags">
+					{% for tag in page.tags %}
+						<a class="article-tag typo--link" href="">{{ tag }}</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+		{% endcomment %}
 		<div class="article-lead-image">
 			<img src="{{ page['Event Image'] }}" />
 			{% if page['Event Image Caption'] and page['Event Image Caption'] != '' %}
@@ -42,7 +46,7 @@ classes: events-page events-page--secondary
 			{% endif %}
 			{{ page.content }}
 			{% if page['Event Info URL'] %}
-			<p>Learn more at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a>.</p>
+				<p>Learn more at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a>.</p>
 			{% endif %}
 		</div>
 		<div class="event-info-sidebar">
@@ -69,7 +73,7 @@ classes: events-page events-page--secondary
 				<a class="button button--dark button--tickets typo--button" href="//{{ page['Ticket Purchasing URL'] }}">Buy Tickets &rarr;</a>
 			{% endif %}
 			{% if page['Event Info URL'] %}
-			<p>More info at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a></p>
+				<p>More info at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a></p>
 			{% endif %}
 		</div>
 	</div>

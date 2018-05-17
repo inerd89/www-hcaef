@@ -42,17 +42,17 @@ defaults:
   values:
     layout: event-detail
     Is Featured?: false
-    Event Image: 
-    Event Image Caption: 
-    Event Start Date: 
-    Event End Date: 
+    Event Image:
+    Event Image Caption:
+    Event Start Date:
+    Event End Date:
     Volunteers Needed?: false
-    Event Venue: 
-    Event Venue Address: 
+    Event Venue:
+    Event Venue Address:
     Tickets Required?: false
-    Ticket Purchasing URL: 
-    Instructions for Tickets: 
-    Event Info URL: 
+    Ticket Purchasing URL:
+    Instructions for Tickets:
+    Event Info URL:
     Feature on Front Page?: false
 - scope:
     path: ''
@@ -76,7 +76,7 @@ defaults:
     Button:
     - Title: ''
       URL: ''
-    Footnote: 
+    Footnote:
     Image: ''
     Image First?: false
     Table:
@@ -94,10 +94,12 @@ email: info@harneyartsfoundation.org
 description: 'Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
   results) and in your feed.xml site description. '
+paypal_share_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2LUZUYG2268NS
 baseurl: "/"
 url: http://harneyartsfoundation.org
-twitter_username: 
-share_image_url: 
+twitter_handle: HCAEF
+facebook_page_handle: HarneyArtsFoundation
+share_image_url:
 markdown: kramdown
 exclude:
 - Gemfile

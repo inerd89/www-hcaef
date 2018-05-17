@@ -11,18 +11,20 @@
 		<div class="footer__extra">
 			<a class="button typo--button" href="#">Funding request application &rarr;</a>
 			<div class="footer__social-links">
-				<a class="footer_twitter" href="#">
+				<a class="footer_twitter" href="https://twitter.com/{{ site.twitter_handle }}">
 					{% include icons/twitter_icon.svg %}
 				</a>
-				<a class="footer_facebook" href="#">
+				<a class="footer_facebook" href="https://facebook.com/{{ site.facebook_page_handle }}">
 					{% include icons/facebook_icon.svg %}
 				</a>
-				<a class="footer_instagram" href="#">
-					{% include icons/instagram_icon.svg %}
-				</a>
-				<a class="footer_linkedin" href="#">
-					{% include icons/linkedin_icon.svg %}
-				</a>
+				{% comment %}
+					<a class="footer_instagram" href="#">
+						{% include icons/instagram_icon.svg %}
+					</a>
+					<a class="footer_linkedin" href="#">
+						{% include icons/linkedin_icon.svg %}
+					</a>
+				{% endcomment %}
 			</div>
 		</div>
 		<div class="footer__logo">

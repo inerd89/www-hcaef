@@ -26,6 +26,8 @@ classes: events-page
 	{% endif %}
 
 {% endfor %}
+{% assign currentEvents = currentEvents | sort: 'Event Start Date' %}
+{% assign pastEvents = pastEvents | sort: 'Event Start Date' %}
 
 <section class="upcoming-events">
 	<div class="container">
@@ -36,8 +38,10 @@ classes: events-page
 					<div class="event-card__copy">
 						<h3 class="event-card__hed">{{ featuredEvent.title }}</h3>
 						<div class="event-card__info">
-							{% assign startDate = featuredEvent['Event Start Date'] | date: "%B %d, %Y" %}
-							{% assign endDate = featuredEvent['Event End Date'] | date: "%B %d, %Y" %}
+							{% assign startDate = featuredEvent['Event Start Date'] %}
+							{% assign endDate = featuredEvent['Event End Date'] %}
+							{% assign startDate = startDate | date: "%B %d, %Y" %}
+							{% assign endDate = endDate | date: "%B %d, %Y" %}
 							{% if startDate == endDate %}
 								<p><time>{{ featuredEvent['Event Start Date'] | date: "%B %e" }}<br>{{ featuredEvent['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ featuredEvent['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 							{% else %}

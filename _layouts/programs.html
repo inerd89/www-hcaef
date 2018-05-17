@@ -8,12 +8,12 @@ classes: programs-page
 <section class="other-program page-section page-section--2col">
 	<div class="container">
 		<div>
-			<h3 class="typo--section-title page-section-title">{{ page['Other Program Title'] }}</h3>
-			{{ page['Other Program Description'] | markdownify }}
-			{% if page['Other Program Button Title (optional)'] and page['Other Program Button URL (optional)'] %}
-				<a class="button button--dark typo--button" href="{{ page['Other Program Button URL (optional)'] }}">{{ page['Other Program Button Title (optional)'] }} &rarr;</a>
+			<h3 class="typo--section-title page-section-title">{{ page['Banner Program Title'] }}</h3>
+			{{ page['Banner Program Description'] | markdownify }}
+			{% if page['Banner Program Button'][0]['Title'] != '' and page['Banner Program Button'][0]['URL'] != '' %}
+				<a class="button button--dark typo--button" href="{{ page['Banner Program Button'][0]['URL'] }}">{{ page['Banner Program Button'][0]['Title'] }} &rarr;</a>
 			{% endif %}
 		</div>
-		<div class="page-section__image"><div>
+		<div class="page-section__image" style="background-image: url({{ page['Banner Program Image'] }})"><div>
 	</div>
 </section>

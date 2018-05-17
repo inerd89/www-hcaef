@@ -1,8 +1,8 @@
 ---
 title: Test Event 5
 position: 4
-Event Start Date: 2018-05-13 19:00
-Event End Date: 2018-05-15 21:00
+Event Start Date: 2018-05-13 19:00:00 -07:00
+Event End Date: 2018-05-15 21:00:00 -07:00
 Volunteers Needed?: true
 Event Venue: Hines Community Center
 ---
