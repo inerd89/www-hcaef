@@ -16,9 +16,7 @@
 	background-color: $green;
 }
 
-.upcoming-events {
-	// margin-top: -24rem;
-}
+.upcoming-events {}
 
 .event-cards {
 	padding: 1.5rem 0 3rem;
@@ -105,6 +103,8 @@
 
 	.event-card__image {
 		margin: 0;
+		height: 100%;
+		padding-bottom: 0;
 	}
 
 	.event-card__image,
@@ -118,14 +118,21 @@
 		// margin-top: -24rem;
 	}
 
-	.hero__card.event-card {
-		position: absolute;
-		top: 3rem;
-		right: 3rem;
-		bottom: 3rem;
-		left: calc(66.667% + 0.75rem);
+	.hero--event {
+		.hero__image {
+			right: calc(33.333% - 0.75rem);
+			// right: 0;
+		}
 
-		> .event-card__link {
+		.hero__card {
+			position: absolute;
+			top: 0rem; //3rem
+			right: 0rem;
+			bottom: 0rem;
+			left: calc(66.667% + 0.75rem);
+		}
+
+		.event-card__copy {
 			height: 100%;
 		}
 	}

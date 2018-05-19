@@ -4,7 +4,7 @@ classes: news-page
 ---
 
 {% assign nonFeaturedPosts = '' | split: '' %}
-{% for post in site.news %}
+{% for post in site.posts %}
 	{% if post['Is Featured?'] == false %}
 		{% assign nonFeaturedPosts = nonFeaturedPosts | push: post %}
 	{% else %}
@@ -23,7 +23,7 @@ classes: news-page
 		<div class="news-cards">
 			{% for post in nonFeaturedPosts limit: 6 %}
 				{% assign hed = post.title %}
-				{% assign dek = post['Description'] %}
+				{% assign dek = post['Subtitle'] %}
 				{% assign url = post.url %}
 				{% assign cat = post['Category'] %}
 				{% assign img = post['Main Image'] %}

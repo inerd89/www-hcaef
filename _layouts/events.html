@@ -31,7 +31,8 @@ classes: events-page
 
 <section class="upcoming-events">
 	<div class="container">
-		<article class="hero">
+		{% include hero.html type='event' post=featuredEvent %}
+		<!-- <article class="hero">
 			<div class="hero__image" style="background-image: url({{ featuredEvent['Event Image'] }});"></div>
 			<div class="hero__card event-card">
 				<a class="event-card__link" href="{{ featuredEvent.url }}">
@@ -56,7 +57,7 @@ classes: events-page
 					</div>
 				</a>
 			</div>
-		</article>
+		</article> -->
 		<div class="event-cards">
 			{% assign numberOfWides = 0 %}
 			{% for event in currentEvents limit: 6 %}

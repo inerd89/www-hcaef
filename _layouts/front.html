@@ -42,7 +42,7 @@ classes: front-page
 <section class="news-events">
 	<div class="container">
 
-		{% assign featuredNews = site.news | where: 'Feature on Front Page?', true | first %}
+		{% assign featuredNews = site.posts | where: 'Feature on Front Page?', true | first %}
 		{% assign featuredEvent = site.events | where: 'Feature on Front Page?', true | first %}
 		{% if featuredEvent %}
 			{% include hero.html type='event' event=featuredEvent %}
@@ -56,7 +56,7 @@ classes: front-page
 			<!-- <a class="typo--link typo--small see-all" href="/news">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Latest News</h3>
 			<div class="news-cards">
-				{% for post in site.news limit: 3 %}
+				{% for post in site.posts limit: 3 %}
 					{% assign hed = post.title %}
 					{% assign dek = post['Description'] %}
 					{% assign url = post.url %}

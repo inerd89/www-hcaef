@@ -10,7 +10,7 @@ position: 1
 Main Image: test-article.jpg
 Main Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME
   TEEKAY'
-Description: This is an excellent test article.
+Subtitle: This is an excellent test article.
 Category: Student Spotlight
 Feature on Front Page?: true
 ---
