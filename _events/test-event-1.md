@@ -15,7 +15,7 @@ Event Venue: Burns High School Auditorium
 Event Venue Address: 1100 Oregon Ave, Burns, OR 97720
 Tickets Required?: true
 Ticket Purchasing URL: test.com
-Instructions for Tickets:
+Instructions for Tickets: 
 Event Info URL: test.com
 ---
 
