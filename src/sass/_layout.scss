@@ -53,7 +53,7 @@ body {
 	.page-section__image {
 		background: $light-grey;
 		height: 0;
-		padding-bottom: 75%;
+		padding-bottom: 66.67%;
 	}
 }
 
@@ -77,10 +77,26 @@ body {
 			}
 		}
 
-
 		.page-section__image {
 			height: 100%;
+			min-height: calc(((960px - 3rem) / 2) * 0.6667);
 			padding: 0;
+		}
+	}
+}
+
+@include breakpoint($desktop) {
+	.page-section--2col {
+		.page-section__image {
+			min-height: calc(((1104px - 3rem) / 2) * 0.6667);
+		}
+	}
+}
+
+@include breakpoint($desktop-large) {
+	.page-section--2col {
+		.page-section__image {
+			min-height: calc(((1260px - 3rem) / 2) * 0.6667);
 		}
 	}
 }

@@ -29,8 +29,8 @@ defaults:
     layout: news-detail
     Subtitle: ''
     Author: ''
-    Main Image: ''
-    Main Image Caption: ''
+    Image: ''
+    Image Caption: ''
     Is Featured?: false
     Feature on Front Page?: false
 - scope:
@@ -39,17 +39,17 @@ defaults:
   values:
     layout: event-detail
     Is Featured?: false
-    Event Image: 
-    Event Image Caption: 
-    Event Start Date: 
-    Event End Date: 
+    Image: ''
+    Image Caption: ''
+    Event Start Date:
+    Event End Date:
     Volunteers Needed?: false
-    Event Venue: 
-    Event Venue Address: 
+    Event Venue: ''
+    Event Venue Address: ''
     Tickets Required?: false
-    Ticket Purchasing URL: 
-    Instructions for Tickets: 
-    Event Info URL: 
+    Ticket Purchasing URL: ''
+    Instructions for Tickets: ''
+    Event Info URL: ''
     Feature on Front Page?: false
 - scope:
     path: ''
@@ -60,6 +60,7 @@ defaults:
       URL: ''
     Footnote: ''
     Image: ''
+    Image Caption: ''
     Image First?: false
     List (single):
     - Item: ''
@@ -73,8 +74,9 @@ defaults:
     Button:
     - Title: ''
       URL: ''
-    Footnote: 
+    Footnote: ''
     Image: ''
+    Image Caption: ''
     Image First?: false
     Table:
     - - ''
@@ -96,7 +98,7 @@ baseurl: "/"
 url: http://harneyartsfoundation.org
 twitter_handle: HCAEF
 facebook_page_handle: HarneyArtsFoundation
-share_image_url: 
+share_image_url:
 markdown: kramdown
 exclude:
 - Gemfile

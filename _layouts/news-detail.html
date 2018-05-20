@@ -5,7 +5,7 @@ classes: news-page news-page--secondary
 
 {% assign related = '' | split:'' %}
 
-{% for post in site.news %}
+{% for post in site.posts %}
 	{% if post.url != page.url %}
 		{% assign related = related | push: post %}
 	{% endif %}
@@ -37,10 +37,10 @@ classes: news-page news-page--secondary
 				</div>
 			{% endif %}
 		{% endcomment %}
-		{% if page['Main Image'] and page['Main Image'] != '' %}
+		{% if page['Image'] and page['Image'] != '' %}
 			<div class="article-lead-image">
-				<img src="{{ page['Main Image'] }}" />
-				<p class="image-caption typo--caption">{{ page['Main Image Caption'] }}</p>
+				<img src="{{ page['Image'] }}" alt="{{ page['Image Caption'] }}" />
+				<p class="image-caption typo--caption">{{ page['Image Caption'] }}</p>
 			</div>
 		{% endif %}
 		<div class="article-byline-date">
@@ -57,12 +57,7 @@ classes: news-page news-page--secondary
 		<h3 class="page-section-title typo--section-title">More Recent News</h3>
 		<div class="news-cards">
 			{% for item in related limit: 3 %}
-				{% assign hed = item.title %}
-				{% assign dek = item['Subtitle'] %}
-				{% assign url = item.url %}
-				{% assign cat = item['Category'] %}
-				{% assign img = item['Main Image'] %}
-				{% include news-card.html hed=hed dek=dek url=url image=img cat=cat %}
+				{% include news-card.html post=item %}
 			{% endfor %}
 		</div>
 	</div>

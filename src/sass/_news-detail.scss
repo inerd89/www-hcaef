@@ -98,7 +98,7 @@
 }
 
 .image-caption {
-	color: lighten($dark-grey, 25%);
+	color: lighten($dark-grey, 50%);
 	padding-top: 0;
 }
 
@@ -111,6 +111,10 @@
 	h2 {
 		padding: 2rem 0 1rem;
 		@extend .typo--large;
+	}
+
+	img, p > img {
+		width: 100%;
 	}
 }
 

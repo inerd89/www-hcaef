@@ -57,12 +57,7 @@ classes: front-page
 			<h3 class="page-section-title typo--section-title">Latest News</h3>
 			<div class="news-cards">
 				{% for post in site.posts limit: 3 %}
-					{% assign hed = post.title %}
-					{% assign dek = post['Description'] %}
-					{% assign url = post.url %}
-					{% assign image = post['Main Image'] %}
-					{% assign cat = post['Category'] %}
-					{% include news-card.html hed=hed dek=dek url=url image=image cat=cat classModifier="front-page" %}
+					{% include news-card.html post=post classModifier="front-page" %}
 				{% endfor %}
 			</div>
 		</div>
@@ -79,27 +74,27 @@ classes: front-page
 					{% assign url = event.url %}
 
 					{% if i == 1 %}
-						{% if event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img classModifier="front-page" %}
+						{% if event['Image'] and event['Image'] != '' %}
+							{% assign img = event['Image'] %}
+							{% include event-card.html event=event wide=true classModifier="front-page" %}
 						{% else %}
 							{% assign needFour = true %}
-							{% include event-card.html title=title start=start end=end url=url classModifier="front-page" %}
+							{% include event-card.html event=event classModifier="front-page" %}
 						{% endif %}
 					{% elsif i == 3 %}
-						{% if needFour == true and event['Event Image'] and event['Event Image'] != '' %}
+						{% if needFour == true and event['Image'] and event['Image'] != '' %}
 							{% assign needFour = false %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img classModifier="front-page" %}
+							{% assign img = event['Image'] %}
+							{% include event-card.html event=event wide=true classModifier="front-page" %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url classModifier="front-page" %}
+							{% include event-card.html event=event classModifier="front-page" %}
 						{% endif %}
 					{% elsif i == 4 %}
 						{% if needFour == true %}
-							{% include event-card.html title=title start=start end=end url=url classModifier="front-page" %}
+							{% include event-card.html event=event classModifier="front-page" %}
 						{% endif %}
 					{% else %}
-						{% include event-card.html title=title start=start end=end url=url classModifier="front-page" %}
+						{% include event-card.html event=event classModifier="front-page" %}
 					{% endif %}
 				{% endfor %}
 			</div>

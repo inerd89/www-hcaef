@@ -35,9 +35,9 @@ classes: events-page events-page--secondary
 			{% endif %}
 		{% endcomment %}
 		<div class="article-lead-image">
-			<img src="{{ page['Event Image'] }}" />
-			{% if page['Event Image Caption'] and page['Event Image Caption'] != '' %}
-				<p class="image-caption typo--caption">{{ page['Event Image Caption'] }}</p>
+			<img src="{{ page['Image'] }}" alt="{{ page['Image Caption'] }}" />
+			{% if page['Image Caption'] and page['Image Caption'] != '' %}
+				<p class="image-caption typo--caption">{{ page['Image Caption'] }}</p>
 			{% endif %}
 		</div>
 		<div class="article-body">
@@ -117,31 +117,27 @@ classes: events-page events-page--secondary
 			{% assign numberOfWides = 0 %}
 			{% for event in related limit: 3 %}
 				{% assign i = forloop.index %}
-				{% assign title = event.title %}
-				{% assign start = event['Event Start Date'] %}
-				{% assign end = event['Event End Date'] %}
-				{% assign url = event.url %}
 
 				{% case i %}
 					{% when 1 %}
-						{% if event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if event['Image'] and event['Image'] != '' %}
+							{% assign img = event['Image'] %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 2 %}
-						{% if numberOfWides == 0 and event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if numberOfWides == 0 and event['Image'] and event['Image'] != '' %}
+							{% assign img = event['Image'] %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 3 %}
 						{% if numberOfWides == 0 %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 				{% endcase %}
 			{% endfor %}

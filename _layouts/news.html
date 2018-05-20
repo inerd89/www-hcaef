@@ -22,12 +22,7 @@ classes: news-page
 		{% include hero.html type='news' post=featuredPost %}
 		<div class="news-cards">
 			{% for post in nonFeaturedPosts limit: 6 %}
-				{% assign hed = post.title %}
-				{% assign dek = post['Subtitle'] %}
-				{% assign url = post.url %}
-				{% assign cat = post['Category'] %}
-				{% assign img = post['Main Image'] %}
-				{% include news-card.html hed=hed dek=dek url=url image=img cat=cat %}
+				{% include news-card.html post=post %}
 			{% endfor %}
 		</div>
 	</div>

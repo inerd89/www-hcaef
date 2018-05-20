@@ -1,18 +1,17 @@
-<article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %} {% if include.image and include.image != '' %}with-image{% endif %}">
-	<a class="news-card__link" href="{{ include.url }}">
-		{% comment %}{% if include.cat and include.cat != '' %}
-			<p class="news-card__category">{{ include.cat }}</p>
-		{% endif %}{% endcomment %}
-		{% if include.image and include.image != '' %}
-			<div class="news-card__image" style="background-image: url({{ include.image }});"></div>
+{% assign post = include.post %}
+
+<article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %} {% if post['Image'] and post['Image'] != '' %}with-image{% endif %}">
+	<a class="news-card__link" href="{{ post.url }}">
+		{% if post['Image'] and post['Image'] != '' %}
+			<div class="news-card__image" style="background-image: url({{ post['Image'] }});" role="image" aria-label="{{ post['Image Caption'] }}"></div>
 		{% endif %}
 		<div class="news-card__info">
-			{% if include.cat and include.cat != '' %}
-				<p class="news-card__category">{{ include.cat }}</p>
+			{% if post['Category'] and post['Category'] != '' %}
+				<p class="news-card__category">{{ post['Category'] }}</p>
 			{% endif %}
-			<h4 class="news-card__hed typo--small-article-title">{{ include.hed }}</h4>
-			{% if include.dek and include.dek != '' %}
-				<p class="news-card__dek">{{ include.dek }}</p>
+			<h4 class="news-card__hed typo--small-article-title">{{ post.title }}</h4>
+			{% if post['Subtitle'] and post['Subtitle'] != '' %}
+				<p class="news-card__dek">{{ post['Subtitle'] }}</p>
 			{% endif %}
 			<p class="news-card__cta">Continue reading &rarr;</p>
 		</div>

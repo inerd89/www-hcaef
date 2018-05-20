@@ -7,8 +7,8 @@ tags:
 - music
 - from the archives
 position: 1
-Main Image: test-article.jpg
-Main Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME
+Image: test-article.jpg
+Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME
   TEEKAY'
 Subtitle: This is an excellent test article.
 Category: Student Spotlight

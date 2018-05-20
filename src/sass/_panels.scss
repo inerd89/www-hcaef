@@ -58,7 +58,7 @@
 .panel__image {
 	width: 100%;
 	height: 0;
-	padding-bottom: 75%;
+	padding-bottom: 66.67%;
 	background-color: $light-grey;
 	background-size: cover;
 	background-position: center;
@@ -162,6 +162,7 @@
 
 	.panel__image {
 		height: 100%;
+		min-height: calc(((960px - 9rem) / 2) * 0.6667);
 		padding: 0;
 	}
 
@@ -185,9 +186,16 @@
 			float: right;
 		}
 	}
+}
 
+@include breakpoint($desktop) {
+	.panel__image {
+		min-height: calc(((1104px - 9rem) / 2) * 0.6667);
+	}
+}
 
-
-
-
+@include breakpoint($desktop-large) {
+	.panel__image {
+		min-height: calc(((1260px - 9rem) / 2) * 0.6667);
+	}
 }

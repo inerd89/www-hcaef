@@ -33,7 +33,7 @@ classes: events-page
 	<div class="container">
 		{% include hero.html type='event' post=featuredEvent %}
 		<!-- <article class="hero">
-			<div class="hero__image" style="background-image: url({{ featuredEvent['Event Image'] }});"></div>
+			<div class="hero__image" style="background-image: url({{ featuredEvent['Image'] }});"></div>
 			<div class="hero__card event-card">
 				<a class="event-card__link" href="{{ featuredEvent.url }}">
 					<div class="event-card__copy">
@@ -62,55 +62,46 @@ classes: events-page
 			{% assign numberOfWides = 0 %}
 			{% for event in currentEvents limit: 6 %}
 				{% assign i = forloop.index %}
-				{% assign title = event.title %}
-				{% assign start = event['Event Start Date'] %}
-				{% assign end = event['Event End Date'] %}
-				{% assign url = event.url %}
 
 				{% case i %}
 					{% when 1 %}
-						{% if event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 2 %}
-						{% if numberOfWides == 0 and event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if numberOfWides == 0 and event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 3 %}
-						{% if numberOfWides == 1 and event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if numberOfWides == 1 and event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 4 %}
-						{% if numberOfWides <= 1 and event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if numberOfWides <= 1 and event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% else %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 5 %}
-						{% if numberOfWides == 0 and event['Event Image'] and event['Event Image'] != '' %}
-							{% assign img = event['Event Image'] %}
-							{% include event-card.html title=title start=start end=end url=url image=img %}
+						{% if numberOfWides == 0 and event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true %}
 							{% assign numberOfWides = numberOfWides | plus: 1 %}
 						{% elsif numberOfWides != 2 %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 					{% when 6 %}
 						{% if numberOfWides == 0 %}
-							{% include event-card.html title=title start=start end=end url=url %}
+							{% include event-card.html event=event %}
 						{% endif %}
 				{% endcase %}
 			{% endfor %}
