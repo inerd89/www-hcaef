@@ -8,8 +8,7 @@ tags:
 - from the archives
 position: 1
 Image: test-article.jpg
-Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME
-  TEEKAY'
+Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME TEEKAY'
 Subtitle: This is an excellent test article.
 Category: Student Spotlight
 Feature on Front Page?: true
