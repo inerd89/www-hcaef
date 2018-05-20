@@ -41,8 +41,8 @@ defaults:
     Is Featured?: false
     Image: ''
     Image Caption: ''
-    Event Start Date:
-    Event End Date:
+    Event Start Date: 
+    Event End Date: 
     Volunteers Needed?: false
     Event Venue: ''
     Event Venue Address: ''
@@ -98,7 +98,7 @@ baseurl: "/"
 url: http://harneyartsfoundation.org
 twitter_handle: HCAEF
 facebook_page_handle: HarneyArtsFoundation
-share_image_url:
+share_image_url: 
 markdown: kramdown
 exclude:
 - Gemfile
