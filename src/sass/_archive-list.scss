@@ -12,11 +12,19 @@
 	background-color: transparent;
 	color: $dark-grey;
 	transition: all .3s ease-out;
-	mix-blend-mode: multiply;
 
 	&:hover {
-		background-color: lighten($dark-grey, 80%);
-		// color: #fff;
+		background-color: rgba($dark-grey, 0.2);
+	}
+}
+
+@supports (mix-blend-mode: multiply) {
+	.archive-item {
+		mix-blend-mode: multiply;
+
+		&:hover {
+			background-color: lighten($dark-grey, 80%);
+		}
 	}
 }
 
