@@ -150,22 +150,8 @@
 
 	blockquote {
 		margin: 0 4rem 2rem 0.25rem;
-		// margin-left: 0.5rem;
-		// margin-right: 4rem;
 		padding-left: 2rem;
-		// border-left: 1px solid lighten($dark-grey, 60%);
-		// padding-bottom: 2rem;
-		position: relative;
-
-		&::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			width: 1px;
-			top: 0;
-			bottom: 0;
-			background-color: lighten($dark-grey, 60%);
-		}
+		border-left: 1px solid lighten($dark-grey, 60%);
 	}
 
 	ul {
