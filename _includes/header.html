@@ -1,7 +1,10 @@
 <header class="site-header">
 	<div class="container">
 		<h1 class="logo">
-			<a href="/">Logo</a>
+			<a href="/">
+				{% include icons/header-logo-full.svg %}
+				<span>Harney County Arts in Education Foundation</span>
+			</a>
 		</h1>
 		<nav class="site-nav">
 			{% assign sitePages = site.pages | sort: 'position' %}

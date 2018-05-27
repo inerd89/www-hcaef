@@ -57,6 +57,15 @@ body {
 	}
 }
 
+.image-cover {
+	> img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
 @include breakpoint($tablet-landscape) {
 	.page-section {
 		padding: 6rem 0 8rem;
@@ -135,6 +144,41 @@ body {
 
 .site-header.scrolled.mobile-open {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
+}
+
+.logo > a {
+	width: 75%;
+	display: block;
+	text-indent: -100%;
+	position: relative;
+	transition: width 0.2s ease-out;
+
+	> svg {
+		display: block;
+		width: 100%;
+	}
+
+	> span {
+		display: block;
+		position: absolute;
+		clip: rect(1px, 1px, 1px, 1px);
+		padding: 0;
+		border: 0;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+	}
+}
+
+.site-header.scrolled {
+	.logo > a {
+		width: 60%;
+	}
+}
+
+.site-title {
+	position: absolute;
+	visibility: hidden;
 }
 
 .site-nav {
@@ -296,6 +340,16 @@ body {
 		height: 100%;
 	}
 
+	.logo > a {
+		width: 90%;
+	}
+
+	.site-header.scrolled {
+		.logo > a {
+			width: 70%;
+		}
+	}
+
 	.site-nav {
 		display: flex;
 		justify-content: space-between;
@@ -317,6 +371,22 @@ body {
 	.site-header > .container {
 		grid-template: auto / 1fr 1fr;
 		height: 10rem;
+	}
+
+	.logo > a {
+		width: 50%;
+	}
+
+	.site-header.scrolled {
+		.logo > a {
+			width: 35%;
+		}
+	}
+}
+
+@include breakpoint($desktop-large) {
+	.logo > a {
+		width: 45%;
 	}
 }
 

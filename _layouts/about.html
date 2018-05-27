@@ -74,7 +74,7 @@ classes: about-page
 		<h3 class="page-section-title historical-highlights__title typo--section-title">{{ page['Historical Highlights Title'] }}</h3>
 		{% for hilite in page['Historical Highlights'] limit: 2 %}
 			<div class="col historical-highlight">
-				<div class="historical-highlight__image" style="background-image: url({{ hilite['Image'] }});"></div>
+				<div class="historical-highlight__image image-cover"><img src="{{ hilite['Image'] }}" /></div>
 				<div class="historical-highlight__caption">
 					<h4 class="typo--strong">{{ hilite['Caption Title'] }}</h4>
 					<p>{{ hilite['Caption'] }}</p>
