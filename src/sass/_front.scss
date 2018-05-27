@@ -6,6 +6,10 @@
 	.site-header {
 		background-color: $green;
 	}
+
+	.site-header.mobile-open {
+		background-color: #fff;
+	}
 }
 
 .page-banner--front {
