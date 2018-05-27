@@ -23,7 +23,10 @@
 			</div>
 		</div>
 		{% if event['Image'] and event['Image'] != '' and include.wide %}
-			<div class="event-card__image" style="background-image: url({{ event['Image'] }});" role="image" aria-label="{{ event['Image Caption'] }}"></div>
+			<!-- <div class="event-card__image" style="background-image: url({{ event['Image'] }});" role="image" aria-label="{{ event['Image Caption'] }}"></div> -->
+			<div class="event-card__image image-cover">
+				<img src="{{ event['Image'] }}" alt="{{ event['Image Caption'] }}" />
+			</div>
 		{% endif %}
 	</a>
 

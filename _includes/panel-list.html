@@ -81,7 +81,9 @@
 					</div>
 				{% elsif panel['Image'] and panel['Image'] != '' %}
 					<div class="panel__secondary">
-						<div class="panel__image" style="background-image: url({{ panel['Image'] }});"></div>
+						<div class="panel__image image-cover">
+							<img src="{{ panel['Image'] }}" />
+						</div>
 					</div>
 				{% endif %}
 

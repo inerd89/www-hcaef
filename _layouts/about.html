@@ -11,7 +11,9 @@ classes: about-page
 <section class="about-us">
 	<div class="container">
 		<div class="hero">
-			<div class="hero__image" style="background-image: url({{ page['Hero Image'] }});"></div>
+			<div class="hero__image image-cover">
+				<img src="{{ page['Hero Image'] }}" />
+			</div>
 		</div>
 		<h3 class="about-us__intro typo--small-section-title">{{ page['About Us Intro'] }}</h3>
 		<p class="about-us__copy">{{ page['About Us Text'] }}</p>
@@ -96,7 +98,9 @@ classes: about-page
 			{% assign board-members = site.team-members | where: 'Is Board Member?', true %}
 			{% for mem in board-members %}
 			<li class="board-member">
-				<div class="board-member__image" style="background-image: url({{ mem['Image'] }});"></div>
+				<div class="board-member__image image-cover">
+					<img src="{{ mem['Image'] }}" />
+				</div>
 				<h4 class="typo--small-section-title">{{ mem.title }}</h4>
 				<p>{{ mem['Position Title'] }}
 					{% if mem['Email Address'] and mem['Email Address'] != '' %}

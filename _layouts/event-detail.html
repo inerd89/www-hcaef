@@ -34,12 +34,14 @@ classes: events-page events-page--secondary
 				</div>
 			{% endif %}
 		{% endcomment %}
+		{% if page['Image'] and page['Image'] != '' %}
 		<div class="article-lead-image">
 			<img src="{{ page['Image'] }}" alt="{{ page['Image Caption'] }}" />
 			{% if page['Image Caption'] and page['Image Caption'] != '' %}
 				<p class="image-caption typo--caption">{{ page['Image Caption'] }}</p>
 			{% endif %}
 		</div>
+		{% endif %}
 		<div class="article-body">
 			{% if page['Volunteers Needed?'] %}
 				<p><strong>Volunteers needed!</strong></p>

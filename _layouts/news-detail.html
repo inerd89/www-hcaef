@@ -38,10 +38,12 @@ classes: news-page news-page--secondary
 			{% endif %}
 		{% endcomment %}
 		{% if page['Image'] and page['Image'] != '' %}
-			<div class="article-lead-image">
-				<img src="{{ page['Image'] }}" alt="{{ page['Image Caption'] }}" />
+		<div class="article-lead-image">
+			<img src="{{ page['Image'] }}" alt="{{ page['Image Caption'] }}" />
+			{% if page['Image Caption'] and page['Image Caption'] != '' %}
 				<p class="image-caption typo--caption">{{ page['Image Caption'] }}</p>
-			</div>
+			{% endif %}
+		</div>
 		{% endif %}
 		<div class="article-byline-date">
 			<p>{% if page['Author'] and page['Author'] != '' %}By {{ page['Author'] }}<br>{% endif %}{{ page.date | date: "%B %e, %Y" }}</p>

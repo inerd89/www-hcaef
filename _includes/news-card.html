@@ -3,7 +3,10 @@
 <article class="news-card {% if include.classModifier %}news-card--{{ include.classModifier }}{% endif %} {% if post['Image'] and post['Image'] != '' %}with-image{% endif %}">
 	<a class="news-card__link" href="{{ post.url }}">
 		{% if post['Image'] and post['Image'] != '' %}
-			<div class="news-card__image" style="background-image: url({{ post['Image'] }});" role="image" aria-label="{{ post['Image Caption'] }}"></div>
+			<!-- <div class="news-card__image" style="background-image: url({{ post['Image'] }});" role="image" aria-label="{{ post['Image Caption'] }}"></div> -->
+			<div class="news-card__image image-cover">
+				<img src="{{ post['Image'] }}" alt="{{ post['Image Caption'] }}" />
+			</div>
 		{% endif %}
 		<div class="news-card__info">
 			{% if post['Category'] and post['Category'] != '' %}
