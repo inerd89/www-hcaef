@@ -9,4 +9,4 @@ Footnote: You can designate your donation to go toward a specific initiative, su
   form.
 ---
 
-Pellentesque faucibus velit a auctor tempor. Proin tristique lorem et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus placerat, felis est consequat elit. Donate via the PayPal button below or mail your contribution to: **HCAEF, P.O. Box 415, Hines, Oregon 97738**.
+Donations of any amount are greatly appreciated. Donate via the PayPal button below or mail your contribution to: **HCAEF, P.O. Box 415, Hines, Oregon 97738**.
