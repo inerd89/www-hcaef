@@ -1,7 +1,7 @@
 ---
 title: Performing Groups
 position: 1
-Image: "/uploads/PhoenixRising.JPG"
+Image: "/uploads/rsquarter2_width1200.jpg"
 Image First?: true
 List (single):
 - Item: Portland Youth Philharmonic
