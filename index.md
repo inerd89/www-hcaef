@@ -11,7 +11,7 @@ Support Section Title: Support the Foundation
 Support Section Text: Are you passionate about supporting arts and music educational
   opportunities in Harney County? There are many ways you can show your support. Consider
   a monetary donation, or give of your time by volunteering &mdash; it all helps!
-Support Section Image: test.jpg
+Support Section Image: "/uploads/symposium2_width1800.jpg"
 layout: front
 ---
 
