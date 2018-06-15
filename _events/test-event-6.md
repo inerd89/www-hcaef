@@ -1,6 +1,6 @@
 ---
 title: LEGO My Library
-position: 5
+position: 0
 Is Featured?: false
 Event Start Date: 2018-06-20 18:00:00 -07:00
 Event End Date: 2018-06-20 19:30:00 -07:00
