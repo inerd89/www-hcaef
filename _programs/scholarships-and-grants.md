@@ -4,6 +4,7 @@ position: 0
 Button:
 - Title: Contact us about grant or scholarship opportunities
   URL: harneyartsfoundation@gmail.com
+Image: "/uploads/scholarshipawards_width1200.jpg"
 List (expanded):
 - Item Title: Oregon Community Foundation Studio to School Grant
   Item Description: "$280,000 was awarded to Harney County middle school music and
