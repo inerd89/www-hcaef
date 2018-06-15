@@ -14,7 +14,7 @@ Table:
   - "$1000 per year"
 ---
 
-Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-placerat, felis est consequat elit.\n\nMail your contribution to: **HCAEF, P.O.
+Become a member and show your commitment to the arts in Harney County. 
+
+Mail your contribution to: **HCAEF, P.O.
 Box 415, Hines, Oregon 97738.** Include your name, address and email.
