@@ -3,7 +3,7 @@ title: About Us
 permalink: "/about/"
 position: 4
 Navigation Title: About
-Hero Image: "/uploads/FoundingofHCAEF.JPG"
+Hero Image: "/uploads/drummers_width1200.jpg"
 About Us Intro: Our mission is to promote, maintain, and enhance the opportunities
   for growth and achievement within the areas of Music Education, Performing Arts,
   Visual Arts, and Theater Arts in the schools and communities of Harney County.
