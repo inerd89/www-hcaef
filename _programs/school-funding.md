@@ -6,17 +6,13 @@ Button:
   URL: "#"
 List (expanded):
 - Item Title: New Instruments / Instrument Repair
-  Item Description: No description.
+  Item Description: 
 - Item Title: Art Supplies
-  Item Description: No description.
+  Item Description: 
 - Item Title: Rural School Travel Assistance
-  Item Description: No description.
+  Item Description: 
 - Item Title: Teaching Positions
-  Item Description: No description.
+  Item Description: 
 ---
 
-Pellentesque faucibus velit a auctor tempor. Proin tristique lorem
-et est feugiat, non tempus justo sodales. Curabitur dapibus, mauris sed dapibus
-placerat, felis est consequat elit, id dictum turpis nibh eget enim. Vestibulum
-ut quam turpis. Proin convallis neque eget felis vehicula, ac faucibus augue aliquam.
-Vivamus vitae enim rutrum ipsum ultrices convallis.
+Harney County Arts in Education Foundation is dedicated to helping our local schools in a variety of ways. Contact us for funding requests.
