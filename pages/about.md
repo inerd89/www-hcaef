@@ -39,12 +39,14 @@ Historical Stats:
   Label: current students served
 Historical Highlights Title: Highlights
 Historical Highlights:
-- Image: "/uploads/prism-quartet-breath-beneath-2016-05-web.jpg"
-  Caption Title: Highlight Title
-  Caption: Placeholder caption text
-- Image: test.jpg
-  Caption Title: Highlight Title
-  Caption: Placeholder caption text
+- Image: "/uploads/pyp_width600-34d2ba.jpg"
+  Caption Title: Music in the Community
+  Caption: HCAEF funds one of several scholarships given to local students each year
+    by the Chamber Music Society. These scholarships allow students to receive private
+    music lessons or go to a music camp.
+- Image: "/uploads/balletviolin_width1800.jpg"
+  Caption Title: Performing Arts
+  Caption: HCAEF provides grants to the Steens Mountain Ballet Company.
 Board & Contact Title: Board Members
 Contact Info Blurb: 'Please contact us:'
 HCAEF Mailing Address: |
