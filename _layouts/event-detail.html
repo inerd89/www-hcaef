@@ -47,7 +47,7 @@ classes: events-page events-page--secondary
 				<p><strong>Volunteers needed!</strong></p>
 			{% endif %}
 			{{ page.content }}
-			{% if page['Event Info URL'] %}
+			{% if page['Event Info URL'] and page['Event Info URL'] != '' %}
 				<p>Learn more at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a>.</p>
 			{% endif %}
 		</div>
@@ -74,7 +74,7 @@ classes: events-page events-page--secondary
 			{% if page['Ticket Purchasing URL'] and page['Ticket Purchasing URL'] != '' %}
 				<a class="button button--dark button--tickets typo--button" href="//{{ page['Ticket Purchasing URL'] }}">Buy Tickets &rarr;</a>
 			{% endif %}
-			{% if page['Event Info URL'] %}
+			{% if page['Event Info URL'] and page['Event Info URL'] != '' %}
 				<p>More info at <a href="//{{ page['Event Info URL'] }}">{{ page['Event Info URL'] }}</a></p>
 			{% endif %}
 		</div>
