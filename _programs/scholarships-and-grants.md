@@ -3,7 +3,7 @@ title: Scholarships & Grants
 position: 0
 Button:
 - Title: Contact us about grant or scholarship opportunities
-  URL: "//mailto:harneyartsfoundation@gmail.com"
+  URL: mailto:harneyartsfoundation@gmail.com
 Image: "/uploads/scholarshipawards_width1200.jpg"
 List (expanded):
 - Item Title: Oregon Community Foundation Studio to School Grant
