@@ -12,7 +12,7 @@ About Us Text: We strongly believe that every child deserves the opportunity to 
   arts. There is no question that this type of education benefits at-risk kids, opens
   doors of opportunity to dedicated students and increases academic ability for all.
 Programs Section Title: Our Programs
-Programs Section Text: We support a variety of programs and initiatives -- everything
+Programs Section Text: We support a variety of programs and initiatives &mdash; everything
   from art supplies and musical instruments to funding teaching positions to bringing
   world-class performances to Harney County.
 Call to Action: Please consider making a donation to support the arts in Harney County.
@@ -39,12 +39,12 @@ Historical Stats:
   Label: current students served
 Historical Highlights Title: Highlights
 Historical Highlights:
-- Image: "/uploads/pyp_width600-34d2ba.jpg"
+- Image: "/uploads/pyp_width1200.jpg"
   Caption Title: Music in the Community
   Caption: HCAEF funds one of several scholarships given to local students each year
     by the Chamber Music Society. These scholarships allow students to receive private
     music lessons or go to a music camp.
-- Image: "/uploads/balletviolin_width1800.jpg"
+- Image: "/uploads/balletviolin_width1200.jpg"
   Caption Title: Performing Arts
   Caption: HCAEF provides grants to the Steens Mountain Ballet Company.
 Board & Contact Title: Board Members

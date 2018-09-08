@@ -6,4 +6,4 @@ Navigation Title: News
 layout: news
 ---
 
-Find out more about our past, present and future in our newsfeed.
+We are proud to be part of the arts community in Harney County. Read incredible stories about our students, local artists and community members who keep the arts strong.

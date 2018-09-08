@@ -4,7 +4,7 @@ Intro Blurb: We are committed to providing excellent art education and art exper
   in Harney County.
 Intro Link Title: Learn more about us
 Programs Section Title: Our Programs
-Programs Section Text: We support a variety of programs and initiatives -- everything
+Programs Section Text: We support a variety of programs and initiatives &mdash; everything
   from art supplies and musical instruments to funding teaching positions to bringing
   world-class performances to Harney County.
 Support Section Title: Support the Foundation
@@ -14,4 +14,3 @@ Support Section Text: Are you passionate about supporting arts and music educati
 Support Section Image: "/uploads/symposium2_width1800.jpg"
 layout: front
 ---
-

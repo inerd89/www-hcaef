@@ -13,8 +13,8 @@ Banner Program Description: From day one of HCAEF, the need for a performing art
 Banner Program Button:
 - Title: Donate to the PAEC
   URL: "#"
-Banner Program Image: test.jpg
+Banner Program Image: "/uploads/paec-width1200.jpg"
 layout: programs
 ---
 
-HCAEF supports a wide variety of programs and initiatives.
+We are committed to empowering the arts and providing arts experiences in our community. We have developed a variety of programs designed to promote the arts, assist inspiring artists and keep the arts in our schools. 
