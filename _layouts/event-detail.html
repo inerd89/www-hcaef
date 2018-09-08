@@ -15,14 +15,22 @@ classes: events-page events-page--secondary
 			<h1 class="article-hed typo--article-title">{{ page.title }}</h1>
 			{% assign startDate = page['Event Start Date'] | date: "%B %d, %Y" %}
 			{% assign endDate = page['Event End Date'] | date: "%B %d, %Y" %}
-			{% if startDate == endDate %}
-				<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
-			{% else %}
-				{% if page['Event Start Date'] | date: "%B" == page['Event End Date'] | date: "%B" %}
-					<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+			{% assign startYear = page['Event Start Date'] | date: "%Y" | times: 1 %}
+			{% assign endYear = page['Event End Date'] | date: "%Y" | times: 1 %}
+			{% if page['Event Start Date'] == page['Event End Date'] %}
+				<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e, %Y" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+			{% elsif startYear == endYear %}
+				{% assign startMonth = page['Event Start Date'] | date: "%m" | times: 1 %}
+				{% assign endMonth = page['Event End Date'] | date: "%m" | times: 1 %}
+				{% if startMonth == endMonth %}
+					<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%e, %Y" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
 				{% else %}
-					<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event E Date'] | date: "%B %e" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+					<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%B %e, %Y" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
 				{% endif %}
+			{% elsif startYear < endYear %}
+				<h3 class="article-dek typo--large"><time>{{ page['Event Start Date'] | date: "%B %e, %Y" }}&ndash;{{ page['Event End Date'] | date: "%B %e, %Y" }} | {{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></h3>
+			{% else %}
+				<p>ERROR: End Date comes before Start Date.</p>
 			{% endif %}
 		</header>
 		{% comment %} // until functionality fully built
@@ -52,14 +60,22 @@ classes: events-page events-page--secondary
 			{% endif %}
 		</div>
 		<div class="event-info-sidebar">
-			{% if startDate == endDate %}
+			{% assign startYear = page['Event Start Date'] | date: "%Y" | times: 1 %}
+			{% assign endYear = page['Event End Date'] | date: "%Y" | times: 1 %}
+			{% if page['Event Start Date'] == page['Event End Date'] %}
 				<p><time>{{ page['Event Start Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
-			{% else %}
-				{% if page['Event Start Date'] | date: "%B" == page['Event End Date'] | date: "%B" %}
+			{% elsif startYear == endYear %}
+				{% assign startMonth = page['Event Start Date'] | date: "%m" | times: 1 %}
+				{% assign endMonth = page['Event End Date'] | date: "%m" | times: 1 %}
+				{% if startMonth == endMonth %}
 					<p><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 				{% else %}
-					<p><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event E Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+					<p><time>{{ page['Event Start Date'] | date: "%B %e" }}&ndash;{{ page['Event End Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 				{% endif %}
+			{% elsif startYear < endYear %}
+				<p><time>{{ page['Event Start Date'] | date: "%B %e, %Y" }}&ndash;{{ page['Event End Date'] | date: "%B %e, %Y" }}<br>{{ page['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ page['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+			{% else %}
+				<p>ERROR: End Date comes before Start Date.</p>
 			{% endif %}
 			{% if page['Event Venue'] and page['Event Venue'] != '' %}
 				<p>{{ page['Event Venue'] }}
@@ -91,14 +107,12 @@ classes: events-page events-page--secondary
 	{% assign month = event['Event Start Date'] | date: '%m' | times: 1 %}
 	{% assign day = event['Event Start Date'] | date: '%d' | times: 1 %}
 
-	{% if year > currentYear and event['Is Featured?'] == false %}
+	{% if year > currentYear %}
 		{% assign currentEvents = currentEvents | push: event %}
-	{% elsif year == currentYear and month > currentMonth and event['Is Featured?'] == false %}
+	{% elsif year == currentYear and month > currentMonth %}
 		{% assign currentEvents = currentEvents | push: event %}
-	{% elsif year == currentYear and month == currentMonth and day >= currentDay and event['Is Featured?'] == false %}
+	{% elsif year == currentYear and month == currentMonth and day >= currentDay %}
 		{% assign currentEvents = currentEvents | push: event %}
-	{% elsif event['Is Featured?'] == true %}
-		{% assign featuredEvent = event %}
 	{% else %}
 		{% assign pastEvents = pastEvents | push: event %}
 	{% endif %}
@@ -112,6 +126,8 @@ classes: events-page events-page--secondary
 	{% endif %}
 {% endfor %}
 
+{% assign relatedSize = related | size | times: 1 %}
+{% if relatedSize > 0 %}
 <section class="page-section related">
 	<div class="container">
 		<h3 class="page-section-title typo--section-title">More Upcoming Events</h3>
@@ -146,3 +162,4 @@ classes: events-page events-page--secondary
 		</div>
 	</div>
 </section>
+{% endif %}

@@ -30,16 +30,22 @@
 				<div class="event-card__copy">
 					<h4 class="event-card__hed">{{ post.title }}</h4>
 					<div class="event-card__info">
-						{% assign startDate = post['Event Start Date'] | date: "%B %d, %Y" %}
-						{% assign endDate = post['Event End Date'] | date: "%B %d, %Y" %}
-						{% if startDate == endDate %}
-							<p><time>{{ post['Event Start Date'] | date: "%B %e" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
-						{% else %}
-							{% if post['Event Start Date'] | date: "%B" == post['Event End Date'] | date: "%B" %}
-								<p><time>{{ post['Event Start Date'] | date: "%B %e" }}&ndash;{{ post['Event End Date'] | date: "%e" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+						{% assign startYear = post['Event Start Date'] | date: "%Y" | times: 1 %}
+						{% assign endYear = post['Event End Date'] | date: "%Y" | times: 1 %}
+						{% if post['Event Start Date'] == post['Event End Date'] %}
+							<p><time>{{ post['Event Start Date'] | date: "%B %e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+						{% elsif startYear == endYear %}
+							{% assign startMonth = post['Event Start Date'] | date: "%m" | times: 1 %}
+							{% assign endMonth = post['Event End Date'] | date: "%m" | times: 1 %}
+							{% if startMonth == endMonth %}
+								<p><time>{{ post['Event Start Date'] | date: "%B %e" }}&ndash;{{ post['Event End Date'] | date: "%e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 							{% else %}
-								<p><time>{{ post['Event Start Date'] | date: "%B %e" }}&ndash;{{ post['Event End Date'] | date: "%B %e" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+								<p><time>{{ post['Event Start Date'] | date: "%B %e" }}&ndash;{{ post['Event End Date'] | date: "%B %e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 							{% endif %}
+						{% elsif startYear < endYear %}
+							<p><time>{{ post['Event Start Date'] | date: "%B %e, %Y" }}&ndash;{{ post['Event End Date'] | date: "%B %e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
+						{% else %}
+							<p>ERROR: End Date comes before Start Date.</p>
 						{% endif %}
 						<p class="event-card__cta">Learn more &rarr;</p>
 					</div>
