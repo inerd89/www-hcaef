@@ -14,3 +14,4 @@ Support Section Text: Are you passionate about supporting arts and music educati
 Support Section Image: "/uploads/symposium2_width1800.jpg"
 layout: front
 ---
+
