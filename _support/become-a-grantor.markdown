@@ -4,7 +4,7 @@ date: 2018-04-14 13:50:00 -07:00
 position: 3
 Button:
 - Title: Recommend grant applications
-  URL: "#"
+  URL: mailto:harneyartsfoundation@gmail.com
 Image: "/uploads/studentart2_width1200.jpg"
 ---
 
