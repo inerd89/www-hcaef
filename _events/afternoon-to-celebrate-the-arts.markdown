@@ -8,4 +8,4 @@ Event Venue: Burns High School
 Event Venue Address: 1100 Oregon Ave, Burns, OR 97720
 ---
 
-The Central Oregon Symphony,  under the direction of Michael Gesme, will be performing in concert.
+The Central Oregon Symphony, under the direction of Michael Gesme, will be performing in concert.
