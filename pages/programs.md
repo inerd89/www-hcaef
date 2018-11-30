@@ -12,7 +12,7 @@ Banner Program Description: From day one of HCAEF, the need for a performing art
   a reality.
 Banner Program Button:
 - Title: Donate to the PAEC
-  URL: "#"
+  URL: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2LUZUYG2268NS
 Banner Program Image: "/uploads/paec-width1200.jpg"
 layout: programs
 ---
