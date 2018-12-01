@@ -33,8 +33,8 @@ Our History Text: "Harney County Arts in Education Foundation (HCAEF) officially
 Historical Stats:
 - Number: 18
   Label: student scholarships sponsored
-- Number: "$20k"
-  Label: endowed to school art programs
+- Number: "$280k"
+  Label: endowed to school art and music programs
 - Number: '1,100'
   Label: current students served
 Historical Highlights Title: Highlights
