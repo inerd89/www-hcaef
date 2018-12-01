@@ -9,3 +9,4 @@ Event Venue: Church of Nazarene, Hines
 Event Venue Address: 311 Roe Davis Ave, Hines, OR 97738
 ---
 
+If you are a community member or just passing through our town we invite you to enjoy our Christmas Concert Sunday Afternoon.
