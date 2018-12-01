@@ -89,10 +89,10 @@ defaults:
     Email Address: ''
     Is Board Member?: false
     Image: ''
-email: info@harneyartsfoundation.org
-description: 'Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description. '
+email: harneyartsfoundation@gmail.com
+description: We are a group of artists, educators, parents, and community members
+  that are committed to providing our students and our community with excellent art
+  and music education and experiences.
 paypal_share_url: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2LUZUYG2268NS
 baseurl: "/"
 url: http://harneyartsfoundation.org
