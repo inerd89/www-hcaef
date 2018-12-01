@@ -45,7 +45,7 @@ classes: front-page
 		{% assign featuredNews = site.posts | where: 'Feature on Front Page?', true | first %}
 		{% assign featuredEvent = site.events | where: 'Feature on Front Page?', true | first %}
 		{% if featuredEvent %}
-			{% include hero.html type='event' event=featuredEvent %}
+			{% include hero.html type='event' post=featuredEvent %}
 		{% elsif featuredNews %}
 			{% include hero.html type='news' post=featuredNews %}
 		{% else %}
@@ -75,7 +75,6 @@ classes: front-page
 
 					{% if i == 1 %}
 						{% if event['Image'] and event['Image'] != '' %}
-							{% assign img = event['Image'] %}
 							{% include event-card.html event=event wide=true classModifier="front-page" %}
 						{% else %}
 							{% assign needFour = true %}
@@ -84,7 +83,6 @@ classes: front-page
 					{% elsif i == 3 %}
 						{% if needFour == true and event['Image'] and event['Image'] != '' %}
 							{% assign needFour = false %}
-							{% assign img = event['Image'] %}
 							{% include event-card.html event=event wide=true classModifier="front-page" %}
 						{% else %}
 							{% include event-card.html event=event classModifier="front-page" %}
