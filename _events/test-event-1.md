@@ -5,7 +5,7 @@ tags:
 - tag2
 - tag3
 position: 2
-Is Featured?: true
+Is Featured?: false
 Image: "/uploads/rsquartet_width1200.jpg"
 Event Start Date: 2018-09-01 19:00:00 -07:00
 Event End Date: 2018-11-30 19:30:00 -08:00
