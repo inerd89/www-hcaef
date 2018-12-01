@@ -1,5 +1,12 @@
 {% assign event = include.event %}
 
+{% assign startYear = event['Event Start Date'] | date: "%Y" | times: 1 %}
+{% assign startMonth = event['Event Start Date'] | date: "%m" | times: 1 %}
+
+{% assign endYear = event['Event End Date'] | date: "%Y" | times: 1 %}
+{% assign endMonth = event['Event End Date'] | date: "%m" | times: 1 %}
+
+
 <article class="event-card
 				{% if include.classModifier %}event-card--{{ include.classModifier }}{% endif %}
 				{% if include.wide %}with-image{% endif %}">
@@ -8,13 +15,10 @@
 		<div class="event-card__copy">
 			<h4 class="event-card__hed">{{ event.title }}</h4>
 			<div class="event-card__info">
-				{% assign startYear = event['Event Start Date'] | date: "%Y" | times: 1 %}
-				{% assign endYear = event['Event End Date'] | date: "%Y" | times: 1 %}
-				{% if event['Event Start Date'] == event['Event End Date'] %}
+
+				{% if event['Event Start Date'] | date: "%B %e, %Y" == event['Event End Date'] | date: "%B %e, %Y" %}
 					<p><time>{{ event['Event Start Date'] | date: "%B %e, %Y" }}<br>{{ event['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ event['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 				{% elsif startYear == endYear %}
-					{% assign startMonth = event['Event Start Date'] | date: "%m" | times: 1 %}
-					{% assign endMonth = event['Event End Date'] | date: "%m" | times: 1 %}
 					{% if startMonth == endMonth %}
 						<p><time>{{ event['Event Start Date'] | date: "%B %e" }}&ndash;{{ event['Event End Date'] | date: "%e, %Y" }}<br>{{ event['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ event['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 					{% else %}
@@ -25,6 +29,7 @@
 				{% else %}
 					<p>ERROR: End Date comes before Start Date.</p>
 				{% endif %}
+
 				{% if event['Event Venue'] and event['Event Venue'] != '' %}
 					<p>{{ event['Event Venue'] }}
 						{% if event['Event Venue Address'] and event['Event Venue Address'] != '' %}
@@ -32,9 +37,11 @@
 						{% endif %}
 					</p>
 				{% endif %}
+
 				<p class="event-card__cta">Learn more &rarr;</p>
 			</div>
 		</div>
+
 		{% if event['Image'] and event['Image'] != '' and include.wide %}
 			<!-- <div class="event-card__image" style="background-image: url({{ event['Image'] }});" role="image" aria-label="{{ event['Image Caption'] }}"></div> -->
 			<div class="event-card__image image-cover">

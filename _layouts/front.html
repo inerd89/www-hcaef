@@ -36,7 +36,7 @@ classes: front-page
 
 {% comment %}
 *
-* News Events
+* NEWS / EVENTS
 *
 {% endcomment %}
 <section class="news-events">
@@ -52,6 +52,11 @@ classes: front-page
 			<h1>NO FEATURED POST FOUND</h1>
 		{% endif %}
 
+		{% comment %}
+		*
+		* LATEST NEW LIST
+		*
+		{% endcomment %}
 		<div class="front-page-news">
 			<!-- <a class="typo--link typo--small see-all" href="/news">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Latest News</h3>
@@ -61,11 +66,16 @@ classes: front-page
 				{% endfor %}
 			</div>
 		</div>
+		{% comment %}
+		*
+		* UPCOMING EVENTS LIST
+		*
+		{% endcomment %}
 		<div class="front-page-events">
 			<!-- <a class="typo--link typo--small see-all" href="/events">See all &rarr;</a> -->
 			<h3 class="page-section-title typo--section-title">Upcoming Events</h3>
 			<div class="event-cards">
-				{% assign needFour = false %}
+				{% assign spaceNeeded = 0 %}
 				{% for event in currentEvents limit: 4 %}
 					{% assign i = forloop.index %}
 					{% assign title = event.title %}
@@ -76,19 +86,29 @@ classes: front-page
 					{% if i == 1 %}
 						{% if event['Image'] and event['Image'] != '' %}
 							{% include event-card.html event=event wide=true classModifier="front-page" %}
+							{% assign spaceNeeded = 2 %}
 						{% else %}
-							{% assign needFour = true %}
 							{% include event-card.html event=event classModifier="front-page" %}
+							{% assign spaceNeeded = 3 %}
+						{% endif %}
+					{% elsif i == 2 %}
+						{% if spaceNeeded == 2 and event['Image'] and event['Image'] != '' %}
+							{% include event-card.html event=event wide=true classModifier="front-page" %}
+							{% assign spaceNeeded = 0 %}
+						{% else %}
+							{% include event-card.html event=event classModifier="front-page" %}
+							{% assign spaceNeeded = 2 %}
 						{% endif %}
 					{% elsif i == 3 %}
-						{% if needFour == true and event['Image'] and event['Image'] != '' %}
-							{% assign needFour = false %}
+						{% if spaceNeeded == 2 and event['Image'] and event['Image'] != '' %}
 							{% include event-card.html event=event wide=true classModifier="front-page" %}
+							{% assign spaceNeeded = 0 %}
 						{% else %}
 							{% include event-card.html event=event classModifier="front-page" %}
+							{% assign spaceNeeded = 1 %}
 						{% endif %}
 					{% elsif i == 4 %}
-						{% if needFour == true %}
+						{% if spaceNeeded == 1 %}
 							{% include event-card.html event=event classModifier="front-page" %}
 						{% endif %}
 					{% else %}

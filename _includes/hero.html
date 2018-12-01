@@ -31,12 +31,14 @@
 					<h4 class="event-card__hed">{{ post.title }}</h4>
 					<div class="event-card__info">
 						{% assign startYear = post['Event Start Date'] | date: "%Y" | times: 1 %}
+						{% assign startMonth = post['Event Start Date'] | date: "%m" | times: 1 %}
+
 						{% assign endYear = post['Event End Date'] | date: "%Y" | times: 1 %}
-						{% if post['Event Start Date'] == post['Event End Date'] %}
+						{% assign endMonth = post['Event End Date'] | date: "%m" | times: 1 %}
+
+						{% if post['Event Start Date'] | date: "%B %e, %Y" == post['Event End Date'] | date: "%B %e, %Y" %}
 							<p><time>{{ post['Event Start Date'] | date: "%B %e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 						{% elsif startYear == endYear %}
-							{% assign startMonth = post['Event Start Date'] | date: "%m" | times: 1 %}
-							{% assign endMonth = post['Event End Date'] | date: "%m" | times: 1 %}
 							{% if startMonth == endMonth %}
 								<p><time>{{ post['Event Start Date'] | date: "%B %e" }}&ndash;{{ post['Event End Date'] | date: "%e, %Y" }}<br>{{ post['Event Start Date'] | date: "%l:%M %P" }}&ndash;{{ post['Event End Date'] | date: "%l:%M %P" | strip }}</time></p>
 							{% else %}
