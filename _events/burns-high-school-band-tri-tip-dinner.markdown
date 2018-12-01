@@ -1,6 +1,7 @@
 ---
 title: Burns High School Band Tri-tip Dinner
 date: 2018-12-01 09:25:00 -08:00
+published: false
 Is Featured?: false
 Volunteers Needed?: true
 Event Venue: Burns Elks Lodge
