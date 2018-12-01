@@ -11,7 +11,7 @@ Subtitle: The Harney County Arts in Education Foundation (HCAEF) was pleased to 
   the Raphael Spiro Quartet (RSQ) in concert in October 2017.
 Image: "/uploads/rsquarter2_width1200.jpg"
 Image Caption: 'This is an image caption that is moderately long. PHOTO: NAME TEEKAY'
-Feature on Front Page?: true
+Feature on Front Page?: false
 Category: Event Recap
 ---
 
