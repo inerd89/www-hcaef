@@ -1,5 +1,5 @@
 ---
-title: Oregon Ambassador's of Music Scholarship Awards
+title: Oregon Ambassadors of Music Scholarship Awards
 date: 2018-12-01 20:18:00 -08:00
 Subtitle: Scholarship Awards
 Image: "/uploads/HCAEF%20Donation-6dd9ce.jpg"
