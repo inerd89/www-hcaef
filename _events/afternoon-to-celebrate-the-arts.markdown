@@ -11,4 +11,4 @@ Event Venue Address: 1100 Oregon Ave, Burns, OR 97720
 Feature on Front Page?: true
 ---
 
-The Central Oregon Symphony, under the direction of Michael Gesme, will be performing in concert.
+The Central Oregon Symphony, under the direction of Michael Gesme, will be performing in concert. Concert tickets call 541*-573-2427 or 541-573-7125
