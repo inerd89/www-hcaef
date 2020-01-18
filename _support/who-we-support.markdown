@@ -21,14 +21,14 @@ Contributions to the Harney County Arts in Education Foundation continue to supp
           
          ♫ WE APPRECIATE YOUR CONTINUED SUPPORT!  ♫
 
-Mail your donation to:   Harney County Arts in Education Foundation
+**Mail your donation to:   Harney County Arts in Education Foundation
                                                   PO Box 415
                                                 Hines, Oregon 97738
  
 If you prefer to remain anonymous, you can donate through PayPal or donations may be mailed to:
                                                 Bank of Eastern Oregon
                                                 290 N. Broadway
-                                                Burns, Oregon  97720
+>                                                 Burns, Oregon  97720
  
 Please make checks payable to HCAEF and please designate your donation to either the Foundation or the Performing Arts & Education Center
                                                 
