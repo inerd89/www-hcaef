@@ -19,7 +19,7 @@ Contributions to the Harney County Arts in Education Foundation continue to supp
  -        Chamber Solo Scholarship
  -        Performing Arts & Education Center 
           
-     ♫ WE APPRECIATE YOUR CONTINUED SUPPORT!  ♫
+         ♫ WE APPRECIATE YOUR CONTINUED SUPPORT!  ♫
 
 Mail your donation to:   Harney County Arts in Education Foundation
                                                   PO Box 415
