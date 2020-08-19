@@ -11,6 +11,7 @@ List (single):
 - Item: Kevin Lefohn
 - Item: Monica Ouchi
 - Item: Raphael Spiro Quartet
+- Item: Central Oregon Symphony
 ---
 
 HCAEF has had the pleasure of bringing a variety of performances to
