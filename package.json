@@ -50,7 +50,7 @@
     "critical": "^1.2.0",
     "eslint": "^4.19.1",
     "image-min": "^0.3.2",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.13.1",
     "parallelshell": "^3.0.2",
     "postcss-cli": "^5.0.0",
     "psi": "^3.1.0",
