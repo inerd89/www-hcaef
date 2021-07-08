@@ -14,7 +14,7 @@ List (expanded):
     each year by the Harney County Chamber Music Society. These scholarships allow
     students to receive private music lessons or go to a music camp.
 - Item Title: Grants to Steens Mountain Ballet Company
-  Item Description: HCAEF provides grants to Steens Mountain Ballet Company.
+  Item Description: HCAEF has provided grant funding to Steens Mountain Ballet Company.
 ---
 
 HCAEF funds several scholarships and grants for the arts throughout Harney County. From individual students to schools and local arts programs, we are a proud supporter of the arts in our community.
