@@ -3,9 +3,9 @@ title: Become a Member
 position: 2
 Table:
 - - Student Membership
-  - "$5 per year"
+  - "$10 per year"
 - - Individual Membership
-  - "$15 per year"
+  - "$20 per year"
 - - Family Membership
   - "$30 per year"
 - - Supporting Membership
