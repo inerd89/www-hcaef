@@ -47,7 +47,7 @@ Historical Highlights:
 - Image: "/uploads/balletviolin_width1200.jpg"
   Caption Title: Performing Arts
   Caption: HCAEF provides grants to the Steens Mountain Ballet Company.
-Board & Contact Title: Board Members
+Board & Contact Title: Executive Board Members
 Contact Info Blurb: 'Please contact us:'
 HCAEF Mailing Address: |
   Harney County Arts in Education Foundation
